@@ -1,0 +1,55 @@
+<!-- O projeto segue o conceito de mobile first, ao abrir a janela html, "adaptar para a visualização mobile. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Health Track">
+        <meta name="author" content="Luis Gustavo Ullmann">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <link rel="stylesheet" href="./css/login.css">
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <script src="./js/login.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <meta name="keywords" content="Heath Track,Saúde,Exercícios,Pressão Arterial,Peso,IMC,Índice de Massa Corporal,Corrida,Caminhada,Bibícleta">
+        <title>Projeto Health Track</title>
+    </head>
+    
+    <header>
+        <nav class="navbar navbar-drak headerTitle">
+            <span class="navbar-brand mb-0 h1">Health track</span>
+        </nav>
+    </header>
+    
+    <body> 
+        <div class="container">    
+            <div class="form-group contGroup">
+                <h2 class="titulo2" id="login">Bem-vindo</h2>
+                <form class="cLogin">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"><span id="msgEmail"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"></label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                        <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+                    </div>
+                    <a href="PHT.Index.html"><button type="submit" class="btn btn-primary botao" onclick="cObg">Enviar</button></a>
+                    </form>
+                    <footer>
+                        <div class="cUsuario">
+                            <h6><a href="PHT.Cadastro.html">Cadastrar novo usuário</a></h6>
+                        </div>
+                        <nav class="navbar fixed-bottom navbar-dark footer">
+                            <a class="navbar-brand" href="#"><h1 class="footerTitle">Projeto Health Track - 2018</h1></a>
+                        </nav>
+                    </footer>
+            </div>
+        </div>
+    </body>
+</html>
