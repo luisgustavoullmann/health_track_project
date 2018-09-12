@@ -5,13 +5,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
+import java.util.List;
 
 import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 
-public class DbPresArtDAO {
+public class DbPresArtDAO implements PresArtDAO {
 	private Connection conexao;
 	
+	//CREATE
+	@Override
 	public void cadastrar(PresArterial presart) {
 		PreparedStatement stmt = null;
 		
@@ -39,6 +42,7 @@ public class DbPresArtDAO {
 		}
 	}
 	
+	@Override
 	public List<PresArterial> getAll(){
 		//Cria uma lista de pressões auferidas
 		//List<PresArterial> lista = new ArrayList<PresArterial>();
@@ -76,11 +80,12 @@ public class DbPresArtDAO {
 				e.printStackTrace();
 			}
 		}
-		//return getAll();
+		return getAll();
 	}//
 	
 	
 	//UPDATE
+	@Override
 	public void atualizar(PresArterial presart) {
 		PreparedStatement stmt = null;
 		
@@ -109,6 +114,7 @@ public class DbPresArtDAO {
 	
 	
 	//Remove
+	@Override
 	public void remover(int codigo) {
 		PreparedStatement stmt = null;
 		
@@ -131,7 +137,8 @@ public class DbPresArtDAO {
 	}//
 	
 	
-	//SEARCH 
+	//SEARCH
+	@Override
 	public PresArterial searchId(int codeSearch) {
 		PresArterial presart = null;
 		PreparedStatement stmt = null;

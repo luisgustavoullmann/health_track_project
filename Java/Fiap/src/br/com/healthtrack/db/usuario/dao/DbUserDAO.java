@@ -4,14 +4,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import br.com.healthtrack.jdbc.CompanyDBManager;
 import br.com.healthtrack.usuario.Usuario;
 
-public class DbUserDAO {
+public class DbUserDAO implements UserDAO {
 	
 	private Connection conexao;
 	
+	//CREATE
+	@Override
 	public void cadastrar(Usuario user) {
 		PreparedStatement stmt = null;
 		
@@ -44,6 +47,7 @@ public class DbUserDAO {
 		}
 	}//
 	
+	@Override
 	public List<Usuario> getAll(){
 		//Cria uma lista de usuarios
 		//List<Usuario> lista = new ArrayList<Usuario>();
@@ -88,6 +92,7 @@ public class DbUserDAO {
 	}//
 
 	//UPDATE
+	@Override
 	public void atualizar(Usuario user) {
 		PreparedStatement stmt = null;
 		
@@ -121,6 +126,7 @@ public class DbUserDAO {
 	}//
 	
 	//REMOVE
+	@Override
 	public void remover(int codigo) {
 		PreparedStatement stmt = null;
 		
@@ -142,6 +148,8 @@ public class DbUserDAO {
 		}
 	}//
 	
+	//Search with ID
+	@Override
 	public Usuario searchId (int id) {
 		Usuario user = null;
 		PreparedStatement stmt = null;
@@ -177,7 +185,7 @@ public class DbUserDAO {
 				e.printStackTrace();
 			}
 		}
-		//return id
+		return user;
 	}//
 	
 }//done here
