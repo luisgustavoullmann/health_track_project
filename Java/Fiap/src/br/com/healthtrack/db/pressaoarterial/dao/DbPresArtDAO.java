@@ -1,4 +1,4 @@
-package br.com.healthtrack.oracle.pressaoarterial.dao;
+package br.com.healthtrack.db.pressaoarterial.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import java.util.Calendar;
 import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 
-public class OraclePresArtDAO {
+public class DbPresArtDAO {
 	private Connection conexao;
 	
 	public void cadastrar(PresArterial presart) {

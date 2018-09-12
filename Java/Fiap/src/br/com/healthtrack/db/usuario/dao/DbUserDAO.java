@@ -1,4 +1,4 @@
-package br.com.healthtrack.oracle.usuario.dao;
+package br.com.healthtrack.db.usuario.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 import br.com.healthtrack.usuario.Usuario;
 
-public class OracleUserDAO {
+public class DbUserDAO {
 	
 	private Connection conexao;
 	

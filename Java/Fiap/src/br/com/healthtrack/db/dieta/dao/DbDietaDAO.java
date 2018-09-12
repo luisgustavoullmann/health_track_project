@@ -1,4 +1,4 @@
-package br.com.healthtrack.oracle.dieta.dao;
+package br.com.healthtrack.db.dieta.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +15,7 @@ import br.com.healthtrack.jdbc.CompanyDBManager;
  * @version 1.5 
  * */
 
-public class OracleDietaDAO implements DietaDAO {
+public class DbDietaDAO implements DietaDAO {
 	private Connection conexao;
 	
 	//CREATE

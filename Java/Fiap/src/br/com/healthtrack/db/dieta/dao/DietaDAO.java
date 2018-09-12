@@ -1,4 +1,4 @@
-package br.com.healthtrack.oracle.dieta.dao;
+package br.com.healthtrack.db.dieta.dao;
 
 import java.util.List;
 
