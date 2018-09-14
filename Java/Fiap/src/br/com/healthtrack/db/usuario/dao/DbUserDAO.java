@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.List;
 
 import br.com.healthtrack.jdbc.CompanyDBManager;
@@ -21,8 +22,8 @@ public class DbUserDAO implements UserDAO {
 		try {
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "INSERT INTO T_USUARIO(CD_USUARIO, NM_USUARIO, NM_EMAIL, NR_IDAIDE, NR_PESO,"
-					+ " NR_ALTURA, NR_TELEFONE, NR_CPF, DS_SEXO)"
-					+ " VALUES(SQ_USUARIO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?)";
+					+ " NR_ALTURA, NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD)"
+					+ " VALUES(SQ_USUARIO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, user.getCdUsuario());
 			stmt.setString(2, user.getNome());
@@ -33,6 +34,11 @@ public class DbUserDAO implements UserDAO {
 			stmt.setInt(7, user.getTelefone());
 			stmt.setInt(8, user.getCpf());
 			stmt.setString(9, user.getSexo());
+			java.sql.Date dataNascimento = new java.sql.Date(user.getNascimento().getTimeInMillis());
+			stmt.setDate(10, dataNascimento);
+			java.sql.Date dataCadastro = new java.sql.Date(user.getCadastro().getTimeInMillis());
+			stmt.setDate(11, dataCadastro);
+			stmt.setString(12, user.getPassword());
 			
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -70,6 +76,13 @@ public class DbUserDAO implements UserDAO {
 				int telefone = rs.getInt("NR_TELEFONE");
 				int cpf = rs.getInt("NR_CPF");
 				String sexo = rs.getString("DS_SEXO");
+				java.sql.Date dataNascimento = rs.getDate("DT_NASCIMENTO");
+				Calendar dataNasc = Calendar.getInstance();
+				dataNasc.setTimeInMillis(dataNascimento.getTime());
+				java.sql.Date dataCadastro = rs.getDate("DT_CADASTRO");
+				Calendar dataCadast = Calendar.getInstance();
+				dataCadast.setTimeInMillis(dataCadastro.getTime());
+				String password = rs.getString("NR_PASSWORD");
 				
 				//Cria um objeto
 				//Usuario user = new Usuario(code, name, email, idade, peso, altura, telefone, cpf, sexo);
@@ -100,7 +113,8 @@ public class DbUserDAO implements UserDAO {
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_USUARIO SET NM_USUARIO = ?, NM_EMAIL = ?,"
 					+ " NR_IDAIDE = ?, NR_PESO = ?, NR_ALTURA = ?,"
-					+ " NR_TELEFONE = ?, NR_CPF = ?, DS_SEXO = ?"
+					+ " NR_TELEFONE = ?, NR_CPF = ?, DS_SEXO = ?, DT_NASCIMENTO = ?, "
+					+  "NR_PASSWORD = ?"
 					+ "WHERE CD_USUARIO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setString(1, user.getNome());

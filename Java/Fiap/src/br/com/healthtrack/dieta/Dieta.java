@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Dieta {
 	//Atributos
 	private int cdDieta;
+	private Date data;
 	private String nomeAlimento;
 	private double caloria;
 	private String tipo; //almoço, café, janta e etc..
@@ -90,6 +91,14 @@ public class Dieta {
 
 	public void setCdDieta(int cdDieta) {
 		this.cdDieta = cdDieta;
+	}
+	
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 	
 	public String getNomeAlimento() {

@@ -1,5 +1,6 @@
 package br.com.healthtrack.usuario;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 import br.com.health.pressaoarterial.PresArterial;
@@ -25,11 +26,14 @@ public class Usuario {
 	private int telefone;
 	private int cpf;
 	private String sexo;
+	private Calendar nascimento;
+	private Calendar cadastro;
+	private String password;
 	
 	
 	
 	public void dadoUser() {
-		/*Instancia class Usuario
+	 /*Instancia class Usuario
 		 * @param A nome do usuario
 		 */
 		Scanner name = new Scanner(System.in);
@@ -251,4 +255,29 @@ public class Usuario {
 			System.out.println("Feminino");
 		}
 	}
+
+	public Calendar getNascimento() {
+		return nascimento;
+	}
+
+	public void setNascimento(Calendar nascimento) {
+		this.nascimento = nascimento;
+	}
+
+	public Calendar getCadastro() {
+		return cadastro;
+	}
+
+	public void setCadastro(Calendar cadastro) {
+		this.cadastro = cadastro;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 }

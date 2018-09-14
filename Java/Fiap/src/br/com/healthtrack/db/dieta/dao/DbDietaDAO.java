@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import br.com.healthtrack.dieta.Dieta;
@@ -25,14 +26,15 @@ public class DbDietaDAO implements DietaDAO {
 		
 		try {
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, DS_CALORIA)"
-					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA)"
+					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, dieta.getCdDieta());
 			stmt.setString(2, dieta.getNomeAlimento());
 			stmt.setDouble(3, dieta.getCaloria());
 			stmt.setString(4, dieta.getTipo());
 			stmt.setDouble(5, dieta.getPadraoCaloria());
+			stmt.setDate(6, dieta.getData());//corrigir
 			
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -65,7 +67,10 @@ public class DbDietaDAO implements DietaDAO {
 				String name = rs.getString("NM_ALIMENTO");
 				double caloria1 = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
-				double padcaloria = rs.getDouble("DS_CALORIA");
+				double padcaloria = rs.getDouble("QTD_PADRAOCALORIA");
+				java.sql.Date data = rs.getDate("DT_DATA");
+				Calendar dataDieta = Calendar.getInstance();
+				dataDieta.setTimeInMillis(data.getTime());
 				
 				//Instancia new Object Dieta com as informações encontradas
 				Dieta dieta1 = new Dieta();
@@ -147,6 +152,7 @@ public class DbDietaDAO implements DietaDAO {
 					System.out.println(di.getCaloria());
 					System.out.println(di.getNomeAlimento());
 					System.out.println(di.getPadraoCaloria());
+					System.out.println(di.getData());
 				}
 				
 			}
@@ -171,13 +177,15 @@ public class DbDietaDAO implements DietaDAO {
 		
 		try {
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, DS_CALORIA = ?";
+			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?, DT_DATA = ?";
 			stmt = conexao.prepareStatement(sql);
-			stmt.setInt(1, dieta.getCdUsuario());
+			stmt.setInt(1, dieta.getCdDieta());
 			stmt.setString(2, dieta.getNomeAlimento());
 			stmt.setDouble(3, dieta.getCaloria());
 			stmt.setString(4, dieta.getTipo());
 			stmt.setDouble(5, dieta.getPadraoCaloria());
+			java.sql.Date data = new java.sql.Date(dieta.getData());
+			stmt.setDate(6, data);
 			
 			stmt.executeUpdate();
 					
@@ -241,7 +249,10 @@ public class DbDietaDAO implements DietaDAO {
 				String name = rs.getString("NM_ALIMENTO");
 				double caloria1 = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
-				double padcaloria = rs.getDouble("DS_CALORIA");
+				double padcaloria = rs.getDouble("QTD_PADRAOCALORIA");
+				java.sql.Date data = rs.getDate("DT_DATA");
+				Calendar dataDieta = Calendar.getInstance();
+				dataDieta.setTimeInMillis(data.getTime());
 				
 				//dieta = new Dieta(int code1, String name, double caloria1, String type, double padcaloria);
 				
