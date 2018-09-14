@@ -125,6 +125,9 @@ public class DbUserDAO implements UserDAO {
 			stmt.setInt(6, user.getTelefone());
 			stmt.setInt(7, user.getCpf());
 			stmt.setString(8, user.getSexo());
+			java.sql.Date dataNascimento = new java.sql.Date(user.getNascimento().getTimeInMillis());
+			stmt.setDate(9, dataNascimento);
+			stmt.setString(10, user.getPassword());
 			
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -184,9 +187,14 @@ public class DbUserDAO implements UserDAO {
 				float altura = rs.getFloat("NR_ALTURA");
 				int telefone = rs.getInt("NR_TELEFONE");
 				int cpf = rs.getInt("NR_CPF");
-				String sexo = rs.getString("DS_SEXO"); 
+				String sexo = rs.getString("DS_SEXO");
+				java.sql.Date dataNascimento = rs.getDate("DT_NASCIMENTO");
+				Calendar dataNasc = Calendar.getInstance();
+				dataNasc.setTimeInMillis(dataNascimento.getTime());
+				String password = rs.getString("NR_PASSWORD");
+				//DT_NASCIMENTO
 				
-				//id = new Usuario(code, name, email, idade, peso, altura, telefone, cpf, sexo);
+				//id = new Usuario(code, name, email, idade, peso, altura, telefone, cpf, sexo, dataNasc, password);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

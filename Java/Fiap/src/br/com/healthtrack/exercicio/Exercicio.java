@@ -1,6 +1,7 @@
 package br.com.healthtrack.exercicio;
 
 import java.sql.Time;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public abstract class Exercicio {
 	protected Time tempo;
 	protected double padraoKm;
 	protected Time padraoTempo;
+	protected Calendar data;
 		
 	
 	/*Input dados do exercicio*/
@@ -116,5 +118,15 @@ public abstract class Exercicio {
 	public void setPadraoTempo(Time padraoTempo) {
 		this.padraoTempo = padraoTempo;
 	}
+
+	public Calendar getData() {
+		return data;
+	}
+
+	public void setData(Calendar data) {
+		this.data = data;
+	}
+	
+	
 	
 }

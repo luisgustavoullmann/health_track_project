@@ -34,7 +34,8 @@ public class DbDietaDAO implements DietaDAO {
 			stmt.setDouble(3, dieta.getCaloria());
 			stmt.setString(4, dieta.getTipo());
 			stmt.setDouble(5, dieta.getPadraoCaloria());
-			stmt.setDate(6, dieta.getData());//corrigir
+			java.sql.Date data = new java.sql.Date(dieta.getData().getTimeInMillis());
+			stmt.setDate(6, data);
 			
 			stmt.executeUpdate();
 		} catch (SQLException e) {
