@@ -20,7 +20,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		
 		try {
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "INSERT INTO T_PRESARTERIAL(CD_USUARIO, NR_DADO, DT_DATA, DS_PADRAO)"
+			String sql = "INSERT INTO T_PRESARTERIAL(CD_PRES_ART, NR_DADO, DT_DATA, DS_PADRAO)"
 					+ "VALUES(SQ_PRESART.NEXTVAL, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, presart.getCdUsuario());
@@ -56,7 +56,7 @@ public class DbPresArtDAO implements PresArtDAO {
 			
 			//Percorre a lista inteira
 			while(rs.next()) {
-				int code = rs.getInt("CD_USUARIO");
+				int code = rs.getInt("CD_PRES_ART");
 				double dado = rs.getDouble("NR_DADO");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataPres = Calendar.getInstance();
@@ -120,7 +120,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		
 		try {
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "DELETE FROM T_PRESARTERIAL WHERE CD_USUARIO = ?"; 
+			String sql = "DELETE FROM T_PRESARTERIAL WHERE CD_PRES_ART = ?"; 
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
 			stmt.executeUpdate();
@@ -145,12 +145,12 @@ public class DbPresArtDAO implements PresArtDAO {
 		ResultSet rs = null;
 		 try {
 			 conexao = CompanyDBManager.obterConexao();
-			 stmt = conexao.prepareStatement("SELECT * FROM T_PRESARTERIAL WHERE CD_USUARIO = ?");
+			 stmt = conexao.prepareStatement("SELECT * FROM T_PRESARTERIAL WHERE CD_PRES_ART = ?");
 			 stmt.setInt(1, codeSearch);
 			 rs = stmt.executeQuery();
 			 
 			 if (rs.next()) {
-				 int code = rs.getInt("CD_USUARIO");
+				 int code = rs.getInt("CD_PRES_ART");
 				 double dado = rs.getDouble("NR_DADO");
 				 java.sql.Date data = rs.getDate("DT_DATA");
 				 Calendar dataPres = Calendar.getInstance();

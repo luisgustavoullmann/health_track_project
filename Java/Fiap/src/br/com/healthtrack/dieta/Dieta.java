@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 public class Dieta {
 	//Atributos
-	private int cdUsuario;
+	private int cdDieta;
 	private String nomeAlimento;
 	private double caloria;
 	private String tipo; //almoço, café, janta e etc..
-	private double padraoCaloria; //quantas calorias consumidas era o ideal por refeição?
+	private double padraoCaloria; //ds_caloria: quantas calorias consumidas era o ideal por refeição?
 
 	//Métodos
 	
@@ -84,13 +84,14 @@ public class Dieta {
 	
 	
 	//Getters and setters
-	public int getCdUsuario() {
-		return cdUsuario;
+	public int getCdDieta() {
+		return cdDieta;
 	}
 
-	public void setCdUsuario(int cdUsuario) {
-		this.cdUsuario = cdUsuario;
+	public void setCdDieta(int cdDieta) {
+		this.cdDieta = cdDieta;
 	}
+	
 	public String getNomeAlimento() {
 		return nomeAlimento;
 	}

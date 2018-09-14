@@ -25,10 +25,10 @@ public class DbDietaDAO implements DietaDAO {
 		
 		try {
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "INSERT INTO T_DIETA(CD_USUARIO, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, DS_CALORIA)"
+			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, DS_CALORIA)"
 					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
-			stmt.setInt(1, dieta.getCdUsuario());
+			stmt.setInt(1, dieta.getCdDieta());
 			stmt.setString(2, dieta.getNomeAlimento());
 			stmt.setDouble(3, dieta.getCaloria());
 			stmt.setString(4, dieta.getTipo());
@@ -61,7 +61,7 @@ public class DbDietaDAO implements DietaDAO {
 			
 			//Precorre todos os registros encontrados
 			while (rs.next()) {
-				int code = rs.getInt("CD_USUARIO");
+				int code = rs.getInt("CD_DIETA");
 				String name = rs.getString("NM_ALIMENTO");
 				double caloria1 = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
@@ -203,7 +203,7 @@ public class DbDietaDAO implements DietaDAO {
 		try {
 			
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "DELETE FROM T_DIETA WHERE CD_USUARIO = ?";
+			String sql = "DELETE FROM T_DIETA WHERE CD_DIETA = ?";
 			
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
@@ -221,7 +221,7 @@ public class DbDietaDAO implements DietaDAO {
 		}
 	}
 	
-	//SEARCH por nome do alimento e CD_USUARIO
+	//SEARCH por nome do alimento e CD_DIETA
 	@Override
 	public Dieta searchName (String nome, int code) {
 		Dieta dieta = null;
@@ -231,13 +231,13 @@ public class DbDietaDAO implements DietaDAO {
 		try {
 			
 			conexao = CompanyDBManager.obterConexao();
-			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA WHERE NM_ALIMENTO = ?, CD_USUARIO = ?");
+			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA WHERE NM_ALIMENTO = ?, CD_DIETA = ?");
 			stmt.setString(1, nome);
 			stmt.setInt(2, code);
 			rs = stmt.executeQuery();
 			
 			if(rs.next()) {
-				int code1 = rs.getInt("CD_USUARIO");
+				int code1 = rs.getInt("CD_DIETA");
 				String name = rs.getString("NM_ALIMENTO");
 				double caloria1 = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
