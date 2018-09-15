@@ -20,17 +20,6 @@
 <ownDataTypeParameters>,6,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="T_T_LOG_cd_t_logradouro" id="348D9B94-398B-1341-5027-B8DB0D421ABA">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-28 15:13:08 UTC</createdTime>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="ds_logradouro" id="DD2BE9C5-F3DE-0FB1-2BED-A1EADA7001EC">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>
@@ -117,7 +106,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="F4354DDF-676F-1E72-DF5D-2297B4193850" name="T_ENDERECO_PK">
+<ind_PK_UK id="F4354DDF-676F-1E72-DF5D-2297B4193850" name="PK_HT_END">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>
 <generatorID>1A85A99B-D094-D964-36C8-3EAB8A7EF477</generatorID>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075" name="T_USUARIO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075" name="T_USER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>78ED820C-E239-4F93-DFEF-5E290E9A6815</generatorID>
@@ -9,7 +9,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_usuario" id="231A1174-712B-56A8-E1D3-BB2B011702D9">
+<Column name="cd_user" id="231A1174-712B-56A8-E1D3-BB2B011702D9">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>AE58967B-9C3F-7249-2B51-96D25AC1E2C1</generatorID>
@@ -155,7 +155,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="093A8340-1B51-A839-03BC-F196E147AB5B" name="T_USUARIO_PK">
+<ind_PK_UK id="093A8340-1B51-A839-03BC-F196E147AB5B" name="PK_HT_USER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>A6BAADC1-F471-68E2-AC27-C53E1008CA55</generatorID>

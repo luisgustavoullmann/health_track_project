@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B90973EE-433F-EA50-2F9E-BCABB45D36BC" name="T_USUARIO_DIETA">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B90973EE-433F-EA50-2F9E-BCABB45D36BC" name="T_USER_DIETA">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>6784A0C0-D45B-1753-26D7-C3FD834F82C2</generatorID>
@@ -9,7 +9,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="T_USUARIO_cd_usuario" id="89FCC2CA-7410-5C5A-53CC-39EA2D2C47AF">
+<Column name="T_USER_cd_user" id="89FCC2CA-7410-5C5A-53CC-39EA2D2C47AF">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>EBB0968F-F617-4F94-0635-7D8F3624C626</generatorID>
@@ -43,7 +43,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="B0C6306B-584D-DE1E-F925-036E8F81F7B0" name="T_USUARIO_DIETA_PK">
+<ind_PK_UK id="B0C6306B-584D-DE1E-F925-036E8F81F7B0" name="PK_HT_USDI">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>7B386EBC-83FD-5132-7E42-E550EC1A6D70</generatorID>
@@ -56,14 +56,7 @@
 <colUsage columnID="48408700-B552-8BBA-B5FD-5A47D5FBE929"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2E5CF51A-A409-1FAD-13FD-102F2EBEDAAB" name="T_US_AL_PK">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-28 15:39:02 UTC</createdTime>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<indexState>Unique Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="EE9CCC3B-06DB-F781-A979-28CDFEF037A3" name="T_USUARIO_DIETA_T_USUARIO_FK">
+<ind_PK_UK id="EE9CCC3B-06DB-F781-A979-28CDFEF037A3" name="FK_T_UDIETA_US">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>A0A070AB-58BE-D07B-D887-128D6ABF75EA</generatorID>
@@ -74,7 +67,7 @@
 <colUsage columnID="89FCC2CA-7410-5C5A-53CC-39EA2D2C47AF"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5781A2FA-39F9-F65A-57F6-A52EBC54E065" name="T_USUARIO_DIETA_T_DIETA_FK">
+<ind_PK_UK id="5781A2FA-39F9-F65A-57F6-A52EBC54E065" name="FK_T_UDIETA_DI">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>72D005FB-FE67-D625-A778-A768023CA351</generatorID>

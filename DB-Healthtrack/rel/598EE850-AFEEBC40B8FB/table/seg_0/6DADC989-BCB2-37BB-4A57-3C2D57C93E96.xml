@@ -93,7 +93,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="10332D47-51A2-45BA-0C91-D20C32F930EF" name="T_PREARTERIAL_PK">
+<ind_PK_UK id="10332D47-51A2-45BA-0C91-D20C32F930EF" name="PK_HT_PREART">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>13E7B05E-8412-33B1-F7F9-B7D7109093F0</generatorID>

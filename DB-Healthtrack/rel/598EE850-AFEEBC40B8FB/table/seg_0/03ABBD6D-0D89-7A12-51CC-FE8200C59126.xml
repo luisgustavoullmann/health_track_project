@@ -106,7 +106,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="E9C15DEE-1330-6360-6C63-31B0AD7432B8" name="T_EXERCICIO_PK">
+<ind_PK_UK id="E9C15DEE-1330-6360-6C63-31B0AD7432B8" name="PK_HT_EXER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>
 <generatorID>6D5D9E3F-4B5E-D5D7-89C2-2ABE1EB5DA29</generatorID>

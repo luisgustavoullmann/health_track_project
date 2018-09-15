@@ -95,7 +95,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="D7B5187E-6AAD-F482-43D9-F1ECEFFF20BB" name="T_DIETA_PK">
+<ind_PK_UK id="D7B5187E-6AAD-F482-43D9-F1ECEFFF20BB" name="PK_HT_DIETA">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>
 <generatorID>6684F22D-1D92-934D-5C5C-3703B319FDED</generatorID>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D16B1D1B-6572-CD93-BB8D-44E24B314DEB" containerWithKeyObject="B90973EE-433F-EA50-2F9E-BCABB45D36BC" localFKIndex="5781A2FA-39F9-F65A-57F6-A52EBC54E065" name="T_USUARIO_DIETA_T_DIETA_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D16B1D1B-6572-CD93-BB8D-44E24B314DEB" containerWithKeyObject="B90973EE-433F-EA50-2F9E-BCABB45D36BC" localFKIndex="5781A2FA-39F9-F65A-57F6-A52EBC54E065" name="FK_T_UDIETA_DI">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>72D005FB-FE67-D625-A778-A768023CA351</generatorID>

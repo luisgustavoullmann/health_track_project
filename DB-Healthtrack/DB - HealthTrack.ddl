@@ -1,5 +1,5 @@
 -- Gerado por Oracle SQL Developer Data Modeler 17.4.0.355.2121
---   em:        2018-09-15 12:37:19 BRT
+--   em:        2018-09-15 16:31:47 BRT
 --   site:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -15,21 +15,20 @@ CREATE TABLE t_dieta (
     dt_data               DATE NOT NULL
 );
 
-ALTER TABLE t_dieta ADD CONSTRAINT t_dieta_pk PRIMARY KEY ( cd_dieta );
+ALTER TABLE t_dieta ADD CONSTRAINT pk_ht_dieta PRIMARY KEY ( cd_dieta );
 
-CREATE TABLE t_endereco (
-    cd_endereco               NUMBER(6) NOT NULL,
-    t_t_log_cd_t_logradouro   INTEGER NOT NULL,
-    ds_logradouro             VARCHAR2(20) NOT NULL,
-    nm_logradouro             VARCHAR2(255) NOT NULL,
-    nr_cep                    VARCHAR2(10) NOT NULL,
-    nm_bairro                 VARCHAR2(255) NOT NULL,
-    nm_cidade                 VARCHAR2(255) NOT NULL,
-    nm_estado                 VARCHAR2(255) NOT NULL,
-    nr_endereco               NUMBER(6) NOT NULL
+CREATE TABLE t_end (
+    cd_end          NUMBER(6) NOT NULL,
+    ds_logradouro   VARCHAR2(20) NOT NULL,
+    nm_logradouro   VARCHAR2(255) NOT NULL,
+    nr_cep          VARCHAR2(10) NOT NULL,
+    nm_bairro       VARCHAR2(255) NOT NULL,
+    nm_cidade       VARCHAR2(255) NOT NULL,
+    nm_estado       VARCHAR2(255) NOT NULL,
+    nr_endereco     NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_endereco ADD CONSTRAINT t_endereco_pk PRIMARY KEY ( cd_endereco );
+ALTER TABLE t_end ADD CONSTRAINT pk_ht_end PRIMARY KEY ( cd_end );
 
 CREATE TABLE t_exercicio (
     cd_exercicio                 NUMBER(6) NOT NULL,
@@ -42,7 +41,7 @@ CREATE TABLE t_exercicio (
     qt_padraotempo               TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL
 );
 
-ALTER TABLE t_exercicio ADD CONSTRAINT t_exercicio_pk PRIMARY KEY ( cd_exercicio );
+ALTER TABLE t_exercicio ADD CONSTRAINT pk_ht_exer PRIMARY KEY ( cd_exercicio );
 
 CREATE TABLE t_prearterial (
     cd_pres_art                  NUMBER(6) NOT NULL,
@@ -54,10 +53,10 @@ CREATE TABLE t_prearterial (
     ds_padrao                    NUMBER(4,2) NOT NULL
 );
 
-ALTER TABLE t_prearterial ADD CONSTRAINT t_prearterial_pk PRIMARY KEY ( cd_pres_art );
+ALTER TABLE t_prearterial ADD CONSTRAINT pk_ht_preart PRIMARY KEY ( cd_pres_art );
 
-CREATE TABLE t_usuario (
-    cd_usuario      NUMBER(6) NOT NULL,
+CREATE TABLE t_user (
+    cd_user         NUMBER(6) NOT NULL,
     nm_usuario      VARCHAR2(255) NOT NULL,
     nm_email        VARCHAR2(255) NOT NULL,
     nr_idade        NUMBER(3) NOT NULL,
@@ -71,85 +70,73 @@ CREATE TABLE t_usuario (
     nr_password     VARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE t_usuario ADD CONSTRAINT t_usuario_pk PRIMARY KEY ( cd_usuario );
+ALTER TABLE t_user ADD CONSTRAINT pk_ht_user PRIMARY KEY ( cd_user );
 
-CREATE TABLE t_usuario_arterial (
-    t_usuario_cd_usuario        NUMBER(6) NOT NULL,
+CREATE TABLE t_user_art (
+    t_user_cd_user              NUMBER(6) NOT NULL,
     t_prearterial_cd_pres_art   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_usuario_arterial ADD CONSTRAINT t_usuario_arterial_pk PRIMARY KEY ( t_prearterial_cd_pres_art,
-t_usuario_cd_usuario );
+ALTER TABLE t_user_art ADD CONSTRAINT pk_ht_usar PRIMARY KEY ( t_prearterial_cd_pres_art,
+t_user_cd_user );
 
--- Error - Unique Constraint T_USUARIO_ARTERIAL.T_US_ART_PK doesn't have columns
-
-CREATE TABLE t_usuario_dieta (
-    t_usuario_cd_usuario   NUMBER(6) NOT NULL,
-    t_dieta_cd_dieta       NUMBER(6) NOT NULL
+CREATE TABLE t_user_dieta (
+    t_user_cd_user     NUMBER(6) NOT NULL,
+    t_dieta_cd_dieta   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_usuario_dieta ADD CONSTRAINT t_usuario_dieta_pk PRIMARY KEY ( t_usuario_cd_usuario,
+ALTER TABLE t_user_dieta ADD CONSTRAINT pk_ht_usdi PRIMARY KEY ( t_user_cd_user,
 t_dieta_cd_dieta );
 
--- Error - Unique Constraint T_USUARIO_DIETA.T_US_AL_PK doesn't have columns
-
-CREATE TABLE t_usuario_endereco (
-    t_usuario_cd_usuario     NUMBER(6) NOT NULL,
-    t_endereco_cd_endereco   NUMBER(6) NOT NULL
+CREATE TABLE t_user_endereco (
+    t_user_cd_user   NUMBER(6)
+        CONSTRAINT nnc_t_usend_t_user_cd_user NOT NULL,
+    t_end_cd_end     NUMBER(6)
+        CONSTRAINT nnc_t_usend_t_end_cd_end NOT NULL
 );
 
-ALTER TABLE t_usuario_endereco ADD CONSTRAINT t_usuario_endereco_pk PRIMARY KEY ( t_usuario_cd_usuario,
-t_endereco_cd_endereco );
+ALTER TABLE t_user_endereco ADD CONSTRAINT pk_ht_user_ed PRIMARY KEY ( t_user_cd_user,
+t_end_cd_end );
 
--- Error - Unique Constraint T_USUARIO_ENDERECO.T_US_END_PK doesn't have columns
-
-CREATE TABLE t_usuario_exercicio (
-    t_usuario_cd_usuario       NUMBER(6) NOT NULL,
+CREATE TABLE t_user_exercicio (
+    t_user_cd_user             NUMBER(6) NOT NULL,
     t_exercicio_cd_exercicio   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_usuario_exercicio ADD CONSTRAINT t_usuario_exercicio_pk PRIMARY KEY ( t_exercicio_cd_exercicio,
-t_usuario_cd_usuario );
+ALTER TABLE t_user_exercicio ADD CONSTRAINT pk_ht_usex PRIMARY KEY ( t_exercicio_cd_exercicio,
+t_user_cd_user );
 
--- Error - Unique Constraint T_USUARIO_EXERCICIO.T_US_EXER_PK doesn't have columns
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE t_usuario_arterial
-    ADD CONSTRAINT t_usuario_arterial_t_prearterial_fk FOREIGN KEY ( t_prearterial_cd_pres_art )
-        REFERENCES t_prearterial ( cd_pres_art );
-
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE t_usuario_arterial
-    ADD CONSTRAINT t_usuario_arterial_t_usuario_fk FOREIGN KEY ( t_usuario_cd_usuario )
-        REFERENCES t_usuario ( cd_usuario );
-
-ALTER TABLE t_usuario_dieta
-    ADD CONSTRAINT t_usuario_dieta_t_dieta_fk FOREIGN KEY ( t_dieta_cd_dieta )
+ALTER TABLE t_user_dieta
+    ADD CONSTRAINT fk_t_udieta_di FOREIGN KEY ( t_dieta_cd_dieta )
         REFERENCES t_dieta ( cd_dieta );
 
-ALTER TABLE t_usuario_dieta
-    ADD CONSTRAINT t_usuario_dieta_t_usuario_fk FOREIGN KEY ( t_usuario_cd_usuario )
-        REFERENCES t_usuario ( cd_usuario );
+ALTER TABLE t_user_dieta
+    ADD CONSTRAINT fk_t_udieta_us FOREIGN KEY ( t_user_cd_user )
+        REFERENCES t_user ( cd_user );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE t_usuario_endereco
-    ADD CONSTRAINT t_usuario_endereco_t_endereco_fk FOREIGN KEY ( t_endereco_cd_endereco )
-        REFERENCES t_endereco ( cd_endereco );
+ALTER TABLE t_user_endereco
+    ADD CONSTRAINT fk_t_ue_end FOREIGN KEY ( t_end_cd_end )
+        REFERENCES t_end ( cd_end );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE t_usuario_endereco
-    ADD CONSTRAINT t_usuario_endereco_t_usuario_fk FOREIGN KEY ( t_usuario_cd_usuario )
-        REFERENCES t_usuario ( cd_usuario );
+ALTER TABLE t_user_endereco
+    ADD CONSTRAINT fk_t_ue_user FOREIGN KEY ( t_user_cd_user )
+        REFERENCES t_user ( cd_user );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE t_usuario_exercicio
-    ADD CONSTRAINT t_usuario_exercicio_t_exercicio_fk FOREIGN KEY ( t_exercicio_cd_exercicio )
+ALTER TABLE t_user_exercicio
+    ADD CONSTRAINT fk_t_uex_exer FOREIGN KEY ( t_exercicio_cd_exercicio )
         REFERENCES t_exercicio ( cd_exercicio );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
-ALTER TABLE t_usuario_exercicio
-    ADD CONSTRAINT t_usuario_exercicio_t_usuario_fk FOREIGN KEY ( t_usuario_cd_usuario )
-        REFERENCES t_usuario ( cd_usuario );
+ALTER TABLE t_user_exercicio
+    ADD CONSTRAINT fk_t_uex_user FOREIGN KEY ( t_user_cd_user )
+        REFERENCES t_user ( cd_user );
+
+ALTER TABLE t_user_art
+    ADD CONSTRAINT fk_t_upre_pre FOREIGN KEY ( t_prearterial_cd_pres_art )
+        REFERENCES t_prearterial ( cd_pres_art );
+
+ALTER TABLE t_user_art
+    ADD CONSTRAINT fk_tupre_us FOREIGN KEY ( t_user_cd_user )
+        REFERENCES t_user ( cd_user );
 
 
 
@@ -192,5 +179,5 @@ ALTER TABLE t_usuario_exercicio
 -- ORDS ENABLE SCHEMA                       0
 -- ORDS ENABLE OBJECT                       0
 -- 
--- ERRORS                                  10
+-- ERRORS                                   0
 -- WARNINGS                                 0

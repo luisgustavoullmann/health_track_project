@@ -1,14 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A004856D-4178-7EFE-56C6-4EEF544313E6" name="T_USUARIO_EXERCICIO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A004856D-4178-7EFE-56C6-4EEF544313E6" name="T_USER_EXERCICIO">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>F00416A6-865C-1EE1-74FD-545C78BCCF19</generatorID>
 <ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ordsAlias>t_usuario_exercicio</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="T_USUARIO_cd_usuario" id="05914CC3-8D12-3A95-8D52-87EAFF60E918">
+<Column name="T_USER_cd_user" id="05914CC3-8D12-3A95-8D52-87EAFF60E918">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>058F4743-59E7-DB46-E708-F76884912CBC</generatorID>
@@ -42,7 +43,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="BA7D3EDF-77D6-DDD1-AB0E-DE46262C29F6" name="T_USUARIO_EXERCICIO_PK">
+<ind_PK_UK id="BA7D3EDF-77D6-DDD1-AB0E-DE46262C29F6" name="PK_HT_USEX">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>22EB8708-EC2A-8982-1C24-42834ED05FB1</generatorID>
@@ -55,14 +56,7 @@
 <colUsage columnID="05914CC3-8D12-3A95-8D52-87EAFF60E918"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="93BAFD88-CFD6-8125-05FA-F18FC7F9FE9B" name="T_US_EXER_PK">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-28 15:39:14 UTC</createdTime>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<indexState>Unique Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-</ind_PK_UK>
-<ind_PK_UK id="20029000-6581-65F9-844F-E4D048D4FBD3" name="T_USUARIO_EXERCICIO_T_USUARIO_FK">
+<ind_PK_UK id="20029000-6581-65F9-844F-E4D048D4FBD3" name="FK_T_UEX_USER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>FA16AAD3-D7AA-B5A0-CAAC-8AF5BC4976CA</generatorID>
@@ -73,7 +67,7 @@
 <colUsage columnID="05914CC3-8D12-3A95-8D52-87EAFF60E918"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2602376E-FD19-C21D-C5D9-5C0598CFD6F4" name="T_USUARIO_EXERCICIO_T_EXERCICIO_FK">
+<ind_PK_UK id="2602376E-FD19-C21D-C5D9-5C0598CFD6F4" name="FK_T_UEX_EXER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:21:55 UTC</createdTime>
 <generatorID>E1D3D28F-4308-D648-58BE-255D3C436081</generatorID>
