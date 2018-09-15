@@ -7,17 +7,16 @@ import java.util.Scanner;
 
 /*Classe que abstrai dados de exercícios físicos
  * @author Luis Gustavo Ullmann
- * @version 1.5
+ * @version 1.7
  * */
 
 public abstract class Exercicio {
 	//Atributos
 	protected String tipo; //natação, corrida, caminhada..
-	protected Date dt;
 	protected double km;
-	protected Time tempo;
+	protected Time tempo;//Alterar para calendar
 	protected double padraoKm;
-	protected Time padraoTempo;
+	protected Time padraoTempo;//alterar para calendar
 	protected Calendar data;
 		
 	
@@ -25,7 +24,7 @@ public abstract class Exercicio {
 	public void dadoExercicio() {
 		Scanner ex = new Scanner(System.in);
 		System.out.println("Data do exercício: ");
-		this.setDt(ex.next()); /*Como fazer para data?*/
+		this.setData(data);
 		
 		Scanner km = new Scanner(System.in);
 		System.out.println("Quantos km: ");
@@ -77,14 +76,6 @@ public abstract class Exercicio {
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-
-	public Date getDt() {
-		return dt;
-	}
-
-	public void setDt(Date dt) {
-		this.dt = dt;
 	}
 
 	public double getKm() {
