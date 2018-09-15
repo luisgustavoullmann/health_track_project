@@ -28,7 +28,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>6</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_endereco" id="25C8B2F4-210B-36D2-519E-65DCAD4226EA">
 <createdBy>Luis Gustavo Ullmann</createdBy>
@@ -39,10 +39,11 @@
 <item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
 </engineerTo>
 <referedAttribute>7445B9EF-EB71-42D9-477E-490D4B7EEBC5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>6</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

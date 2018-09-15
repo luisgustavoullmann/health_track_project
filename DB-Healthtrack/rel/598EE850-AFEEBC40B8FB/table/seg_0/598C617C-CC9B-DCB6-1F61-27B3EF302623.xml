@@ -1,14 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="598C617C-CC9B-DCB6-1F61-27B3EF302623" name="T_ENDERECO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="598C617C-CC9B-DCB6-1F61-27B3EF302623" name="T_END">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>
 <generatorID>4B0AF3CA-7738-CDEB-8C34-47BB0C2F8767</generatorID>
 <ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ordsAlias>t_endereco</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_endereco" id="011DEC36-8EC3-0126-2F07-E8434A2C56D9">
+<Column name="cd_end" id="011DEC36-8EC3-0126-2F07-E8434A2C56D9">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>
 <generatorID>7445B9EF-EB71-42D9-477E-490D4B7EEBC5</generatorID>

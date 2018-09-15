@@ -24,10 +24,11 @@
 <item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
 </engineerTo>
 <referedAttribute>AE58967B-9C3F-7249-2B51-96D25AC1E2C1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>6</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_pres_art" id="29B3503A-F429-3AD9-8E77-60417BC857C5">
 <createdBy>Luis Gustavo Ullmann</createdBy>
@@ -42,7 +43,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>6</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

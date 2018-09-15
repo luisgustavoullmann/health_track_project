@@ -4,13 +4,13 @@
 <createdTime>2018-09-15 15:21:55 UTC</createdTime>
 <generatorID>CBE93B0D-4089-831F-32C0-201DF128AE73</generatorID>
 <ownerDesignName>DB-Healthtrack</ownerDesignName>
-<referredTableLongName>T_ENDERECO</referredTableLongName>
+<referredTableLongName>T_END</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>598C617C-CC9B-DCB6-1F61-27B3EF302623</referredTableID>
 <keyObject>F4354DDF-676F-1E72-DF5D-2297B4193850</keyObject>
 <referredKeyID>F4354DDF-676F-1E72-DF5D-2297B4193850</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>cd_endereco</refColNames>
+<refColNames>cd_end</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>

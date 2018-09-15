@@ -4,13 +4,13 @@
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
 <generatorID>93768AD9-BD52-EC60-D640-1D39241BC2E2</generatorID>
 <ownerDesignName>DB-Healthtrack</ownerDesignName>
-<referredTableLongName>T_USUARIO</referredTableLongName>
+<referredTableLongName>T_USER</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075</referredTableID>
 <keyObject>093A8340-1B51-A839-03BC-F196E147AB5B</keyObject>
 <referredKeyID>093A8340-1B51-A839-03BC-F196E147AB5B</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>cd_usuario</refColNames>
+<refColNames>cd_user</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
