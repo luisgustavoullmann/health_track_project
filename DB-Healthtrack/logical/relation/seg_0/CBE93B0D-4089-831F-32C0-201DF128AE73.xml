@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="morarv1" directorySegmentName="seg_0" id="CBE93B0D-4089-831F-32C0-201DF128AE73">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 14:01:36 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<sourcePk>1A85A99B-D094-D964-36C8-3EAB8A7EF477</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4B0AF3CA-7738-CDEB-8C34-47BB0C2F8767</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F2F8DBF2-E81C-0FAE-BA50-85C39DD7BEBC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

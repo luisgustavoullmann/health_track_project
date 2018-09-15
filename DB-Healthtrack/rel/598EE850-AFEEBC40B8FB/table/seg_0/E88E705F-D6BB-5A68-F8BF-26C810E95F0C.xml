@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E88E705F-D6BB-5A68-F8BF-26C810E95F0C" name="T_DIETA">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:49 UTC</createdTime>
+<generatorID>6378CACD-794D-4F9A-EC8A-A0C1D654BCBE</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ordsAlias>t_alimentacao</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_dieta" id="AF0E4C42-B556-259D-ABB0-506ECBECE4EE">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:50 UTC</createdTime>
+<generatorID>A39D20B7-F943-42D4-D151-C0C54D079C22</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="T_T_ALI_cd_alimento" id="969D4D1C-D9A3-A72B-95EB-221076A0546F">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:38:34 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_alimento" id="3DE05808-AC09-49BE-7E4A-4739D2965A6B">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:50 UTC</createdTime>
+<generatorID>93875897-1D23-4F24-9B17-C2E1993DA9F1</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtd_caloria" id="77EF481E-3AC3-2198-D182-5168B0A43CA1">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:50 UTC</createdTime>
+<generatorID>0F36D4DF-6BCA-E672-D40F-85CA84BE5020</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_tipo" id="B07723F7-A4A5-F6CF-9B4A-7F666BF89B3C">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 15:12:20 UTC</createdTime>
+<generatorID>E4BC753C-24AA-FEE4-3842-3FDEE286DFE9</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtd_padraocaloria" id="EEE29EDA-73DC-61CE-49D8-83C6A206BBD8">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 15:12:20 UTC</createdTime>
+<generatorID>784D8153-FC67-BC57-BE8F-181D8EDF4B51</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_data" id="01378400-8065-5B69-A8CF-498E1A5FC88D">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 15:12:20 UTC</createdTime>
+<generatorID>53EAFEE6-8C8C-E00D-217A-308C86E48F00</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D7B5187E-6AAD-F482-43D9-F1ECEFFF20BB" name="T_DIETA_PK">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:50 UTC</createdTime>
+<generatorID>6684F22D-1D92-934D-5C5C-3703B319FDED</generatorID>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF0E4C42-B556-259D-ABB0-506ECBECE4EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

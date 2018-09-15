@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4B0AF3CA-7738-CDEB-8C34-47BB0C2F8767" name="T_ENDERECO">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:35:47 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_endereco" id="7445B9EF-EB71-42D9-477E-490D4B7EEBC5">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 13:05:49 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_logradouro" id="1469DB28-67F4-9C4B-0DD2-870ADB0D60F3">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 13:05:57 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_logradouro" id="55B60E66-A2EA-90F9-DF09-EE7AEAEC85A6">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 14:29:59 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_cep" id="0A8ECCF2-9CA0-AD55-76A7-95015FC6C149">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 14:30:41 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_bairro" id="30AC5798-0CD0-E253-146F-8031779014D1">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 14:31:16 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_cidade" id="C17E31EC-BE82-E7DB-44DD-ABB32017516B">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 14:31:54 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_estado" id="B8CDF4C3-14A5-1CE3-2489-E78D397F0F4A">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 14:32:13 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_endereco" id="3B69319E-E0C1-5EFB-F06F-634F46920127">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-15 14:32:28 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1A85A99B-D094-D964-36C8-3EAB8A7EF477" name="T_ENDERECO PK">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 13:05:53 UTC</createdTime>
+<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7445B9EF-EB71-42D9-477E-490D4B7EEBC5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
