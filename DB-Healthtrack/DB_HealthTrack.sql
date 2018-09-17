@@ -125,3 +125,25 @@ ALTER TABLE t_user_art
 ALTER TABLE t_user_art
     ADD CONSTRAINT fk_tupre_us FOREIGN KEY ( t_user_cd_user )
         REFERENCES t_user ( cd_user );
+
+
+--	Consultar os dados de um determinado usuário (filtrar a partir do seu código);
+SELECT * FROM t_user WHERE cd_user = ?;
+--	Consultar todos os dados de todos os registros de peso de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
+SELECT nr_peso FROM t_user WHERE cd_user = ? ORDER BY nr_peso ASC;
+--	Consultar todos os dados de um único registro de peso de um determinado usuário (filtrar a partir do código do usuário e do código de peso);
+-- No meu modelo os dados de peso estão registrados na mesma tabela que o a do usuário. Devo alterar o projeto para ter uma tabela somente de peso?
+--	Consultar todos os dados de todos os registros de pressão arterial de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
+SELECT * FROM t_prearterial WHERE cd_user = ? ORDER BY dt_data ASC;
+--	Consultar todos os dados de um único registro de pressão arterial de um determinado usuário (filtrar a partir do código do usuário e do código de pressão);
+SELECT * FROM t_prearterial WHERE cd_user = ? AND cd_pres_art = ? ORDER BY dt_data ASC;
+--	Consultar todos os dados de todos os registros de atividade física de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
+SELECT * FROM t_exercicio WHERE cd_user = ? ORDER BY dt_data ASC;
+--	Consultar todos os dados de um único registro de atividade física de um determinado usuário (filtrar a partir do código do usuário e do código de atividade);
+SELECT * FROM t_exercicio WHERE cd_user = ? AND cd_exercicio = ? ORDER BY dt_data ASC;
+--	Consultar todos os dados de todos os registros de alimentos ingeridos de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
+SELECT * FROM t_dieta WHERE cd_user = ? ORDER BY dt_data ASC;
+--	Consultar todos os dados de um único registro de alimento ingerido de um determinado usuário (filtrar a partir do código do usuário e do código de alimento);
+SELECT * FROM t_dieta WHERE cd_user = ? AND cd_dieta = ? ORDER BY dt_data ASC;
+--	Consultar os dados básicos de um determinado usuário, o último peso registrado e a última pressão arterial registrada (filtrar a partir do código de usuário – consulta necessária para o dashboard, dica: veja consulta com junções).
+SELECT * FROM t_user WHERE cd_user = ?
