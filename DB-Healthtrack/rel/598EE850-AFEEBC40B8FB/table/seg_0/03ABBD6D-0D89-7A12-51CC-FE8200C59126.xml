@@ -20,17 +20,6 @@
 <ownDataTypeParameters>,6,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="T_T_EXER_cd_tipo_exercicio" id="614BCAEB-5A40-7371-7557-0D1F2C81BA9A">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-28 15:11:40 UTC</createdTime>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="nm_tipo" id="19EBA6DB-A52F-3CEC-26BD-FFEB157A4D9B">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>

@@ -21,17 +21,6 @@
 <ownDataTypeParameters>,6,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="T_T_ALI_cd_alimento" id="969D4D1C-D9A3-A72B-95EB-221076A0546F">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-28 15:38:34 UTC</createdTime>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="nm_alimento" id="3DE05808-AC09-49BE-7E4A-4739D2965A6B">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:50 UTC</createdTime>

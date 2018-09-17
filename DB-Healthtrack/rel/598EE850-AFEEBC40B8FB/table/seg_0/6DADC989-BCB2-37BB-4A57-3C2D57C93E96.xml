@@ -20,40 +20,6 @@
 <ownDataTypeParameters>,6,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="T_TIPO_ART_cd_pre_arterial" id="A66337AF-7CE7-89DA-8264-B7B2D32923B5">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-10 21:49:51 UTC</createdTime>
-<generatorID>267C5B33-C626-AD20-33B3-CCD742D65AD9</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="sg_pressao_art" id="24383706-5B04-B3CF-90AD-B1420710F73F">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-10 21:49:51 UTC</createdTime>
-<generatorID>421F6CDE-9F7A-14FE-BA06-2F53E33A7700</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="nr_pre_arterial" id="6A32BD86-CD2B-AC9C-3185-765319E93999">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-10 21:49:51 UTC</createdTime>
-<generatorID>D7A55711-A9F6-A142-211E-3A5766AE5FC2</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT021</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="nr_dado" id="35C4F42B-7039-D599-2F72-B74EBDA7E2FD">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-15 15:12:20 UTC</createdTime>
