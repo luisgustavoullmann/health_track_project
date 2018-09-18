@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DB-Healthtrack" id="15B00BC4-9DE9-D00E-66ED-0EC5EC3D7817" version="3.5">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-09 12:14:54 UTC</createdTime>
-<ownerDesignName>Aqtividade_Cap_10</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>15B00BC4-9DE9-D00E-66ED-0EC5EC3D7817</designId>
-</OSDM_Design>

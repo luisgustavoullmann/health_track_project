@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="4F1002F1-3D70-3403-877E-057F9032A2E2" mainViewID="C7BB12BF-AA19-F40C-2296-A8D6D1464F09">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-09 12:14:54 UTC</createdTime>
-<ownerDesignName>Aqtividade_Cap_10</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</LogicalDesign>

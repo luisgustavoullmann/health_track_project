@@ -1,15 +1,14 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075" name="T_USER">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075" name="T_USUARIO">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>78ED820C-E239-4F93-DFEF-5E290E9A6815</generatorID>
 <ownerDesignName>DB-Healthtrack</ownerDesignName>
-<ordsAlias>t_usuario</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_user" id="231A1174-712B-56A8-E1D3-BB2B011702D9">
+<Column name="cd_usuario" id="231A1174-712B-56A8-E1D3-BB2B011702D9">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>AE58967B-9C3F-7249-2B51-96D25AC1E2C1</generatorID>
@@ -55,19 +54,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="nr_peso" id="1D791930-094C-CACE-DBAA-0225E50CA4A2">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>8FC3A529-FCF2-F788-85FD-5F005D54D8AF</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,5,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="nr_altura" id="D23E13E4-E9BA-AD5A-0C08-3FDE0ADCAD62">
@@ -155,7 +141,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="093A8340-1B51-A839-03BC-F196E147AB5B" name="PK_HT_USER">
+<ind_PK_UK id="093A8340-1B51-A839-03BC-F196E147AB5B" name="T_USUARIO_PK">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>A6BAADC1-F471-68E2-AC27-C53E1008CA55</generatorID>
