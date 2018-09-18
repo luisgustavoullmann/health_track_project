@@ -146,4 +146,9 @@ SELECT * FROM t_dieta WHERE cd_user = ? ORDER BY dt_data ASC;
 --	Consultar todos os dados de um único registro de alimento ingerido de um determinado usuário (filtrar a partir do código do usuário e do código de alimento);
 SELECT * FROM t_dieta WHERE cd_user = ? AND cd_dieta = ? ORDER BY dt_data ASC;
 --	Consultar os dados básicos de um determinado usuário, o último peso registrado e a última pressão arterial registrada (filtrar a partir do código de usuário – consulta necessária para o dashboard, dica: veja consulta com junções).
-SELECT * FROM t_user WHERE cd_user = ?
+-- INNER JOIN COMO DUAS OU MAIS TABELAS e peso é um atributo de Usuário, não fiz como entity.
+SELECT * 
+FROM t_user U INNER JOIN
+t_prearterial P 
+USING (cd_user)
+ORDER BY nr_peso ASC AND dt_data ASC;
