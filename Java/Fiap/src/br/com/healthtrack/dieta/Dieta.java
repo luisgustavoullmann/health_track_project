@@ -18,6 +18,10 @@ public class Dieta {
 
 	//Métodos
 	
+	public Dieta(int code, String name, double caloria1, String type, double padcaloria, Calendar dataDieta) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void dadoDieta() {
 		Scanner alimento = new Scanner(System.in);
 		/*Instancia class Dieta
