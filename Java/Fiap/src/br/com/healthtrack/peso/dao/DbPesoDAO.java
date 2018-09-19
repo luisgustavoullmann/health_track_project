@@ -6,7 +6,7 @@ import java.util.*;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 import br.com.healthtrack.peso.Peso;
 
-public class PesoDAO {
+public class DbPesoDAO {
 	private Connection conexao;
 	
 	/*
