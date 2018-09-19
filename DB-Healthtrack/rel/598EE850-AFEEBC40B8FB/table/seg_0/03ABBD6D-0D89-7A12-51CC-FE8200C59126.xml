@@ -32,17 +32,6 @@
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_tempo" id="32F182D2-A008-B2B4-5827-67732B46473B">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-05-10 21:49:50 UTC</createdTime>
-<generatorID>17C1E653-A815-2F04-E5CD-7DD5D096BC7E</generatorID>
-<ownerDesignName>DB-HealthTrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="dt_data" id="52F94AA3-42EF-7797-C503-1C6ECAA5B384">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-09-19 13:26:44 UTC</createdTime>
@@ -72,7 +61,6 @@
 <createdTime>2018-09-19 13:26:44 UTC</createdTime>
 <generatorID>EEA904B1-8C30-25BF-98F7-588EA3AF56FB</generatorID>
 <ownerDesignName>DB-HealthTrack</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT047</logicalDatatype>
@@ -85,7 +73,6 @@
 <createdTime>2018-09-19 13:26:44 UTC</createdTime>
 <generatorID>FF717562-7C1A-A3E7-F37A-5627E3C88C6E</generatorID>
 <ownerDesignName>DB-HealthTrack</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

@@ -4,16 +4,17 @@ import java.util.*;
 
 /*Classe que abstrai dados de exercícios físicos
  * @author Luis Gustavo Ullmann
- * @version 1.7
+ * @version 1.8
  * */
 
 public abstract class Exercicio {
 	//Atributos
+	protected int cdExercicio;
 	protected String tipo; //natação, corrida, caminhada..
 	protected double km;
-	protected Calendar tempo;//Alterar para calendar
+	protected Calendar tempo;//qtd_tempo
 	protected double padraoKm;
-	protected Calendar padraoTempo;//alterar para calendar
+	protected Calendar padraoTempo;
 	protected Calendar data;
 		
 	
@@ -23,28 +24,21 @@ public abstract class Exercicio {
 		System.out.println("Data do exercício: ");
 		this.setData(data);
 		
-		Scanner km = new Scanner(System.in);
 		System.out.println("Quantos km: ");
-		this.setKm(km.nextDouble());
+		this.setKm(ex.nextDouble());
 		
-		Scanner time = new Scanner(System.in);
 		System.out.println("Quanto tempo: ");
 		this.setTempo(padraoTempo);
 		
-		Scanner padkm = new Scanner(System.in);
 		System.out.println("Qual o seu padrão de km percorrido: ");
 		this.setPadraoKm(padraoKm);
 		
-		Scanner padtempo = new Scanner(System.in);
 		System.out.println("Qual o seu padrão de tempo: ");
 		this.setPadraoTempo(padraoTempo);
 		
 		/*Fecha o objeto*/
 		ex.close();
-		km.close();
-		time.close();
-		padkm.close();
-		padtempo.close();
+		
 		
 	}
 	
@@ -67,6 +61,15 @@ public abstract class Exercicio {
 	}
 
 	//Getters and Setters
+	public int getCdExercicio() {
+		return cdExercicio;
+	}
+
+	public void setCdExercicio(int cdExercicio) {
+		this.cdExercicio = cdExercicio;
+	}
+	
+	
 	public String getTipo() {
 		return tipo;
 	}

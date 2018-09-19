@@ -3,7 +3,7 @@ package br.com.healthtrack.exercicio;
 public final class Caminhada extends Exercicio {
 	/*Atribuição
 	 * @param tipo como String caminhada
-	 * @version 1.4
+	 * @version 1.5
 	 */
 	private String tipo = "caminhada";
 	
@@ -11,6 +11,7 @@ public final class Caminhada extends Exercicio {
 	/*Retorna dados do exercicio*/
 	@Override
 	public void infoEx() {
+		super();
 		if(!(this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() < this.getPadraoKm())) {
 			System.out.println("O seu tempo e Km na " + this.getTipo() + ", estão abaixo do padrão.");
 		} else if((this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() < this.getPadraoKm())) {

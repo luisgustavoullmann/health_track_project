@@ -25,11 +25,10 @@ ALTER TABLE t_endereco ADD CONSTRAINT pk_t_end PRIMARY KEY ( cd_endereco );
 CREATE TABLE t_exercicio (
     cd_exercicio      NUMBER(6) NOT NULL,
     nm_tipo           NVARCHAR2(30) NOT NULL,
-    nr_tempo          DATE NOT NULL,
     dt_data           DATE NOT NULL,
     nr_km             NUMBER(8,2) NOT NULL,
-    qtd_tempo         TIMESTAMP(9) WITH LOCAL TIME ZONE,
-    nr_padraokm       NUMBER(8,2),
+    qtd_tempo         TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL,
+    nr_padraokm       NUMBER(8,2) NOT NULL,
     qtd_padraotempo   TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL
 );
 
