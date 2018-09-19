@@ -1,9 +1,6 @@
 package br.com.healthtrack.exercicio;
 
-import java.sql.Time;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 /*Classe que abstrai dados de exercícios físicos
  * @author Luis Gustavo Ullmann
@@ -14,9 +11,9 @@ public abstract class Exercicio {
 	//Atributos
 	protected String tipo; //natação, corrida, caminhada..
 	protected double km;
-	protected Time tempo;//Alterar para calendar
+	protected Calendar tempo;//Alterar para calendar
 	protected double padraoKm;
-	protected Time padraoTempo;//alterar para calendar
+	protected Calendar padraoTempo;//alterar para calendar
 	protected Calendar data;
 		
 	
@@ -32,15 +29,15 @@ public abstract class Exercicio {
 		
 		Scanner time = new Scanner(System.in);
 		System.out.println("Quanto tempo: ");
-		this.setTempo(time.next()); /*Como fazer para tempo?*/
+		this.setTempo(padraoTempo);
 		
-		Scanner padkm = new ScannSer(System.in);
+		Scanner padkm = new Scanner(System.in);
 		System.out.println("Qual o seu padrão de km percorrido: ");
-		this.setPadraoKm(padkm.nextDouble());
+		this.setPadraoKm(padraoKm);
 		
 		Scanner padtempo = new Scanner(System.in);
 		System.out.println("Qual o seu padrão de tempo: ");
-		this.setPadraoTempo(padtempo.next()); /*Como fazer?*/
+		this.setPadraoTempo(padraoTempo);
 		
 		/*Fecha o objeto*/
 		ex.close();
@@ -86,11 +83,11 @@ public abstract class Exercicio {
 		this.km = km;
 	}
 
-	public Time getTempo() {
+	public Calendar getTempo() {
 		return tempo;
 	}
 
-	public void setTempo(Time tempo) {
+	public void setTempo(Calendar tempo) {
 		this.tempo = tempo;
 	}
 
@@ -102,11 +99,11 @@ public abstract class Exercicio {
 		this.padraoKm = padraoKm;
 	}
 
-	public Time getPadraoTempo() {
+	public Calendar getPadraoTempo() {
 		return padraoTempo;
 	}
 
-	public void setPadraoTempo(Time padraoTempo) {
+	public void setPadraoTempo(Calendar padraoTempo) {
 		this.padraoTempo = padraoTempo;
 	}
 

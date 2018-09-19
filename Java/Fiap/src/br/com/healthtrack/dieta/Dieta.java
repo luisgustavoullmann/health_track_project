@@ -1,11 +1,10 @@
 package br.com.healthtrack.dieta;
 
-import java.util.Calendar;
-import java.util.Scanner;
+import java.util.*;
 
 /*Classe que abstrai dados de uma dieta
  * @author Luis Gustavo Ullmann
- * @version 1.7 
+ * @version 1.8 
  * */
 
 public class Dieta {
@@ -20,39 +19,33 @@ public class Dieta {
 	//Métodos
 	
 	public void dadoDieta() {
+		Scanner alimento = new Scanner(System.in);
 		/*Instancia class Dieta
 		 * @param O Nome do alimento consumido
 		 */
-		Scanner alimento = new Scanner(System.in);
 		System.out.println("O que você comeu ontem?");
 		this.setNomeAlimento(alimento.nextLine());
 		
 		/*Instancia class Dieta
 		 * @param Adiciona uma quantidade de calorias por refeição
 		 */
-		Scanner caloria = new Scanner(System.in);
 		System.out.println("Quantas calorias foram consumidas?");
-		this.addCaloria(caloria.nextDouble());
+		this.addCaloria(alimento.nextDouble());
 		
 		/*Instancia class Dieta
 		 * @param O tipo da refeição
 		 */
-		Scanner refeicao = new Scanner(System.in);
 		System.out.println("Qual refeição do dia?");
-		this.setTipo(refeicao.nextLine());
+		this.setTipo(alimento.nextLine());
 		
 		/*Instancia class Dieta
 		 * @param Se a quantidade consumida de calorias é maior, igual ou menor que o padrao para a refeição
 		 */
-		Scanner padrao = new Scanner(System.in);
 		System.out.println("Qual padrão de calorias que deseja consumir por dia?");
-		this.setPadraoCaloria(padrao.nextDouble());
+		this.setPadraoCaloria(alimento.nextDouble());
 		
 		/*Fecha o objeto*/
 		alimento.close();
-		caloria.close();
-		refeicao.close();
-		padrao.close();
 	}
 	
 	/*Retorna informações da Dieta*/
