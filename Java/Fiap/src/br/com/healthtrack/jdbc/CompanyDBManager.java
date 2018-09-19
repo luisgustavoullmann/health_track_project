@@ -1,6 +1,7 @@
 package br.com.healthtrack.jdbc;
 
-import java.sql.DriverManager;
+import java.sql.*;
+
 
 public class CompanyDBManager {
 	

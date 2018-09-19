@@ -150,8 +150,8 @@ public class DbPresArtDAO implements PresArtDAO {
 			 rs = stmt.executeQuery();
 			 
 			 if (rs.next()) {
-				 int code = rs.getInt("CD_PRES_ART");
-				 double dado = rs.getDouble("NR_DADO");
+				 int code1 = rs.getInt("CD_PRES_ART");
+				 double dado1 = rs.getDouble("NR_DADO");
 				 java.sql.Date data = rs.getDate("DT_DATA");
 				 Calendar dataPres = Calendar.getInstance();
 				 dataPres.setTimeInMillis(data.getTime());
