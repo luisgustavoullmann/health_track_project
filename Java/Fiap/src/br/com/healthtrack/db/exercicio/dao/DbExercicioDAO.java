@@ -2,6 +2,7 @@ package br.com.healthtrack.db.exercicio.dao;
 
 import java.util.*;
 
+import br.com.healthtrack.exercicio.Exercicio;
 import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 
