@@ -1,4 +1,4 @@
-package br.com.healthtrack.peso.dao;
+package br.com.healthtrack.db.peso.dao;
 
 import java.sql.*;
 import java.util.*;
@@ -6,12 +6,13 @@ import java.util.*;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 import br.com.healthtrack.peso.Peso;
 
-public class DbPesoDAO {
+public class DbPesoDAO implements PesoDAO {
 	private Connection conexao;
 	
 	/*
 	 *INSERT Peso
 	 */
+	@Override
 	public void cadastrar(Peso peso) {
 		PreparedStatement stmt = null;
 		
@@ -39,6 +40,7 @@ public class DbPesoDAO {
 		}
 	}
 	
+	@Override
 	public List<Peso> listar(){
 		//Cria uma lista de pesos
 		List<Peso> lista = new ArrayList<Peso>();
@@ -84,6 +86,7 @@ public class DbPesoDAO {
 	/*
 	 *UPDATE Peso 
 	 */
+	@Override
 	public void atualizar(Peso peso) {
 		PreparedStatement stmt = null;
 		
@@ -114,6 +117,7 @@ public class DbPesoDAO {
 	/*
 	 *DELETE Peso 
 	 */
+	@Override
 	public void remover(int code) {
 		PreparedStatement stmt = null;
 		
@@ -135,6 +139,10 @@ public class DbPesoDAO {
 		}
 	}
 	
+	/*
+	 * @param Search with ID
+	 */
+	@Override
 	public Peso searchId(int codeSearch) {
 		Peso peso = null;
 		PreparedStatement stmt = null;
