@@ -5,9 +5,9 @@ import java.util.*;
 import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.dieta.Dieta;
 import br.com.healthtrack.endereco.Endereco;
-import br.com.healthtrack.exercicio.Caminhada;
-import br.com.healthtrack.exercicio.Corrida;
-import br.com.healthtrack.exercicio.Natacao;
+import br.com.healthtrack.exercicio.outdoor.Caminhada;
+import br.com.healthtrack.exercicio.outdoor.Corrida;
+import br.com.healthtrack.exercicio.outdoor.Natacao;
 import br.com.healthtrack.peso.Peso;
 
 /* Classe que abstrai o cadastro de um Usuario e seu Endereço

@@ -1,9 +1,11 @@
-package br.com.healthtrack.exercicio;
+package br.com.healthtrack.exercicio.outdoor;
 
-public final class Caminhada extends Exercicio {
+import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
+
+public final class Caminhada extends ExercicioOutdoor {
 	/*Atribuição
 	 * @param tipo como String caminhada
-	 * @version 1.5
+	 * @version 1.6
 	 */
 	private String tipo = "caminhada";
 	

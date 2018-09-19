@@ -1,12 +1,13 @@
-package br.com.healthtrack.exercicio;
+package br.com.healthtrack.exercicio.outdoor;
 
-public final class Corrida extends Exercicio{
+import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
+
+public final class Natacao extends ExercicioOutdoor {
 	/*Atribuição
-	 * @param tipo como String corrida
-	 * @version 1.4
+	 * @param tipo como String natação
+	 * @version 1.6
 	 */
-	private String tipo = "corrida";
-	
+	private String tipo = "natação";
 	
 	/*Retorna info do exercicio*/
 	@Override
@@ -24,7 +25,7 @@ public final class Corrida extends Exercicio{
 			System.out.println("Há algo de errado com os dados da "+ this.getTipo() +".");
 		}
 	}
-	
+
 	public String getTipo() {
 		return tipo;
 	}

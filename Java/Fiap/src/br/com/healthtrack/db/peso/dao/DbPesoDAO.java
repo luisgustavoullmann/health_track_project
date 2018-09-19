@@ -18,7 +18,8 @@ public class DbPesoDAO implements PesoDAO {
 		
 		try {
 			conexao = CompanyDBManager.obterConexao();
-			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA)";
+			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA)"
+					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, ?)";
 			
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, peso.getCdPeso());
