@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="379CE163-E609-E82D-C919-F40B0E107FA7" name="T_EXERCICIO">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:34:34 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_exercicio" id="C0456CF7-64AA-382F-3C09-AFE9193CC1F7">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:45:31 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_tipo" id="0196CB94-8E59-532D-D3FF-7541FA033CA2">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:45:40 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data" id="FD7BE123-3A25-0D4F-569D-C3B779FC2847">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:11:39 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_km" id="092C30E7-D2E6-FE99-3CBE-232F9A4A5293">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:12:41 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qtd_tempo" id="EEA904B1-8C30-25BF-98F7-588EA3AF56FB">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:12:58 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_padraokm" id="FF717562-7C1A-A3E7-F37A-5627E3C88C6E">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:13:19 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qtd_padraotempo" id="EBCAB71E-D6DA-CB1A-472E-727C595CA5FF">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:13:46 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6D5D9E3F-4B5E-D5D7-89C2-2ABE1EB5DA29" name="pk_t_exercicio">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:45:39 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>C0456CF7-64AA-382F-3C09-AFE9193CC1F7</newElementsIDs>
+<usedAttributes>
+<attributeRef>C0456CF7-64AA-382F-3C09-AFE9193CC1F7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

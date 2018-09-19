@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="10E13E92-5B60-FDA6-6C71-8109AA53B63A" containerWithKeyObject="A70FAA9A-9D11-4C90-57E7-FF3E062C8FDF" localFKIndex="3360DDAA-0D8A-9647-D05F-C8590EB1145F" name="FK_USED_END">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>CBE93B0D-4089-831F-32C0-201DF128AE73</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<referredTableLongName>T_ENDERECO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>598C617C-CC9B-DCB6-1F61-27B3EF302623</referredTableID>
+<keyObject>F4354DDF-676F-1E72-DF5D-2297B4193850</keyObject>
+<referredKeyID>F4354DDF-676F-1E72-DF5D-2297B4193850</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_endereco</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

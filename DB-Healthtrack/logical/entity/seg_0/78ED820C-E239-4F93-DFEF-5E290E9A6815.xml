@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="78ED820C-E239-4F93-DFEF-5E290E9A6815" name="T_USER">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:33:19 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_user" id="AE58967B-9C3F-7249-2B51-96D25AC1E2C1">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:44:04 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_usuario" id="06B939B1-0BC9-AD9B-7A43-0D612E7E0DAA">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:44:15 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_email" id="3C33F4C7-8BBB-CA2E-B11C-81809D588FA2">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:23:05 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_idade" id="6D84735C-420D-B680-AAA9-0BE4B11400CE">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:23:17 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_telefone" id="4E16EAE0-AFF0-5C16-4464-59026DE6DC60">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:23:37 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_cpf" id="C9F7D400-89E7-3B58-4ECF-8B044BF2614F">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:23:54 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_sexo" id="5D07B520-5EC1-2406-A53F-905A4C150FCF">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:24:21 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="37AB9528-592D-5978-3984-E7CE23E27DCB">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:24:42 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_cadastro" id="D8C65023-0BD6-CBEA-CB75-43EEE3500DB7">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:24:59 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_password" id="3160AE0E-203A-4E3E-D2F3-BB15735D8C52">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:25:11 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A6BAADC1-F471-68E2-AC27-C53E1008CA55" name="pk_t_user">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:44:13 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>AE58967B-9C3F-7249-2B51-96D25AC1E2C1</newElementsIDs>
+<usedAttributes>
+<attributeRef>AE58967B-9C3F-7249-2B51-96D25AC1E2C1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

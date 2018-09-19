@@ -1,18 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075" name="T_USUARIO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65F0F1DC-EF80-BB1F-A5B9-E099BCE3D075" name="T_USER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>78ED820C-E239-4F93-DFEF-5E290E9A6815</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<ordsAlias>t_usuario</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_usuario" id="231A1174-712B-56A8-E1D3-BB2B011702D9">
+<Column name="cd_user" id="231A1174-712B-56A8-E1D3-BB2B011702D9">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>AE58967B-9C3F-7249-2B51-96D25AC1E2C1</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -24,31 +25,31 @@
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>06B939B1-0BC9-AD9B-7A43-0D612E7E0DAA</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_email" id="0E7A0F2D-76DB-B24E-EC96-3F50AEAE77E8">
+<Column name="nm_email" id="C6AFFE80-8844-6C20-7EFC-1C11DD7039A5">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>AD251E15-E4C3-32C1-C5B7-D812CACFD2DD</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>3C33F4C7-8BBB-CA2E-B11C-81809D588FA2</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_idade" id="C0A585CD-F5E7-8CC0-E3CF-043AB42AC6BA">
+<Column name="nr_idade" id="CBE776F4-7E9E-5640-EEE8-533FCC62F175">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>0031466B-1AF5-7C9E-C07E-DE4E62C425C9</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>6D84735C-420D-B680-AAA9-0BE4B11400CE</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -56,96 +57,83 @@
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_altura" id="D23E13E4-E9BA-AD5A-0C08-3FDE0ADCAD62">
+<Column name="nr_telefone" id="460F4AB3-2921-12CE-A869-A3CD07176E6A">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>823353EF-F0CA-FBD3-A15D-F6CD7EB4440A</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>4E16EAE0-AFF0-5C16-4464-59026DE6DC60</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,3,2</ownDataTypeParameters>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_telefone" id="F56D7DF1-90CA-C559-18C6-E96BA3D5DD01">
+<Column name="nr_cpf" id="B70344E5-EC1A-C643-0BA0-1DDA3E085DA1">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>2BD5D328-2B60-6475-D5AD-36078A451E5F</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>C9F7D400-89E7-3B58-4ECF-8B044BF2614F</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_cpf" id="6FD89580-1668-A9CF-3AAB-D35C5984BCFF">
+<Column name="ds_sexo" id="3213B635-1A41-3ECA-0C58-1E15DAD77653">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>B39982D8-178E-AD43-C8E1-C5D125CE69D2</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>5D07B520-5EC1-2406-A53F-905A4C150FCF</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>30</dataTypePrecision>
-<ownDataTypeParameters>,30,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="ds_sexo" id="A4DA7BA3-2C04-73FA-08B3-83964502718F">
-<createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>55B035DD-37DA-EB71-707A-8DFA92534318</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>12</dataTypeSize>
 <ownDataTypeParameters>12,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="dt_nascimento" id="1C6FFC4B-C1AE-BA56-5E6E-68FBEF4D0E22">
+<Column name="dt_nascimento" id="64FDB9B0-DA46-0051-483E-1F8274A1F707">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>374129AD-9F4C-B993-E970-B118E75AF9AC</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>37AB9528-592D-5978-3984-E7CE23E27DCB</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="dt_cadastro" id="17158BBD-B236-52F6-2231-7B4BE581C94B">
+<Column name="dt_cadastro" id="BD533EFA-24E2-377F-9855-ACDB9A01C2A2">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>DB70E938-6917-DFB7-09AC-4F1226EEDF70</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>D8C65023-0BD6-CBEA-CB75-43EEE3500DB7</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_password" id="A25A8B72-D2BB-9E84-9458-BE81962B8D88">
+<Column name="nr_password" id="1030512C-A9F0-2126-1C87-840DDF8BBFF3">
 <createdBy>Luis Gustavo Ullmann</createdBy>
-<createdTime>2018-09-15 15:12:20 UTC</createdTime>
-<generatorID>93B89FA7-10C9-C72A-CB4C-F2846206786C</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>3160AE0E-203A-4E3E-D2F3-BB15735D8C52</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="093A8340-1B51-A839-03BC-F196E147AB5B" name="T_USUARIO_PK">
+<ind_PK_UK id="093A8340-1B51-A839-03BC-F196E147AB5B" name="PK_T_USER">
 <createdBy>Luis Gustavo Ullmann</createdBy>
 <createdTime>2018-05-10 21:49:51 UTC</createdTime>
 <generatorID>A6BAADC1-F471-68E2-AC27-C53E1008CA55</generatorID>
-<ownerDesignName>DB-Healthtrack</ownerDesignName>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>

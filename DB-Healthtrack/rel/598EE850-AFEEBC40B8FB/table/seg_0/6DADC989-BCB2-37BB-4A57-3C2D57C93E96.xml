@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6DADC989-BCB2-37BB-4A57-3C2D57C93E96" name="T_PREARTERIAL">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>B579A455-549A-62F7-EAFF-F170CC892DB3</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_pres_art" id="93A043FE-E151-5288-DFF6-D38CC90057E9">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>0990D326-6D87-4567-9C10-4760E81E1A11</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_dado" id="24383706-5B04-B3CF-90AD-B1420710F73F">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>421F6CDE-9F7A-14FE-BA06-2F53E33A7700</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_data" id="6A32BD86-CD2B-AC9C-3185-765319E93999">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>D7A55711-A9F6-A142-211E-3A5766AE5FC2</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_padrao" id="6E6D0CF9-C8C1-408E-F1F5-E3DCEB073E84">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>16D57453-AD86-5484-7374-D533CB17253A</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10332D47-51A2-45BA-0C91-D20C32F930EF" name="PK_T_PREARTERIAL">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>13E7B05E-8412-33B1-F7F9-B7D7109093F0</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93A043FE-E151-5288-DFF6-D38CC90057E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

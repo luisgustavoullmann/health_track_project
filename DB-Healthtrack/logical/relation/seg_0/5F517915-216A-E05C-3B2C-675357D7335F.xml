@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="auferir" directorySegmentName="seg_0" id="5F517915-216A-E05C-3B2C-675357D7335F">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 13:13:59 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<sourcePk>A6BAADC1-F471-68E2-AC27-C53E1008CA55</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>78ED820C-E239-4F93-DFEF-5E290E9A6815</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5DA716E0-DEFD-27FE-C3C9-1F35C1E6E291</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

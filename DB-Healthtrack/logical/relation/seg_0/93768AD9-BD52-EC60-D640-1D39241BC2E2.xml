@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="morar" directorySegmentName="seg_0" id="93768AD9-BD52-EC60-D640-1D39241BC2E2">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-09 12:47:29 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<engineerTo>
+<item key="598EE850-C1F2-C79E-850F-AFEEBC40B8FB" value="true"/>
+</engineerTo>
+<sourcePk>A6BAADC1-F471-68E2-AC27-C53E1008CA55</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>78ED820C-E239-4F93-DFEF-5E290E9A6815</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F2F8DBF2-E81C-0FAE-BA50-85C39DD7BEBC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

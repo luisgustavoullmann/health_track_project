@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE50726E-E208-BA20-8D10-26929A4A1786" containerWithKeyObject="D95B373F-6EC7-EE43-E236-6E0D2F70688D" localFKIndex="E3DD0CF9-0E49-ED77-9FBC-67D9CCA87197" name="FK_USPE_PE">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:30:18 UTC</createdTime>
+<generatorID>387E4995-3B07-3DDA-FE7C-C144A86D958A</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<referredTableLongName>T_PESO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EFFDF147-1DB7-83BA-F428-85C82EBC6D23</referredTableID>
+<keyObject>EB07D160-D3D1-900C-EAEB-F5683DC2945D</keyObject>
+<referredKeyID>EB07D160-D3D1-900C-EAEB-F5683DC2945D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_peso</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

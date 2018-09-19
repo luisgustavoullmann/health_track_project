@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A004856D-4178-7EFE-56C6-4EEF544313E6" name="T_USER_EX">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>F00416A6-865C-1EE1-74FD-545C78BCCF19</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<ordsAlias>t_usuario_exercicio</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_USER_cd_user" id="1A8B3017-1133-5109-DE30-2C01C7D0D9C8">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:29:00 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89FAC796-9376-DB26-C0F2-88D2891A727E" referredColumn="231A1174-712B-56A8-E1D3-BB2B011702D9"/>
+</associations>
+</Column>
+<Column name="T_EXERCICIO_cd_exercicio" id="9DCE9F94-0E19-9C35-A99C-0CC1B4A78DF6">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>AA7D6748-2C8B-AA32-BFA3-8C7A61CD438B</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7987698B-206D-B2C7-6F02-EEA09E08CD62" referredColumn="746DBA37-64E6-6F3F-A599-F21B45DD0D22"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="58097BBF-5A46-938A-C531-9783C5C7B141" name="PK_HT_USEX">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>22EB8708-EC2A-8982-1C24-42834ED05FB1</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DCE9F94-0E19-9C35-A99C-0CC1B4A78DF6"/>
+<colUsage columnID="1A8B3017-1133-5109-DE30-2C01C7D0D9C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF99FB6C-4C92-0854-8DA6-F2E27943CA4E" name="FK_USEX_US">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:29:00 UTC</createdTime>
+<generatorID>A6BAADC1-F471-68E2-AC27-C53E1008CA55</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A8B3017-1133-5109-DE30-2C01C7D0D9C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B18ED394-8B10-84CA-E6B7-C5CC8FEDD379" name="FK_USEX_EX">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:26:44 UTC</createdTime>
+<generatorID>E1D3D28F-4308-D648-58BE-255D3C436081</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DCE9F94-0E19-9C35-A99C-0CC1B4A78DF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

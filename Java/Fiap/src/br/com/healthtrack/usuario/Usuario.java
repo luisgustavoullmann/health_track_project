@@ -1,7 +1,6 @@
 package br.com.healthtrack.usuario;
 
-import java.util.Calendar;
-import java.util.Scanner;
+import java.util.*;
 
 import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.dieta.Dieta;
@@ -9,6 +8,7 @@ import br.com.healthtrack.endereco.Endereco;
 import br.com.healthtrack.exercicio.Caminhada;
 import br.com.healthtrack.exercicio.Corrida;
 import br.com.healthtrack.exercicio.Natacao;
+import br.com.healthtrack.peso.Peso;
 
 /* Classe que abstrai o cadastro de um Usuario e seu Endereço
  * @author Luis Gustavo Ullmann
@@ -21,8 +21,6 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private int idade;
-	private float peso;
-	private float altura;
 	private int telefone;
 	private int cpf;
 	private String sexo;
@@ -33,54 +31,37 @@ public class Usuario {
 	
 	
 	public void dadoUser() {
-	 /*Instancia class Usuario
+		/*Instancia class Usuario
 		 * @param A nome do usuario
 		 */
-		Scanner name = new Scanner(System.in);
+		Scanner us = new Scanner(System.in);
 		System.out.print("Digite o seu nome: ");
-		this.setNome(name.nextLine());
+		this.setNome(us.nextLine());
 		
 		/*Instancia class Usuario
 		 * @param A idade do usuario
 		 */
-		Scanner id = new Scanner(System.in);
 		System.out.print("Digite a sua idade: ");
-		this.setIdade(id.nextInt());
+		this.setIdade(us.nextInt());
 		
-		/*Instancia class Usuario
-		 * @param O peso para calculo do IMC
-		 */
-		Scanner ps = new Scanner(System.in);
-		System.out.print("Digite o seu peso: ");
-		this.setPeso(ps.nextFloat());
-		
-		/*Instancia class Usuario
-		 * @param O altura para calculo do IMC
-		 */
-		Scanner alt = new Scanner(System.in);
-		System.out.print("Digite a sua altura: ");
-		this.setAltura(alt.nextFloat());
 		
 		/*Instancia class Usuario
 		 * @param O telefone para contato
 		 */
-		Scanner tel = new Scanner(System.in);
 		System.out.print("Digite o seu telefone: ");
-		this.setTelefone(tel.nextInt());
+		this.setTelefone(us.nextInt());
 		
 		/*Instancia class Usuario
 		 * @param O CPF do usuario
 		 */
-		Scanner cp = new Scanner(System.in);
 		System.out.print("Digite o seu CPF: ");
-		this.setCpf(cp.nextInt());
+		this.setCpf(us.nextInt());
 		
 		/*Instancia class Usuario
 		 * @param O opção sexual
 		 */
-		Scanner sex = new Scanner(System.in);
 		System.out.print("Digite o seu sexo [M/F]: ");
-		this.setSexo(sex.nextLine());
+		this.setSexo(us.nextLine());
 		
 				
 		/*=========== INICIA O ENDERECO ==========*/
@@ -142,41 +123,28 @@ public class Usuario {
 		
 				
 		/*Fecha o objeto*/
-				name.close();
-				id.close();
-				ps.close();
-				alt.close();
-				tel.close();
-				cp.close();
-				sex.close();
+				us.close();
 	}
-	
-	
+		
 	
 	//Método que cálcula o IMC e imprime o seu resultado
 	public void imc() {
 		
+		/*=========== INICIA A PESO ==========
+		/*Objeto de PESO para Usuario
+		 * @param dados do Peso do Usuario
+		*/
+		Peso peso = new Peso();
+		peso.peso();
+		
 		System.out.println("Seu nome é: " + this.getNome() + ", é do sexo " + this.getSexo() + "." );
 		System.out.println("Você tem " + this.getIdade() + " anos.");
-		System.out.println("Com um peso de " + this.getPeso() + " e com " + this.getAltura() + "m de altura.");
+		System.out.println("Com um peso de " + peso.getPeso() + " e com " + peso.getAltura() + "m de altura.");
 		
-		
-		double imc = this.getPeso() / (this.getAltura() * this.getAltura());
-		if(imc < 18.5) {
-			System.out.println("Seu IMC é de " + imc + ", indicando magreza.");			
-		} else if (imc >= 18.6 && imc <= 24.9) {
-			System.out.println("Seu IMC é de " + imc + ", indicando peso normal.");
-		} else if (imc >= 25 && imc <= 29.9) {
-			System.out.println("Seu IMC é de " + imc + ", indicando sobrepeso.");
-		} else if (imc >= 30 && imc <= 34.9) {
-			System.out.println("Seu IMC é de " + imc + ", indicando obesidade de grau 1.");
-		} else if (imc >= 35 && imc <= 39.9) {
-			System.out.println("Seu IMC é de " + imc + ", indicando obesidade de grau 2.");
-		} else if (imc > 40) {
-			System.out.println("Seu IMC é de " + imc + ", indicando obesidade de grau 3.");
-		} else {
-			System.out.println("Algo de errado na sua informação, tente novamente!");
-		}
+		/*
+		 * @param Call method imcPeso()
+		 * */
+		peso.imcPeso();
 	}
 	
 	//Getters and Setters
@@ -210,22 +178,6 @@ public class Usuario {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
-	}
-
-	public double getPeso() {
-		return peso;
-	}
-
-	public void setPeso(float peso) {
-		this.peso = peso;
-	}
-
-	public double getAltura() {
-		return altura;
-	}
-
-	public void setAltura(float altura) {
-		this.altura = altura;
 	}
 
 	public int getTelefone() {

@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D95B373F-6EC7-EE43-E236-6E0D2F70688D" name="T_USER_PESO">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-10 21:49:51 UTC</createdTime>
+<generatorID>F8948071-29A3-CD0A-99C4-41AD963116BF</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<ordsAlias>t_usuario_peso</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="T_PESO_cd_peso" id="52CE6EA6-DF3A-1A37-CE2A-979041961457">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:30:18 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CE50726E-E208-BA20-8D10-26929A4A1786" referredColumn="AB75F252-5B9C-4415-33D3-19CE937B100B"/>
+</associations>
+</Column>
+<Column name="T_USER_cd_user" id="C8132D05-5C29-3FFF-6729-AA285869AD89">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:31:15 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1F9340F-643F-12FE-2915-FA2F8623E6D5" referredColumn="231A1174-712B-56A8-E1D3-BB2B011702D9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="744B8EB8-EA42-B75A-F432-0A906B082023" name="PK_HT_USPE">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-09-19 13:50:08 UTC</createdTime>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52CE6EA6-DF3A-1A37-CE2A-979041961457"/>
+<colUsage columnID="C8132D05-5C29-3FFF-6729-AA285869AD89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3DD0CF9-0E49-ED77-9FBC-67D9CCA87197" name="FK_USPE_PE">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:30:18 UTC</createdTime>
+<generatorID>387E4995-3B07-3DDA-FE7C-C144A86D958A</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52CE6EA6-DF3A-1A37-CE2A-979041961457"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E18B581-BE1A-D63D-C05A-BB2CE95D3719" name="FK_USPE_US">
+<createdBy>Luis Gustavo Ullmann</createdBy>
+<createdTime>2018-05-28 15:31:15 UTC</createdTime>
+<generatorID>A6BAADC1-F471-68E2-AC27-C53E1008CA55</generatorID>
+<ownerDesignName>DB-HealthTrack</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8132D05-5C29-3FFF-6729-AA285869AD89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
