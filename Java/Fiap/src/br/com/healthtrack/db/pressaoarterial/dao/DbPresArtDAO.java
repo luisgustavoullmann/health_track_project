@@ -1,11 +1,7 @@
 package br.com.healthtrack.db.pressaoarterial.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 
 import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.jdbc.CompanyDBManager;
@@ -45,7 +41,7 @@ public class DbPresArtDAO implements PresArtDAO {
 	@Override
 	public List<PresArterial> getAll(){
 		//Cria uma lista de pressões auferidas
-		//List<PresArterial> lista = new ArrayList<PresArterial>();
+		List<PresArterial> lista = new ArrayList<PresArterial>();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		
@@ -64,9 +60,9 @@ public class DbPresArtDAO implements PresArtDAO {
 				double padrao = rs.getDouble("DS_PADRAO");
 				
 				//Cria um objeto Pressao
-				//PresArterial presart = new PresArterial(code, dado, data, padrao);
+				PresArterial presart = new PresArterial(int code, double dado, Calendar data, double padrao);
 				//Adiciona o dado na lista
-				//lista.add(presart);
+				lista.add(presart);
 			
 			}
 		} catch (SQLException e) {
@@ -157,7 +153,7 @@ public class DbPresArtDAO implements PresArtDAO {
 				 dataPres.setTimeInMillis(data.getTime());
 				 double padrao = rs.getDouble("DS_PADRAO");
 				 
-				 //prestart = new PresArterial(int code, double dado, Calendar dataPres, double padrao);
+				 prestart = new PresArterial(int code, double dado, Calendar dataPres, double padrao);
 			 }
 			} catch (SQLException e) {
 				 e.printStackTrace();

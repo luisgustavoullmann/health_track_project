@@ -62,7 +62,7 @@ public class PesoDAO {
 				/*
 				 * Create an object Peso with all informations 
 				 */
-				Peso peso = new Peso(int cdPeso, float peso, float altura, Calendar data);
+				Peso peso = new Peso(cdPeso, peso, altura, dataPeso);
 				//add lista
 				lista.add(peso);
 			}
@@ -154,7 +154,7 @@ public class PesoDAO {
 				Calendar dataPeso = Calendar.getInstance();
 				dataPeso.setTimeInMillis(data.getTime());
 				
-				peso = new Peso(int code, float peso1, float altura1, Date data);
+				peso = new Peso(code, peso1, altura1, dataPeso);
 				
 			}
 		} catch (SQLException e) {

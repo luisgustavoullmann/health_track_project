@@ -1,11 +1,7 @@
 package br.com.healthtrack.db.usuario.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 
 import br.com.healthtrack.jdbc.CompanyDBManager;
 import br.com.healthtrack.usuario.Usuario;
@@ -22,22 +18,21 @@ public class DbUserDAO implements UserDAO {
 		try {
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "INSERT INTO T_USUARIO(CD_USUARIO, NM_USUARIO, NM_EMAIL, NR_IDAIDE,"
-					+ " NR_ALTURA, NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD)"
+					+ " NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD)"
 					+ " VALUES(SQ_USUARIO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, user.getCdUsuario());
 			stmt.setString(2, user.getNome());
 			stmt.setString(3, user.getEmail());
 			stmt.setInt(4, user.getIdade());
-			stmt.setDouble(5, user.getAltura());
-			stmt.setInt(6, user.getTelefone());
-			stmt.setInt(7, user.getCpf());
-			stmt.setString(8, user.getSexo());
+			stmt.setInt(5, user.getTelefone());
+			stmt.setInt(6, user.getCpf());
+			stmt.setString(7, user.getSexo());
 			java.sql.Date dataNascimento = new java.sql.Date(user.getNascimento().getTimeInMillis());
-			stmt.setDate(9, dataNascimento);
+			stmt.setDate(8, dataNascimento);
 			java.sql.Date dataCadastro = new java.sql.Date(user.getCadastro().getTimeInMillis());
-			stmt.setDate(10, dataCadastro);
-			stmt.setString(11, user.getPassword());
+			stmt.setDate(9, dataCadastro);
+			stmt.setString(10, user.getPassword());
 			
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -55,7 +50,7 @@ public class DbUserDAO implements UserDAO {
 	@Override
 	public List<Usuario> getAll(){
 		//Cria uma lista de usuarios
-		//List<Usuario> lista = new ArrayList<Usuario>();
+		List<Usuario> lista = new ArrayList<Usuario>();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		
@@ -70,7 +65,6 @@ public class DbUserDAO implements UserDAO {
 				String name = rs.getString("NM_NOME");
 				String email = rs.getString("NM_EMAIL");
 				int idade = rs.getInt("NR_IDADE");
-				float altura = rs.getFloat("NR_ALTURA");
 				int telefone = rs.getInt("NR_TELEFONE");
 				int cpf = rs.getInt("NR_CPF");
 				String sexo = rs.getString("DS_SEXO");
@@ -110,7 +104,7 @@ public class DbUserDAO implements UserDAO {
 		try {
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_USUARIO SET NM_USUARIO = ?, NM_EMAIL = ?,"
-					+ " NR_IDAIDE = ?, NR_ALTURA = ?,"
+					+ " NR_IDAIDE = ?,"
 					+ " NR_TELEFONE = ?, NR_CPF = ?, DS_SEXO = ?, DT_NASCIMENTO = ?, "
 					+  "NR_PASSWORD = ?"
 					+ "WHERE CD_USUARIO = ?";
@@ -118,13 +112,12 @@ public class DbUserDAO implements UserDAO {
 			stmt.setString(1, user.getNome());
 			stmt.setString(2, user.getEmail());
 			stmt.setInt(3, user.getIdade());
-			stmt.setDouble(4, user.getAltura());
-			stmt.setInt(5, user.getTelefone());
-			stmt.setInt(6, user.getCpf());
-			stmt.setString(7, user.getSexo());
+			stmt.setInt(4, user.getTelefone());
+			stmt.setInt(5, user.getCpf());
+			stmt.setString(6, user.getSexo());
 			java.sql.Date dataNascimento = new java.sql.Date(user.getNascimento().getTimeInMillis());
-			stmt.setDate(8, dataNascimento);
-			stmt.setString(9, user.getPassword());
+			stmt.setDate(7, dataNascimento);
+			stmt.setString(8, user.getPassword());
 			
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -180,7 +173,6 @@ public class DbUserDAO implements UserDAO {
 				String name = rs.getString("NM_NOME");
 				String email = rs.getString("NM_EMAIL");
 				int idade = rs.getInt("NR_IDADE");
-				float altura = rs.getFloat("NR_ALTURA");
 				int telefone = rs.getInt("NR_TELEFONE");
 				int cpf = rs.getInt("NR_CPF");
 				String sexo = rs.getString("DS_SEXO");
@@ -190,7 +182,7 @@ public class DbUserDAO implements UserDAO {
 				String password = rs.getString("NR_PASSWORD");
 				//DT_NASCIMENTO
 				
-				//id = new Usuario(code, name, email, idade, altura, telefone, cpf, sexo, dataNasc, password);
+				user = new Usuario(code, name, email, idade, telefone, cpf, sexo, dataNasc, password);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
