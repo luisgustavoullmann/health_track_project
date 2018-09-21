@@ -1,7 +1,7 @@
 package br.com.health.pressaoarterial;
 
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
+
 
 /*Classe que abstrai dados ao auferir pressão arterial
  * @author Luis Gustavo Ullmann
@@ -12,27 +12,31 @@ public class PresArterial {
 	//Atributo
 	private int cdUsuario;
 	private double dado; // tipo da pressão que foi auferida;
-	private Date data;
+	private Calendar data;
 	private double padraoPres; //padrão da sua pressão 12/8 por exemplo
 	
+	public PresArterial(int code, double dado2, Calendar dataPres, double padrao) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	/*Input dados da Pressao do Usuario*/
 	public void dadoPres() {
 		Scanner dado = new Scanner(System.in);
+		
 		System.out.println("Quanto de pressão foi auferida?");
 		this.setDado(dado.nextDouble());
 
-		Scanner data = new Scanner(System.in);
-		System.out.println("Data de auferimento: ");
-		this.setData(Date); /*Como fazer para data?*/
 		
-		Scanner pad = new Scanner(System.in);
+		System.out.println("Data de auferimento: ");
+		this.setData(data);
+		
+		
 		System.out.println("Qual o padrão da sua pressão?");
-		this.setPadraoPres(pad.nextDouble());
+		this.setPadraoPres(dado.nextDouble());
 		
 		/*Fecha o objeto*/
 		dado.close();
-		data.close();
-		pad.close();
 	}
 	
 	
@@ -66,11 +70,11 @@ public class PresArterial {
 		this.dado = dado;
 	}
 
-	public Date getData() {
+	public Calendar getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(Calendar data) {
 		this.data = data;
 	}
 

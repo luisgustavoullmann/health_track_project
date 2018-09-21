@@ -65,7 +65,7 @@ public class DbPesoDAO implements PesoDAO {
 				/*
 				 * Create an object Peso with all informations 
 				 */
-				Peso peso = new Peso(cdPeso, peso, altura, dataPeso);
+				Peso peso = new Peso(cdPeso, ps, altura, dataPeso);
 				//add lista
 				lista.add(peso);
 			}
@@ -156,14 +156,14 @@ public class DbPesoDAO implements PesoDAO {
 			rs = stmt.executeQuery();
 			
 			if(rs.next()) {
-				int code = rs.getInt("CD_PESO");
-				float peso1 = rs.getFloat("NR_PESO");
-				float altura1 = rs.getFloat("NR_ALTURA");
+				int cdPeso = rs.getInt("CD_PESO");
+				float ps = rs.getFloat("NR_PESO");
+				float altura = rs.getFloat("NR_ALTURA");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataPeso = Calendar.getInstance();
 				dataPeso.setTimeInMillis(data.getTime());
 				
-				peso = new Peso(code, peso1, altura1, dataPeso);
+				peso = new Peso(cdPeso, ps, altura, dataPeso);
 				
 			}
 		} catch (SQLException e) {

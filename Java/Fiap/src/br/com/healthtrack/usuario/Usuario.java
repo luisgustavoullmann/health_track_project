@@ -30,6 +30,11 @@ public class Usuario {
 	
 	
 	
+	public Usuario(int code, String name, String email2, int idade2, int telefone2, int cpf2, String sexo2, Calendar dataNasc, Calendar dataCadast, String password2) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void dadoUser() {
 		/*Instancia class Usuario
 		 * @param A nome do usuario
@@ -76,7 +81,7 @@ public class Usuario {
 		/*Objeto de Endereco para Usuario
 		 * @param dados do Dieta do Usuario
 		*/
-		Dieta dieta = new Dieta();
+		Dieta dieta = new Dieta(cdUsuario, email, cdUsuario, email, cdUsuario, cadastro);
 		dieta.dadoDieta();
 		
 		
@@ -84,7 +89,7 @@ public class Usuario {
 		/*Objeto de Endereco para Usuario
 		 * @param dados da Pressao Arterial do Usuario
 		*/
-		PresArterial pressao = new PresArterial();
+		PresArterial pressao = new PresArterial(cdUsuario, cdUsuario, cadastro, cdUsuario);
 		pressao.dadoPres();
 
 		
@@ -134,7 +139,7 @@ public class Usuario {
 		/*Objeto de PESO para Usuario
 		 * @param dados do Peso do Usuario
 		*/
-		Peso peso = new Peso();
+		Peso peso = new Peso(cdUsuario, cdUsuario, cdUsuario, cadastro);
 		peso.peso();
 		
 		System.out.println("Seu nome é: " + this.getNome() + ", é do sexo " + this.getSexo() + "." );

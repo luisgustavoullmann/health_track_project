@@ -21,7 +21,7 @@ public class DbPresArtDAO implements PresArtDAO {
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, presart.getCdUsuario());
 			stmt.setDouble(2, presart.getDado());
-			java.sql.Date data = new java.sql.Date(presart.getData().getTime());
+			java.sql.Date data = new java.sql.Date(presart.getData().getTimeInMillis());
 			stmt.setDate(3, data);
 			stmt.setDouble(4, presart.getPadraoPres());
 			
@@ -60,7 +60,7 @@ public class DbPresArtDAO implements PresArtDAO {
 				double padrao = rs.getDouble("DS_PADRAO");
 				
 				//Cria um objeto Pressao
-				PresArterial presart = new PresArterial(int code, double dado, Calendar data, double padrao);
+				PresArterial presart = new PresArterial(code, dado, dataPres, padrao);
 				//Adiciona o dado na lista
 				lista.add(presart);
 			
@@ -90,7 +90,7 @@ public class DbPresArtDAO implements PresArtDAO {
 			String sql = "UPDATE T_PRESARTERIAL SET  NR_DADO = ?, DT_DATA = ?, DS_PADRAO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setDouble(1, presart.getDado());
-			java.sql.Date data = new java.sql.Date(presart.getData().getTime());
+			java.sql.Date data = new java.sql.Date(presart.getData().getTimeInMillis());
 			stmt.setDate(2, data);
 			stmt.setDouble(3, presart.getPadraoPres());
 			
@@ -153,7 +153,7 @@ public class DbPresArtDAO implements PresArtDAO {
 				 dataPres.setTimeInMillis(data.getTime());
 				 double padrao = rs.getDouble("DS_PADRAO");
 				 
-				 prestart = new PresArterial(int code, double dado, Calendar dataPres, double padrao);
+				 presart = new PresArterial(code1, dado1, dataPres, padrao);
 			 }
 			} catch (SQLException e) {
 				 e.printStackTrace();

@@ -184,7 +184,7 @@ public class DbDietaDAO implements DietaDAO {
 				Calendar dataDieta = Calendar.getInstance();
 				dataDieta.setTimeInMillis(data.getTime());
 				
-				dieta = new Dieta(int code1, String name, double caloria1, String type, double padcaloria);
+				dieta = new Dieta(code1, name, caloria1, type, padcaloria, dataDieta);
 				
 			}
 			

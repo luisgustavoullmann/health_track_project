@@ -14,6 +14,11 @@ public class Peso {
 	float altura;
 	Calendar data;
 	
+	public Peso(int cdPeso2, float ps, float altura2, Calendar dataPeso) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void peso() {
 		Scanner ps = new Scanner(System.in);
 		

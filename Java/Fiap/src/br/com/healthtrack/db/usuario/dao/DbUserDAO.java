@@ -77,9 +77,9 @@ public class DbUserDAO implements UserDAO {
 				String password = rs.getString("NR_PASSWORD");
 				
 				//Cria um objeto
-				//Usuario user = new Usuario(code, name, email, idade, altura, telefone, cpf, sexo);
+				Usuario user = new Usuario(code, name, email, idade, telefone, cpf, sexo, dataNasc, dataCadast, password);
 				//Adiciona a lista
-				//lista.add(user);
+				lista.add(user);
 			}
 		
 		} catch (SQLException e) {
@@ -93,7 +93,7 @@ public class DbUserDAO implements UserDAO {
 					e.printStackTrace();
 				}
 			}
-		//return getAll();
+		return getAll();
 	}//
 
 	//UPDATE
@@ -179,10 +179,12 @@ public class DbUserDAO implements UserDAO {
 				java.sql.Date dataNascimento = rs.getDate("DT_NASCIMENTO");
 				Calendar dataNasc = Calendar.getInstance();
 				dataNasc.setTimeInMillis(dataNascimento.getTime());
+				java.sql.Date dataCadastro = rs.getDate("DT_CADASTRO");
+				Calendar dataCadast = Calendar.getInstance();
+				dataCadast.setTimeInMillis(dataCadastro.getTime());
 				String password = rs.getString("NR_PASSWORD");
-				//DT_NASCIMENTO
 				
-				user = new Usuario(code, name, email, idade, telefone, cpf, sexo, dataNasc, password);
+				user = new Usuario(code, name, email, idade, telefone, cpf, sexo, dataNasc, dataCadast, password);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
