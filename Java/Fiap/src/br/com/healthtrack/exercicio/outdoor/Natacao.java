@@ -12,7 +12,7 @@ public final class Natacao extends ExercicioOutdoor {
 	/*Retorna info do exercicio*/
 	@Override
 	public void infoEx() {
-		super();
+		
 		if(!(this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() < this.getPadraoKm())) {
 			System.out.println("O seu tempo e Km na " + this.getTipo() + ", estão abaixo do padrão.");
 		} else if((this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() < this.getPadraoKm())) {

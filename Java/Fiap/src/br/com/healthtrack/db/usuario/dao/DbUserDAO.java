@@ -18,7 +18,7 @@ public class DbUserDAO implements UserDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_USUARIO(CD_USUARIO, NM_USUARIO, NM_EMAIL, NR_IDAIDE,"
 					+ " NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD)"
 					+ " VALUES(SQ_USUARIO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -60,7 +60,7 @@ public class DbUserDAO implements UserDAO {
 		ResultSet rs = null;
 		
 		try {
-		conexao = CompanyDBManager.obterConexao();
+		conexao = CompanyDBManager.getInstance().obterConexao();
 		stmt = conexao.prepareStatement("SELECT * FROM T_USUARIO");
 		rs = stmt.executeQuery();
 		
@@ -109,7 +109,7 @@ public class DbUserDAO implements UserDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_USUARIO SET NM_USUARIO = ?, NM_EMAIL = ?,"
 					+ " NR_IDAIDE = ?,"
 					+ " NR_TELEFONE = ?, NR_CPF = ?, DS_SEXO = ?, DT_NASCIMENTO = ?, "
@@ -150,7 +150,7 @@ public class DbUserDAO implements UserDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "DELETE FROM T_USUARIO WHERE CD_USUARIO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
@@ -178,7 +178,7 @@ public class DbUserDAO implements UserDAO {
 		ResultSet rs = null;
 		
 		try {
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_USUARIO WHERE CD_USUARIO = ?");
 			stmt.setInt(1, id);
 			rs = stmt.executeQuery();

@@ -17,7 +17,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_PRESARTERIAL(CD_PRES_ART, NR_DADO, DT_DATA, DS_PADRAO)"
 					+ "VALUES(SQ_PRESART.NEXTVAL, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
@@ -51,7 +51,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		ResultSet rs = null;
 		
 		try {
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_PRESARTERIAL");
 			rs = stmt.executeQuery();
 			
@@ -93,7 +93,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_PRESARTERIAL SET  NR_DADO = ?, DT_DATA = ?, DS_PADRAO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setDouble(1, presart.getDado());
@@ -127,7 +127,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "DELETE FROM T_PRESARTERIAL WHERE CD_PRES_ART = ?"; 
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
@@ -155,7 +155,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		 try {
-			 conexao = CompanyDBManager.obterConexao();
+			 conexao = CompanyDBManager.getInstance().obterConexao();
 			 stmt = conexao.prepareStatement("SELECT * FROM T_PRESARTERIAL WHERE CD_PRES_ART = ?");
 			 stmt.setInt(1, codeSearch);
 			 rs = stmt.executeQuery();

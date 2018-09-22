@@ -5,7 +5,21 @@ import java.sql.*;
 
 public class CompanyDBManager {
 	
-	public static Connection obterConexao() {
+	//Atributo que armazena a única instancia de CompanyDBManager
+	private static CompanyDBManager instance;
+	
+	//Construtor
+	private CompanyDBManager() {}
+	
+	public static CompanyDBManager getInstance() {
+		if(instance == null) {
+			instance = new CompanyDBManager();
+		}
+		
+		return instance;
+	}
+	
+	public Connection obterConexao() {
 		Connection conexao = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

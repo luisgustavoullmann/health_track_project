@@ -23,7 +23,7 @@ public class DbDietaDAO implements DietaDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA)"
 					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(sql);
@@ -59,7 +59,7 @@ public class DbDietaDAO implements DietaDAO {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA");
 			rs = stmt.executeQuery();
 			
@@ -114,7 +114,7 @@ public class DbDietaDAO implements DietaDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?, DT_DATA = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setString(1, dieta.getNomeAlimento());
@@ -150,7 +150,7 @@ public class DbDietaDAO implements DietaDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "DELETE FROM T_DIETA WHERE CD_DIETA = ?";
 			
 			stmt = conexao.prepareStatement(sql);
@@ -180,7 +180,7 @@ public class DbDietaDAO implements DietaDAO {
 		
 		try {
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA WHERE CD_DIETA = ?");
 			stmt.setInt(1, code);
 			rs = stmt.executeQuery();

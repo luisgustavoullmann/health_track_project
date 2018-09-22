@@ -10,7 +10,7 @@ public class ExercicioOutdoor extends Exercicio {
 	
 	@Override
 	public void dadoExercicio() {
-		super();
+		
 		Scanner ex = new Scanner(System.in);
 		System.out.println("Quantos km: ");
 		this.setKm(ex.nextDouble());

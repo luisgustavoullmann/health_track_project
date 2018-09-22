@@ -19,7 +19,7 @@ public class DbPesoDAO implements PesoDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA)"
 					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, ?)";
 			
@@ -54,7 +54,7 @@ public class DbPesoDAO implements PesoDAO {
 		ResultSet rs = null;
 		
 		try {
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_PESO");
 			rs = stmt.executeQuery();
 			
@@ -99,7 +99,7 @@ public class DbPesoDAO implements PesoDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_PESO SET NR_PESO = ?, NR_ALTURA = ?, DT_DATA = ? WHERE CD_PESO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setFloat(1, peso.getPeso());
@@ -134,7 +134,7 @@ public class DbPesoDAO implements PesoDAO {
 		try {
 			conexao.setAutoCommit(false);
 			
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "DELETE FROM T_PESO WHERE CD_PESO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, code);
@@ -164,7 +164,7 @@ public class DbPesoDAO implements PesoDAO {
 		ResultSet rs = null;
 		
 		try {
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_PESO WHERE CD_PESO = ?");
 			stmt.setInt(1, codeSearch);
 			rs = stmt.executeQuery();

@@ -18,7 +18,7 @@ public class DbExercicioDAO implements ExercicioDAO {
 		PreparedStatement stmt = null;
 		
 		try {
-			conexao = CompanyDBManager.obterConexao();
+			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_EXERCICIO(CD_EXERCICIO, NM_TIPO, DT_DATA"
 					+ "NR_KM, QTD_TEMPO, NR_PADRAOKM, QTD_PADRAOTEMPO) "
 					+ "VALUES(SQ_EXERCICIO.NEXTVAL ?, ?, ?, ?, ?, ?, ?)";
