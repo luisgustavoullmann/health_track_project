@@ -13,10 +13,12 @@ public class DbPesoDAO implements PesoDAO {
 	 *INSERT Peso
 	 */
 	@Override
-	public void cadastrar(Peso peso) {
+	public void cadastrar(Peso peso) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA)"
 					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, ?)";
@@ -29,7 +31,10 @@ public class DbPesoDAO implements PesoDAO {
 			stmt.setDate(4, data);
 			
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -88,10 +93,12 @@ public class DbPesoDAO implements PesoDAO {
 	 *UPDATE Peso 
 	 */
 	@Override
-	public void atualizar(Peso peso) {
+	public void atualizar(Peso peso) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_PESO SET NR_PESO = ?, NR_ALTURA = ?, DT_DATA = ? WHERE CD_PESO = ?";
 			stmt = conexao.prepareStatement(sql);
@@ -102,7 +109,9 @@ public class DbPesoDAO implements PesoDAO {
 			
 			stmt.executeUpdate();
 			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 
@@ -119,16 +128,21 @@ public class DbPesoDAO implements PesoDAO {
 	 *DELETE Peso 
 	 */
 	@Override
-	public void remover(int code) {
+	public void remover(int code) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "DELETE FROM T_PESO WHERE CD_PESO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, code);
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {

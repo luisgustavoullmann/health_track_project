@@ -12,10 +12,12 @@ public class DbUserDAO implements UserDAO {
 	
 	//CREATE
 	@Override
-	public void cadastrar(Usuario user) {
+	public void cadastrar(Usuario user) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "INSERT INTO T_USUARIO(CD_USUARIO, NM_USUARIO, NM_EMAIL, NR_IDAIDE,"
 					+ " NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD)"
@@ -35,7 +37,10 @@ public class DbUserDAO implements UserDAO {
 			stmt.setString(10, user.getPassword());
 			
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -98,10 +103,12 @@ public class DbUserDAO implements UserDAO {
 
 	//UPDATE
 	@Override
-	public void atualizar(Usuario user) {
+	public void atualizar(Usuario user) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_USUARIO SET NM_USUARIO = ?, NM_EMAIL = ?,"
 					+ " NR_IDAIDE = ?,"
@@ -120,7 +127,10 @@ public class DbUserDAO implements UserDAO {
 			stmt.setString(8, user.getPassword());
 			
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -134,16 +144,21 @@ public class DbUserDAO implements UserDAO {
 	
 	//REMOVE
 	@Override
-	public void remover(int codigo) {
+	public void remover(int codigo) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "DELETE FROM T_USUARIO WHERE CD_USUARIO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {

@@ -11,10 +11,12 @@ public class DbPresArtDAO implements PresArtDAO {
 	
 	//CREATE
 	@Override
-	public void cadastrar(PresArterial presart) {
+	public void cadastrar(PresArterial presart) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "INSERT INTO T_PRESARTERIAL(CD_PRES_ART, NR_DADO, DT_DATA, DS_PADRAO)"
 					+ "VALUES(SQ_PRESART.NEXTVAL, ?, ?, ?, ?)";
@@ -26,7 +28,10 @@ public class DbPresArtDAO implements PresArtDAO {
 			stmt.setDouble(4, presart.getPadraoPres());
 			
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -82,10 +87,12 @@ public class DbPresArtDAO implements PresArtDAO {
 	
 	//UPDATE
 	@Override
-	public void atualizar(PresArterial presart) {
+	public void atualizar(PresArterial presart) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_PRESARTERIAL SET  NR_DADO = ?, DT_DATA = ?, DS_PADRAO = ?";
 			stmt = conexao.prepareStatement(sql);
@@ -95,7 +102,10 @@ public class DbPresArtDAO implements PresArtDAO {
 			stmt.setDouble(3, presart.getPadraoPres());
 			
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -111,16 +121,21 @@ public class DbPresArtDAO implements PresArtDAO {
 	
 	//Remove
 	@Override
-	public void remover(int codigo) {
+	public void remover(int codigo) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "DELETE FROM T_PRESARTERIAL WHERE CD_PRES_ART = ?"; 
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {

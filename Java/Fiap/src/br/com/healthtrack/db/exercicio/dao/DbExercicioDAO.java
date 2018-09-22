@@ -14,7 +14,7 @@ public class DbExercicioDAO implements ExercicioDAO {
 	/*
 	 *INSERT 
 	 */
-	public void cadastrar(ExercicioOutdoor excercicio) {
+	public void cadastrar(ExercicioOutdoor excercicio) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {

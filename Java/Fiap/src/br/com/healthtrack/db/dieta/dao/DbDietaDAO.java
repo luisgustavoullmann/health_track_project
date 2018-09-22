@@ -17,10 +17,12 @@ public class DbDietaDAO implements DietaDAO {
 	
 	//CREATE
 	@Override
-	public void cadastrar(Dieta dieta) {
+	public void cadastrar(Dieta dieta) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA)"
 					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, ?)";
@@ -34,7 +36,10 @@ public class DbDietaDAO implements DietaDAO {
 			stmt.setDate(6, data);
 			
 			stmt.executeUpdate();
+			
+			conexao.commit();
 		} catch (SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -48,12 +53,12 @@ public class DbDietaDAO implements DietaDAO {
 	
 	
 	@Override
-	public List<Dieta> getAll(){
+	public List<Dieta> getAll() {
 		//Cria uma lista de alimentos
 		List<Dieta> lista = new ArrayList<Dieta>();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		try {
+		try {			
 			conexao = CompanyDBManager.obterConexao();
 			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA");
 			rs = stmt.executeQuery();
@@ -62,7 +67,7 @@ public class DbDietaDAO implements DietaDAO {
 			while (rs.next()) {
 				int code = rs.getInt("CD_DIETA");
 				String name = rs.getString("NM_ALIMENTO");
-				double caloria1 = rs.getInt("QTD_CALORIA");
+				double caloria = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
 				double padcaloria = rs.getDouble("QTD_PADRAOCALORIA");
 				java.sql.Date data = rs.getDate("DT_DATA");
@@ -70,7 +75,7 @@ public class DbDietaDAO implements DietaDAO {
 				dataDieta.setTimeInMillis(data.getTime());
 				
 				//Instancia new Object Dieta com as informações encontradas
-				Dieta dieta = new Dieta(code, name, caloria1, type, padcaloria, dataDieta);
+				Dieta dieta = new Dieta(code, name, caloria, type, padcaloria, dataDieta);
 												
 				//Add a dieta a lista
 				lista.add(dieta);
@@ -92,6 +97,7 @@ public class DbDietaDAO implements DietaDAO {
 			try {
 				stmt.close();
 				rs.close();
+				conexao.close();
 			} catch(SQLException e){
 				e.printStackTrace();
 				}
@@ -102,10 +108,12 @@ public class DbDietaDAO implements DietaDAO {
 	
 	//UPDATE
 	@Override
-	public void atualizar(Dieta dieta) {
+	public void atualizar(Dieta dieta) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
+			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?, DT_DATA = ?";
 			stmt = conexao.prepareStatement(sql);
@@ -117,8 +125,10 @@ public class DbDietaDAO implements DietaDAO {
 			stmt.setDate(5, data);
 			
 			stmt.executeUpdate();
-					
+			
+			conexao.commit();
 		} catch(SQLException e) {
+			conexao.rollback();
 			e.printStackTrace();
 		} finally {
 			try {
@@ -134,10 +144,11 @@ public class DbDietaDAO implements DietaDAO {
 	
 	//REMOVE
 	@Override
-	public void remover(int codigo) {
+	public void remover(int codigo) throws SQLException {
 		PreparedStatement stmt = null;
 		
 		try {
+			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "DELETE FROM T_DIETA WHERE CD_DIETA = ?";
@@ -146,12 +157,14 @@ public class DbDietaDAO implements DietaDAO {
 			stmt.setInt(1, codigo);
 			stmt.executeUpdate();
 			
-	} catch (SQLException e) {
-		e.printStackTrace();
-		} finally {
-			try {
-				stmt.close();
-				conexao.close();
+			conexao.commit();
+			} catch (SQLException e) {
+				conexao.rollback();
+				e.printStackTrace();
+			} finally {
+				try {
+					stmt.close();
+					conexao.close();
 			} catch(SQLException e) {
 				e.printStackTrace();
 			}
@@ -160,7 +173,7 @@ public class DbDietaDAO implements DietaDAO {
 	
 	//SEARCH por nome do alimento e CD_DIETA
 	@Override
-	public Dieta searchName (String nome, int code) {
+	public Dieta searchName (int code) {
 		Dieta dieta = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -168,22 +181,21 @@ public class DbDietaDAO implements DietaDAO {
 		try {
 			
 			conexao = CompanyDBManager.obterConexao();
-			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA WHERE NM_ALIMENTO = ?, CD_DIETA = ?");
-			stmt.setString(1, nome);
-			stmt.setInt(2, code);
+			stmt = conexao.prepareStatement("SELECT * FROM T_DIETA WHERE CD_DIETA = ?");
+			stmt.setInt(1, code);
 			rs = stmt.executeQuery();
 			
 			if(rs.next()) {
 				int code1 = rs.getInt("CD_DIETA");
 				String name = rs.getString("NM_ALIMENTO");
-				double caloria1 = rs.getInt("QTD_CALORIA");
+				double caloria = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
 				double padcaloria = rs.getDouble("QTD_PADRAOCALORIA");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataDieta = Calendar.getInstance();
 				dataDieta.setTimeInMillis(data.getTime());
 				
-				dieta = new Dieta(code1, name, caloria1, type, padcaloria, dataDieta);
+				dieta = new Dieta(code1, name, caloria, type, padcaloria, dataDieta);
 				
 			}
 			
