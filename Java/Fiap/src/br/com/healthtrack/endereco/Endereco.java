@@ -8,6 +8,7 @@ package br.com.healthtrack.endereco;
 import java.util.Scanner;
 
 public class Endereco{
+	private int cdEndereco;
 	private String cidade;
 	private String tipoLogradouro;
 	private String logradouro;
@@ -18,74 +19,77 @@ public class Endereco{
 	private int numEnd; //número do seu endereço
 	
 	
+	public Endereco(int codigo, String tipoLogradouro2, String nmLogradouro, String cep2, String bairro2,
+			String cidade2, String estado2, String pais2, int numero) {
+		super();
+		this.cdEndereco = codigo;
+		this.tipoLogradouro = tipoLogradouro2;
+		this.logradouro = nmLogradouro;
+		this.cep = cep2;
+		this.bairro = bairro2;
+		this.cidade = cidade2;
+		this.estado = estado2;
+		this.pais = pais2;
+		this.numEnd = numero;
+	}
+	
+	public Endereco() {}
+
+
 	/*Input de dados de Endereco do Usuario*/
 	public void dadoEndereco() {
 		/*Instancia class Endereco extends Usuario
 		 * @param A rua do usuario
 		 * */
-		Scanner rua = new Scanner(System.in);
+		Scanner address = new Scanner(System.in);
 		System.out.println("Tipo do seu logradouro? [Rua, Avenida...]");
-		this.setTipoLogradouro(rua.nextLine());
+		this.setTipoLogradouro(address.nextLine());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param O logradouro do usuario
 		 * */
-		Scanner logra = new Scanner(System.in);
 		System.out.println("Qual o seu logradouro?");
-		this.setLogradouro(logra.nextLine());
+		this.setLogradouro(address.nextLine());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param O numero do endereço do usuario
-		 * */
-		Scanner numberEndereco = new Scanner(System.in); 
+		 * */ 
 		System.out.println("Nº do endereço?");
-		this.setNumEnd(numberEndereco.nextInt());
+		this.setNumEnd(address.nextInt());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param O bairro do usuario
 		 * */
-		Scanner bairro = new Scanner(System.in);
 		System.out.println("Qual o seu bairro?");
-		this.setBairro(bairro.nextLine());
+		this.setBairro(address.nextLine());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param A cidade do usuario
 		 * */
-		Scanner cidade = new Scanner(System.in);
 		System.out.println("Qual a sua cidade?");
-		this.setCidade(cidade.nextLine());
+		this.setCidade(address.nextLine());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param O cep do usuario
 		 * */
-		Scanner cep = new Scanner(System.in);
 		System.out.println("Qual o seu CEP?");
-		this.setCep(cep.nextLine());
+		this.setCep(address.nextLine());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param O estado do usuario
 		 * */
-		Scanner estado = new Scanner(System.in);
 		System.out.println("Estado aonde mora?");
-		this.setEstado(estado.nextLine());
+		this.setEstado(address.nextLine());
 		
 		/*Instancia class Endereco extends Usuario
 		 * @param O país do usuario
 		 * */
-		Scanner pais = new Scanner(System.in);
 		System.out.println("Qual o seu país?");
-		this.setPais(pais.nextLine());
+		this.setPais(address.nextLine());
 		
 		
 		/*Fecha o objeto*/
-		rua.close();
-		logra.close();
-		numberEndereco.close();
-		bairro.close();
-		cidade.close();
-		cep.close();
-		estado.close();
-		pais.close();
+		address.close();
 	}
 	
 	
@@ -103,21 +107,30 @@ public class Endereco{
 		this.cidade = cidade;
 	}
 	
+	public String getTipoLogradouro() {
+		return tipoLogradouro;
+	}
+	
 	public void setTipoLogradouro(String tipoLogradouro) {
 		this.tipoLogradouro = tipoLogradouro;
 	}
 	
+	public String getLogradouro() {
+		return logradouro;
+	}
+		
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
 	}
-	
+		
 	public String getLogradouroFormatado() {
 		return formatarLogradouro(tipoLogradouro, logradouro);
 	}
 	public String formatarLogradouro(String tipoLogradouro, String logradouro) {
 		return this.tipoLogradouro + " " + this.logradouro;
 	}
-	
+
+
 	public String getCep() {
 		return cep;
 	}
@@ -148,4 +161,16 @@ public class Endereco{
 	public void setNumEnd(int numEnd) {
 		this.numEnd = numEnd;
 	}
+
+
+	public int getCdEndereco() {
+		return cdEndereco;
+	}
+
+
+	public void setCdEndereco(int cdEndereco) {
+		this.cdEndereco = cdEndereco;
+	}
+	
+	
 }

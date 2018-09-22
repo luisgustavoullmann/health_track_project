@@ -17,6 +17,7 @@ CREATE TABLE t_endereco (
     nm_bairro       NVARCHAR2(255) NOT NULL,
     nm_cidade       NVARCHAR2(255) NOT NULL,
     nm_estado       NVARCHAR2(255) NOT NULL,
+    nm_pais         NVARCHAR2(255) NOT NULL,
     nr_endereco     NUMBER(6) NOT NULL
 );
 
