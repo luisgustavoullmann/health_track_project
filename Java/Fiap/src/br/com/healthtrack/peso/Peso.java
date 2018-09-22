@@ -14,9 +14,15 @@ public class Peso {
 	float altura;
 	Calendar data;
 	
-	public Peso(int cdPeso2, float ps, float altura2, Calendar dataPeso) {
-		// TODO Auto-generated constructor stub
+	public Peso(int cdPeso, float ps, float altura, Calendar dataPeso) {
+		super();
+		this.cdPeso = cdPeso;
+		this.peso = ps;
+		this.altura = altura;
+		this.data = dataPeso;
 	}
+	
+	public Peso() {}
 
 
 	public void peso() {

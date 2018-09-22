@@ -1,4 +1,4 @@
-package br.com.health.pressaoarterial;
+package br.com.healthtrack.pressaoarterial;
 
 import java.util.*;
 
@@ -15,9 +15,15 @@ public class PresArterial {
 	private Calendar data;
 	private double padraoPres; //padrão da sua pressão 12/8 por exemplo
 	
-	public PresArterial(int code, double dado2, Calendar dataPres, double padrao) {
-		// TODO Auto-generated constructor stub
+	public PresArterial(int code, double dado, Calendar dataPres, double padrao) {
+		super();
+		this.cdUsuario = code;
+		this.dado = dado;
+		this.data = dataPres;
+		this.padraoPres = padrao;
 	}
+	
+	public PresArterial() {}
 
 
 	/*Input dados da Pressao do Usuario*/

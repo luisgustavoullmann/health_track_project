@@ -3,8 +3,8 @@ package br.com.healthtrack.db.pressaoarterial.dao;
 import java.sql.*;
 import java.util.*;
 
-import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.jdbc.CompanyDBManager;
+import br.com.healthtrack.pressaoarterial.PresArterial;
 
 public class DbPresArtDAO implements PresArtDAO {
 	private Connection conexao;
@@ -146,14 +146,14 @@ public class DbPresArtDAO implements PresArtDAO {
 			 rs = stmt.executeQuery();
 			 
 			 if (rs.next()) {
-				 int code1 = rs.getInt("CD_PRES_ART");
-				 double dado1 = rs.getDouble("NR_DADO");
+				 int code = rs.getInt("CD_PRES_ART");
+				 double dado = rs.getDouble("NR_DADO");
 				 java.sql.Date data = rs.getDate("DT_DATA");
 				 Calendar dataPres = Calendar.getInstance();
 				 dataPres.setTimeInMillis(data.getTime());
 				 double padrao = rs.getDouble("DS_PADRAO");
 				 
-				 presart = new PresArterial(code1, dado1, dataPres, padrao);
+				 presart = new PresArterial(code, dado, dataPres, padrao);
 			 }
 			} catch (SQLException e) {
 				 e.printStackTrace();

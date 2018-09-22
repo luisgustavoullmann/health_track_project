@@ -2,7 +2,7 @@ package br.com.healthtrack.db.pressaoarterial.dao;
 
 import java.util.List;
 
-import br.com.health.pressaoarterial.PresArterial;
+import br.com.healthtrack.pressaoarterial.PresArterial;
 
 public interface PresArtDAO {
 	

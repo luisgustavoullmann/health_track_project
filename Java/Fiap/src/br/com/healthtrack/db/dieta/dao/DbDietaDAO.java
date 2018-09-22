@@ -109,13 +109,12 @@ public class DbDietaDAO implements DietaDAO {
 			conexao = CompanyDBManager.obterConexao();
 			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?, DT_DATA = ?";
 			stmt = conexao.prepareStatement(sql);
-			stmt.setInt(1, dieta.getCdDieta());
-			stmt.setString(2, dieta.getNomeAlimento());
-			stmt.setDouble(3, dieta.getCaloria());
-			stmt.setString(4, dieta.getTipo());
-			stmt.setDouble(5, dieta.getPadraoCaloria());
+			stmt.setString(1, dieta.getNomeAlimento());
+			stmt.setDouble(2, dieta.getCaloria());
+			stmt.setString(3, dieta.getTipo());
+			stmt.setDouble(4, dieta.getPadraoCaloria());
 			java.sql.Date data = new java.sql.Date(dieta.getData().getTimeInMillis());
-			stmt.setDate(6, data);
+			stmt.setDate(5, data);
 			
 			stmt.executeUpdate();
 					

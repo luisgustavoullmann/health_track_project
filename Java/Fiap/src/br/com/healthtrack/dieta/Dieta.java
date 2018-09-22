@@ -17,10 +17,17 @@ public class Dieta {
 	private double padraoCaloria; //ds_caloria: quantas calorias consumidas era o ideal por refeição?
 
 	//Métodos
-	
 	public Dieta(int code, String name, double caloria1, String type, double padcaloria, Calendar dataDieta) {
-		// TODO Auto-generated constructor stub
+		super();
+		this.cdDieta = code;
+		this.nomeAlimento = name;
+		this.caloria = caloria1;
+		this.tipo = type;
+		this.padraoCaloria = padcaloria;
+		this.data = dataDieta;
 	}
+	
+	public Dieta() {}
 
 	public void dadoDieta() {
 		Scanner alimento = new Scanner(System.in);

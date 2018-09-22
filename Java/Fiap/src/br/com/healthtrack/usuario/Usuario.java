@@ -2,13 +2,13 @@ package br.com.healthtrack.usuario;
 
 import java.util.*;
 
-import br.com.health.pressaoarterial.PresArterial;
 import br.com.healthtrack.dieta.Dieta;
 import br.com.healthtrack.endereco.Endereco;
 import br.com.healthtrack.exercicio.outdoor.Caminhada;
 import br.com.healthtrack.exercicio.outdoor.Corrida;
 import br.com.healthtrack.exercicio.outdoor.Natacao;
 import br.com.healthtrack.peso.Peso;
+import br.com.healthtrack.pressaoarterial.PresArterial;
 
 /* Classe que abstrai o cadastro de um Usuario e seu Endereço
  * @author Luis Gustavo Ullmann
@@ -30,9 +30,22 @@ public class Usuario {
 	
 	
 	
-	public Usuario(int code, String name, String email2, int idade2, int telefone2, int cpf2, String sexo2, Calendar dataNasc, Calendar dataCadast, String password2) {
-		// TODO Auto-generated constructor stub
+	public Usuario(int code, String name, String email, int idade, int telefone, int cpf, String sexo, Calendar dataNasc, Calendar dataCadast, String password) {
+		super();
+		this.cdUsuario = code;
+		this.nome = name;
+		this.email = email;
+		this.idade = idade;
+		this.telefone = telefone;
+		this.cpf = cpf;
+		this.sexo = sexo;
+		this.nascimento = dataNasc;
+		this.cadastro = dataCadast;
+		this.password = password;
+		
 	}
+	
+	public Usuario() {}
 
 
 	public void dadoUser() {
