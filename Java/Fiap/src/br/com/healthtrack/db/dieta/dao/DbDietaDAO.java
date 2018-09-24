@@ -80,16 +80,6 @@ public class DbDietaDAO implements DietaDAO {
 				//Add a dieta a lista
 				lista.add(dieta);
 				
-				//Loop
-				for(int i = 0; i < lista.size(); i++) {
-					Dieta di = lista.get(i);
-					System.out.println(di.getTipo());
-					System.out.println(di.getCaloria());
-					System.out.println(di.getNomeAlimento());
-					System.out.println(di.getPadraoCaloria());
-					System.out.println(di.getData());
-				}
-				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

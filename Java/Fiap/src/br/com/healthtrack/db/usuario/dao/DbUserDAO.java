@@ -86,18 +86,6 @@ public class DbUserDAO implements UserDAO {
 				//Adiciona a lista
 				lista.add(user);
 				
-				//Loop
-				for (Usuario us : lista) {
-					System.out.println(us.getNome());
-					System.out.println(us.getEmail());
-					System.out.println(us.getIdade());
-					System.out.println(us.getTelefone());
-					System.out.println(us.getCpf());
-					System.out.println(us.getSexo());
-					System.out.println(us.getNascimento());
-					System.out.println(us.getCadastro());
-					System.out.println(us.getPassword());
-				}
 			}
 		
 		} catch (SQLException e) {
