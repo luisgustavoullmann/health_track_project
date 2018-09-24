@@ -21,7 +21,7 @@ public class DbPesoDAO implements PesoDAO {
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA)"
-					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, ?)";
+					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')))";
 			
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, peso.getCdPeso());
@@ -100,7 +100,8 @@ public class DbPesoDAO implements PesoDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "UPDATE T_PESO SET NR_PESO = ?, NR_ALTURA = ?, DT_DATA = ? WHERE CD_PESO = ?";
+			String sql = "UPDATE T_PESO SET NR_PESO = ?, NR_ALTURA = ?, "
+					+ "DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')) WHERE CD_PESO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setFloat(1, peso.getPeso());
 			stmt.setFloat(2, peso.getAltura());

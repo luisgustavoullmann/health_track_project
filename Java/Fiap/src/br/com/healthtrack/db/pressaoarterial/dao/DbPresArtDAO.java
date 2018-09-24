@@ -19,7 +19,7 @@ public class DbPresArtDAO implements PresArtDAO {
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_PRESARTERIAL(CD_PRES_ART, NR_DADO, DT_DATA, DS_PADRAO)"
-					+ "VALUES(SQ_PRESART.NEXTVAL, ?, ?, ?, ?)";
+					+ "VALUES(SQ_PRESART.NEXTVAL, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?)";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, presart.getCdUsuario());
 			stmt.setDouble(2, presart.getDado());
@@ -93,7 +93,7 @@ public class DbPresArtDAO implements PresArtDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "UPDATE T_PRESARTERIAL SET  NR_DADO = ?, DT_DATA = ?, DS_PADRAO = ?";
+			String sql = "UPDATE T_PRESARTERIAL SET  NR_DADO = ?, DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')), DS_PADRAO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setDouble(1, presart.getDado());
 			java.sql.Date data = new java.sql.Date(presart.getData().getTimeInMillis());

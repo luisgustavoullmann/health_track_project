@@ -25,7 +25,7 @@ public class DbDietaDAO implements DietaDAO {
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA)"
-					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, ?)";
+					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY'))";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, dieta.getCdDieta());
 			stmt.setString(2, dieta.getNomeAlimento());
@@ -105,7 +105,8 @@ public class DbDietaDAO implements DietaDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?, DT_DATA = ?";
+			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?,"
+					+ " DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY'))";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setString(1, dieta.getNomeAlimento());
 			stmt.setDouble(2, dieta.getCaloria());
