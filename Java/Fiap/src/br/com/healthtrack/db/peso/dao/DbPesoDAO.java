@@ -73,6 +73,13 @@ public class DbPesoDAO implements PesoDAO {
 				Peso peso = new Peso(cdPeso, ps, altura, dataPeso);
 				//add lista
 				lista.add(peso);
+				
+				//Loop
+				for (Peso pes : lista) {
+					System.out.println(pes.getPeso());
+					System.out.println(pes.getAltura());
+					System.out.println(pes.getData());
+				}
 			}
 			
 		} catch (SQLException e) {

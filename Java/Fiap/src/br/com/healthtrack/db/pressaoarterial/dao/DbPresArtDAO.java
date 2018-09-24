@@ -68,6 +68,13 @@ public class DbPresArtDAO implements PresArtDAO {
 				PresArterial presart = new PresArterial(code, dado, dataPres, padrao);
 				//Adiciona o dado na lista
 				lista.add(presart);
+				
+				//Loop
+				for (PresArterial presAr : lista) {
+					System.out.println(presAr.getDado());
+					System.out.println(presAr.getData());
+					System.out.println(presAr.getPadraoPres());
+				}
 			
 			}
 		} catch (SQLException e) {

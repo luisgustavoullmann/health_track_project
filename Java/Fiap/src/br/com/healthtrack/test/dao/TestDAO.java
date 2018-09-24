@@ -8,7 +8,7 @@ import br.com.healthtrack.dieta.Dieta;
 
 /* Classe TestDAO para DietaDAO
  * @author Luis Gustavo Ullmann
- * @version 1.5
+ * @version 1.6
  * */
 
 public class TestDAO {

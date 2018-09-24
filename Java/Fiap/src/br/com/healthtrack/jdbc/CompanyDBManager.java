@@ -8,7 +8,7 @@ public class CompanyDBManager {
 	//Atributo que armazena a única instancia de CompanyDBManager
 	private static CompanyDBManager instance;
 	
-	//Construtor
+	//Constructor
 	private CompanyDBManager() {}
 	
 	public static CompanyDBManager getInstance() {
@@ -24,7 +24,7 @@ public class CompanyDBManager {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			conexao = DriverManager.getConnection("")
+			conexao = DriverManager.getConnection("");
 			
 		} catch(Exception e) {
 			e.printStackTrace();

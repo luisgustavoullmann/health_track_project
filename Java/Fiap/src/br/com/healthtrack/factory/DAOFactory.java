@@ -2,6 +2,8 @@ package br.com.healthtrack.factory;
 
 import br.com.healthtrack.db.dieta.dao.DbDietaDAO;
 import br.com.healthtrack.db.dieta.dao.DietaDAO;
+import br.com.healthtrack.db.endereco.dao.DbEnderecoDAO;
+import br.com.healthtrack.db.endereco.dao.EnderecoDAO;
 import br.com.healthtrack.db.exercicio.dao.DbExercicioDAO;
 import br.com.healthtrack.db.exercicio.dao.ExercicioDAO;
 import br.com.healthtrack.db.peso.dao.DbPesoDAO;
@@ -30,6 +32,10 @@ public abstract class DAOFactory {
 	
 	public static UserDAO getUserDAO() {
 		return new DbUserDAO();
+	}
+	
+	public static EnderecoDAO getEnderecoDAO() {
+		return new DbEnderecoDAO();
 	}
 	
 }

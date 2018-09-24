@@ -75,6 +75,20 @@ public class DbEnderecoDAO implements EnderecoDAO {
 				Endereco endereco = new Endereco(codigo, tipoLogradouro, nmLogradouro, cep, bairro, cidade, estado, pais, numero);
 				//Add endereco a lista
 				lista.add(endereco);
+				
+				//loop
+				for(int i = 0; i < lista.size(); i++) {
+					Endereco end = lista.get(i);
+					System.out.println(end.getTipoLogradouro());
+					System.out.println(end.getLogradouro());
+					System.out.println(end.getNumEnd());
+					System.out.println(end.getBairro());
+					System.out.println(end.getCep());
+					System.out.println(end.getCidade());
+					System.out.println(end.getEstado());
+					System.out.println(end.getPais());
+				}
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
