@@ -7,7 +7,10 @@ public final class Caminhada extends ExercicioOutdoor {
 	 * @param tipo como String caminhada
 	 * @version 1.6
 	 */
-	private String tipo = "caminhada";
+	@Override
+	public String getTipo() {
+		return "caminhada";
+	}
 	
 	
 	/*Retorna dados do exercicio*/
@@ -25,9 +28,5 @@ public final class Caminhada extends ExercicioOutdoor {
 		} else {
 			System.out.println("Há algo de errado com os dados da "+ this.getTipo() +".");
 		}
-	}
-	
-	public String getTipo() {
-		return tipo;
 	}
 }

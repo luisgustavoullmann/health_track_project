@@ -7,4 +7,10 @@ public class ExercicioIndoor extends Exercicio {
 	public void infoEx() {
 		
 	}
+
+	@Override
+	public String getTipo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

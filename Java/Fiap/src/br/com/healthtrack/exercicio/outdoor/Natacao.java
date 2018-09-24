@@ -7,7 +7,10 @@ public final class Natacao extends ExercicioOutdoor {
 	 * @param tipo como String natação
 	 * @version 1.6
 	 */
-	private String tipo = "natação";
+	@Override
+	public String getTipo() {
+		return "natacação";
+	}
 	
 	/*Retorna info do exercicio*/
 	@Override
@@ -24,9 +27,5 @@ public final class Natacao extends ExercicioOutdoor {
 		} else {
 			System.out.println("Há algo de errado com os dados da "+ this.getTipo() +".");
 		}
-	}
-
-	public String getTipo() {
-		return tipo;
 	}
 }

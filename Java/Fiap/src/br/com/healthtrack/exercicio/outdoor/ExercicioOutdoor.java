@@ -10,7 +10,6 @@ public class ExercicioOutdoor extends Exercicio {
 	
 	@Override
 	public void dadoExercicio() {
-		
 		Scanner ex = new Scanner(System.in);
 		System.out.println("Quantos km: ");
 		this.setKm(ex.nextDouble());
@@ -54,5 +53,11 @@ public class ExercicioOutdoor extends Exercicio {
 
 	public void setPadraoKm(double padraoKm) {
 		this.padraoKm = padraoKm;
+	}
+
+	@Override
+	public String getTipo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -5,10 +5,12 @@ import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
 public final class Corrida extends ExercicioOutdoor {
 	/*Atribuição
 	 * @param tipo como String corrida
-	 * @version 1.6
+	 * @version 1.7
 	 */
-	private String tipo = "corrida";
-	
+	@Override
+	public String getTipo() {
+		return "corrida";
+	}
 	
 	/*Retorna info do exercicio*/
 	@Override
@@ -25,9 +27,5 @@ public final class Corrida extends ExercicioOutdoor {
 		} else {
 			System.out.println("Há algo de errado com os dados da "+ this.getTipo() +".");
 		}
-	}
-	
-	public String getTipo() {
-		return tipo;
 	}
 }

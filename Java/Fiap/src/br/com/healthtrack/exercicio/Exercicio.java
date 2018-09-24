@@ -51,10 +51,8 @@ public abstract class Exercicio {
 	}
 
 
-	public String getTipo() {
-		return tipo;
-	}
-
+	public abstract String getTipo();
+	
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;

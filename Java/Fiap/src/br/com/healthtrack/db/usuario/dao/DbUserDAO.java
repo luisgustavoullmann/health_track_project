@@ -21,7 +21,7 @@ public class DbUserDAO implements UserDAO {
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "INSERT INTO T_USUARIO(CD_USUARIO, NM_USUARIO, NM_EMAIL, NR_IDAIDE,"
 					+ " NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD)"
-					+ " VALUES(SQ_USUARIO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?,"
+					+ " VALUES(SQ_USER.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?,"
 					+ " TO_DATE(('??/??/????'),('DD/MM/YYYY')), TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?)";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, user.getCdUsuario());

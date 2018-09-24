@@ -4,10 +4,18 @@ CREATE TABLE t_dieta (
     qtd_caloria         NUMBER(7,2) NOT NULL,
     ds_tipo             NVARCHAR2(30) NOT NULL,
     qtd_padraocaloria   NUMBER(7,2) NOT NULL,
-    dt_data             DATE NOT NULL
+    dt_data             DATE DEFAULT SYSDATE NOT NULL
 );
 
 ALTER TABLE t_dieta ADD CONSTRAINT pk_t_dieta PRIMARY KEY ( cd_dieta );
+
+CREATE SEQUENCE SQ_DIETA
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+NOCACHE
+NOCYCLE;
+
 
 CREATE TABLE t_endereco (
     cd_endereco     NUMBER(6) NOT NULL,
@@ -23,10 +31,18 @@ CREATE TABLE t_endereco (
 
 ALTER TABLE t_endereco ADD CONSTRAINT pk_t_end PRIMARY KEY ( cd_endereco );
 
+CREATE SEQUENCE SQ_ENDERECO
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+NOCACHE
+NOCYCLE;
+
+
 CREATE TABLE t_exercicio (
     cd_exercicio      NUMBER(6) NOT NULL,
     nm_tipo           NVARCHAR2(30) NOT NULL,
-    dt_data           DATE NOT NULL,
+    dt_data           DATE DEFAULT SYSDATE NOT NULL,
     nr_km             NUMBER(8,2) NOT NULL,
     qtd_tempo         TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL,
     nr_padraokm       NUMBER(8,2) NOT NULL,
@@ -35,23 +51,44 @@ CREATE TABLE t_exercicio (
 
 ALTER TABLE t_exercicio ADD CONSTRAINT pk_t_ex PRIMARY KEY ( cd_exercicio );
 
+CREATE SEQUENCE SQ_EXERCICIO
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+NOCACHE
+NOCYCLE;
+
 CREATE TABLE t_peso (
     cd_peso     NUMBER(6) NOT NULL,
     nr_peso     NUMBER(6,2) NOT NULL,
     nr_altura   NUMBER(8,2) NOT NULL,
-    dt_data     DATE NOT NULL
+    dt_data     DATE DEFAULT SYSDATE NOT NULL
 );
 
 ALTER TABLE t_peso ADD CONSTRAINT pk_t_peso PRIMARY KEY ( cd_peso );
 
+CREATE SEQUENCE SQ_PESO
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+NOCACHE
+NOCYCLE;
+
 CREATE TABLE t_prearterial (
     cd_pres_art   NUMBER(6) NOT NULL,
     nr_dado       NUMBER(4,2) NOT NULL,
-    dt_data       DATE NOT NULL,
+    dt_data       DATE DEFAULT SYSDATE NOT NULL,
     ds_padrao     NUMBER(4,2) NOT NULL
 );
 
 ALTER TABLE t_prearterial ADD CONSTRAINT pk_t_prearterial PRIMARY KEY ( cd_pres_art );
+
+CREATE SEQUENCE SQ_PRESART
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+NOCACHE
+NOCYCLE;
 
 CREATE TABLE t_user (
     cd_user         NUMBER(6) NOT NULL,
@@ -62,11 +99,18 @@ CREATE TABLE t_user (
     nr_cpf          NVARCHAR2(30) NOT NULL,
     ds_sexo         NVARCHAR2(12) NOT NULL,
     dt_nascimento   DATE NOT NULL,
-    dt_cadastro     DATE NOT NULL,
+    dt_cadastro     DATE DEFAULT SYSDATE NOT NULL,
     nr_password     NVARCHAR2(255) NOT NULL
 );
 
 ALTER TABLE t_user ADD CONSTRAINT pk_t_user PRIMARY KEY ( cd_user );
+
+CREATE SEQUENCE SQ_USER
+INCREMENT BY 1
+START WITH 1
+NOMAXVALUE
+NOCACHE
+NOCYCLE;
 
 CREATE TABLE t_user_art (
     t_user_cd_user              NUMBER(6) NOT NULL,
