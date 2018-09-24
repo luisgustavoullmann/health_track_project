@@ -23,7 +23,7 @@ public abstract class DAOFactory {
 	}
 	
 	public static ExercicioDAO getExercicioDAO() {
-		return new DbExercicioDAO();
+		return new DbExercicioDAO(null);
 	}
 	
 	public static PresArtDAO getPresArtDAO() {

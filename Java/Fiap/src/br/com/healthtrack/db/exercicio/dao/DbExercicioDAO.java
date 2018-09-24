@@ -1,15 +1,16 @@
 package br.com.healthtrack.db.exercicio.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.*;
 
 import br.com.healthtrack.exercicio.Exercicio;
 import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
 import br.com.healthtrack.jdbc.CompanyDBManager;
-/*Classe DAO da classe Exericio - CRUD
+
+
+/*Classe DAO da classe Exercicio - CRUD
  * @author Luis Gustavo Ullmann
- * @version 1.2
+ * @version 1.3
  * */
 public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
 	public Class<T> tipo;
@@ -25,6 +26,7 @@ public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
 	/*
 	 *INSERT 
 	 */
+	@Override
 	public void cadastrar(ExercicioOutdoor excercicio) throws SQLException {
 		PreparedStatement stmt = null;
 		
@@ -36,12 +38,28 @@ public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
 					+ "NR_KM, QTD_TEMPO, NR_PADRAOKM, QTD_PADRAOTEMPO) "
 					+ "VALUES(SQ_EXERCICIO.NEXTVAL ?, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')))";
 			stmt = conexao.prepareStatement(sql);
-			
+			stmt.setString(1, Exercicio.class.getName().equals(excercicio));
 			
 			conexao.commit();
-		} catch () {
-			
+		} catch (SQLException e) {
+			conexao.rollback();
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				conexao.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
 		}
+	}
+	
+	@Override
+	public <T> List<T> getAll(){
+	
+		
+		
+		return getAll();
 	}
 	 
 	
