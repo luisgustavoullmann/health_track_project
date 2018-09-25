@@ -1,13 +1,13 @@
-CREATE TABLE t_dieta (
-    cd_dieta            NUMBER(6) NOT NULL,
-    nm_alimento         NVARCHAR2(30) NOT NULL,
-    qtd_caloria         NUMBER(7,2) NOT NULL,
-    ds_tipo             NVARCHAR2(30) NOT NULL,
-    qtd_padraocaloria   NUMBER(7,2) NOT NULL,
-    dt_data             DATE DEFAULT SYSDATE NOT NULL
+CREATE TABLE T_DIETA (
+    CD_DIETA            NUMBER(6) NOT NULL,
+    NM_ALIMENTO         NVARCHAR2(30) NOT NULL,
+    QTD_CALORIA         NUMBER(7,2) NOT NULL,
+    DS_TIPO             NVARCHAR2(30) NOT NULL,
+    QTD_PADRAOCALORIA   NUMBER(7,2) NOT NULL,
+    DT_DATA             DATE DEFAULT SYSDATE NOT NULL
 );
 
-ALTER TABLE t_dieta ADD CONSTRAINT pk_t_dieta PRIMARY KEY ( cd_dieta );
+ALTER TABLE T_DIETA ADD CONSTRAINT PK_T_DIETA PRIMARY KEY ( CD_DIETA );
 
 CREATE SEQUENCE SQ_DIETA
 INCREMENT BY 1
@@ -17,19 +17,19 @@ NOCACHE
 NOCYCLE;
 
 
-CREATE TABLE t_endereco (
-    cd_endereco     NUMBER(6) NOT NULL,
-    ds_logradouro   NVARCHAR2(20) NOT NULL,
-    nm_logradouro   NVARCHAR2(255) NOT NULL,
-    nr_cep          NVARCHAR2(10) NOT NULL,
-    nm_bairro       NVARCHAR2(255) NOT NULL,
-    nm_cidade       NVARCHAR2(255) NOT NULL,
-    nm_estado       NVARCHAR2(255) NOT NULL,
-    nm_pais         NVARCHAR2(255) NOT NULL,
-    nr_endereco     NUMBER(6) NOT NULL
+CREATE TABLE T_ENDERECO (
+    CD_ENDERECO     NUMBER(6) NOT NULL,
+    DS_LOGRADOURO   NVARCHAR2(20) NOT NULL,
+    NM_LOGRADOURO   NVARCHAR2(255) NOT NULL,
+    NR_CEP          NVARCHAR2(10) NOT NULL,
+    NM_BAIRRO       NVARCHAR2(255) NOT NULL,
+    NM_CIDADE       NVARCHAR2(255) NOT NULL,
+    NM_ESTADO       NVARCHAR2(255) NOT NULL,
+    NM_PAIS         NVARCHAR2(255) NOT NULL,
+    NR_ENDERECO     NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_endereco ADD CONSTRAINT pk_t_end PRIMARY KEY ( cd_endereco );
+ALTER TABLE T_ENDERECO ADD CONSTRAINT PK_T_END PRIMARY KEY ( CD_ENDERECO );
 
 CREATE SEQUENCE SQ_ENDERECO
 INCREMENT BY 1
@@ -39,17 +39,17 @@ NOCACHE
 NOCYCLE;
 
 
-CREATE TABLE t_exercicio (
-    cd_exercicio      NUMBER(6) NOT NULL,
-    nm_tipo           NVARCHAR2(30) NOT NULL,
-    dt_data           DATE DEFAULT SYSDATE NOT NULL,
-    nr_km             NUMBER(8,2) NOT NULL,
-    qtd_tempo         TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL,
-    nr_padraokm       NUMBER(8,2) NOT NULL,
-    qtd_padraotempo   TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL
+CREATE TABLE T_EXERCICIO (
+    CD_EXERCICIO      NUMBER(6) NOT NULL,
+    NM_TIPO           NVARCHAR2(30) NOT NULL,
+    DT_DATA           DATE DEFAULT SYSDATE NOT NULL,
+    NR_KM             NUMBER(8,2) NOT NULL,
+    QTD_TEMPO         TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL,
+    NR_PADRAOKM       NUMBER(8,2) NOT NULL,
+    QTD_PADRAOTEMPO   TIMESTAMP(9) WITH LOCAL TIME ZONE NOT NULL
 );
 
-ALTER TABLE t_exercicio ADD CONSTRAINT pk_t_ex PRIMARY KEY ( cd_exercicio );
+ALTER TABLE T_EXERCICIO ADD CONSTRAINT PK_T_EX PRIMARY KEY ( CD_EXERCICIO );
 
 CREATE SEQUENCE SQ_EXERCICIO
 INCREMENT BY 1
@@ -58,14 +58,14 @@ NOMAXVALUE
 NOCACHE
 NOCYCLE;
 
-CREATE TABLE t_peso (
-    cd_peso     NUMBER(6) NOT NULL,
-    nr_peso     NUMBER(6,2) NOT NULL,
-    nr_altura   NUMBER(8,2) NOT NULL,
-    dt_data     DATE DEFAULT SYSDATE NOT NULL
+CREATE TABLE T_PESO (
+    CD_PESO     NUMBER(6) NOT NULL,
+    NR_PESO     NUMBER(6,2) NOT NULL,
+    NR_ALTURA   NUMBER(8,2) NOT NULL,
+    DT_DATA     DATE DEFAULT SYSDATE NOT NULL
 );
 
-ALTER TABLE t_peso ADD CONSTRAINT pk_t_peso PRIMARY KEY ( cd_peso );
+ALTER TABLE T_PESO ADD CONSTRAINT PK_T_PESO PRIMARY KEY ( CD_PESO );
 
 CREATE SEQUENCE SQ_PESO
 INCREMENT BY 1
@@ -74,14 +74,14 @@ NOMAXVALUE
 NOCACHE
 NOCYCLE;
 
-CREATE TABLE t_prearterial (
-    cd_pres_art   NUMBER(6) NOT NULL,
-    nr_dado       NUMBER(4,2) NOT NULL,
-    dt_data       DATE DEFAULT SYSDATE NOT NULL,
-    ds_padrao     NUMBER(4,2) NOT NULL
+CREATE TABLE T_PREARTERIAL (
+    CD_PRES_ART   NUMBER(6) NOT NULL,
+    NR_DADO       NUMBER(4,2) NOT NULL,
+    DT_DATA       DATE DEFAULT SYSDATE NOT NULL,
+    DS_PADRAO     NUMBER(4,2) NOT NULL
 );
 
-ALTER TABLE t_prearterial ADD CONSTRAINT pk_t_prearterial PRIMARY KEY ( cd_pres_art );
+ALTER TABLE T_PREARTERIAL ADD CONSTRAINT PK_T_PREARTERIAL PRIMARY KEY ( CD_PRES_ART );
 
 CREATE SEQUENCE SQ_PRESART
 INCREMENT BY 1
@@ -90,20 +90,20 @@ NOMAXVALUE
 NOCACHE
 NOCYCLE;
 
-CREATE TABLE t_user (
-    cd_user         NUMBER(6) NOT NULL,
-    nm_usuario      NVARCHAR2(255) NOT NULL,
-    nm_email        NVARCHAR2(255) NOT NULL,
-    nr_idade        NUMBER(3) NOT NULL,
-    nr_telefone     NUMBER(20) NOT NULL,
-    nr_cpf          NVARCHAR2(30) NOT NULL,
-    ds_sexo         NVARCHAR2(12) NOT NULL,
-    dt_nascimento   DATE NOT NULL,
-    dt_cadastro     DATE DEFAULT SYSDATE NOT NULL,
-    nr_password     NVARCHAR2(255) NOT NULL
+CREATE TABLE T_USER (
+    CD_USER         NUMBER(6) NOT NULL,
+    NM_USUARIO      NVARCHAR2(255) NOT NULL,
+    NM_EMAIL        NVARCHAR2(255) NOT NULL,
+    NR_IDADE        NUMBER(3) NOT NULL,
+    NR_TELEFONE     NUMBER(20) NOT NULL,
+    NR_CPF          NVARCHAR2(30) NOT NULL,
+    DS_SEXO         NVARCHAR2(12) NOT NULL,
+    DT_NASCIMENTO   DATE NOT NULL,
+    DT_CADASTRO     DATE DEFAULT SYSDATE NOT NULL,
+    NR_PASSWORD     NVARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE t_user ADD CONSTRAINT pk_t_user PRIMARY KEY ( cd_user );
+ALTER TABLE T_USER ADD CONSTRAINT PK_T_USER PRIMARY KEY ( CD_USER );
 
 CREATE SEQUENCE SQ_USER
 INCREMENT BY 1
@@ -112,110 +112,110 @@ NOMAXVALUE
 NOCACHE
 NOCYCLE;
 
-CREATE TABLE t_user_art (
-    t_user_cd_user              NUMBER(6) NOT NULL,
-    t_prearterial_cd_pres_art   NUMBER(6) NOT NULL
+CREATE TABLE T_USER_ART (
+    T_USER_CD_USER              NUMBER(6) NOT NULL,
+    T_PREARTERIAL_CD_PRES_ART   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_user_art ADD CONSTRAINT pk_ht_usart PRIMARY KEY ( t_user_cd_user,
-t_prearterial_cd_pres_art );
+ALTER TABLE T_USER_ART ADD CONSTRAINT PK_HT_USART PRIMARY KEY ( T_USER_CD_USER,
+T_PREARTERIAL_CD_PRES_ART );
 
-CREATE TABLE t_user_dieta (
-    t_user_cd_user     NUMBER(6) NOT NULL,
-    t_dieta_cd_dieta   NUMBER(6) NOT NULL
+CREATE TABLE T_USER_DIETA (
+    T_USER_CD_USER     NUMBER(6) NOT NULL,
+    T_DIETA_CD_DIETA   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_user_dieta ADD CONSTRAINT pk_ht_usdi PRIMARY KEY ( t_user_cd_user,
-t_dieta_cd_dieta );
+ALTER TABLE T_USER_DIETA ADD CONSTRAINT PK_HT_USDI PRIMARY KEY ( T_USER_CD_USER,
+T_DIETA_CD_DIETA );
 
-CREATE TABLE t_user_end (
-    t_user_cd_user           NUMBER(6) NOT NULL,
-    t_endereco_cd_endereco   NUMBER(6) NOT NULL
+CREATE TABLE T_USER_END (
+    T_USER_CD_USER           NUMBER(6) NOT NULL,
+    T_ENDERECO_CD_ENDERECO   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_user_end ADD CONSTRAINT pk_ht_used PRIMARY KEY ( t_user_cd_user,
-t_endereco_cd_endereco );
+ALTER TABLE T_USER_END ADD CONSTRAINT PK_HT_USED PRIMARY KEY ( T_USER_CD_USER,
+T_ENDERECO_CD_ENDERECO );
 
-CREATE TABLE t_user_ex (
-    t_user_cd_user             NUMBER(6) NOT NULL,
-    t_exercicio_cd_exercicio   NUMBER(6) NOT NULL
+CREATE TABLE T_USER_EX (
+    T_USER_CD_USER             NUMBER(6) NOT NULL,
+    T_EXERCICIO_CD_EXERCICIO   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_user_ex ADD CONSTRAINT pk_ht_usex PRIMARY KEY ( t_exercicio_cd_exercicio,
-t_user_cd_user );
+ALTER TABLE T_USER_EX ADD CONSTRAINT PK_HT_USEX PRIMARY KEY ( T_ENDERECO_CD_EXERCICIO,
+T_USER_CD_USER );
 
-CREATE TABLE t_user_peso (
-    t_peso_cd_peso   NUMBER(6) NOT NULL,
-    t_user_cd_user   NUMBER(6) NOT NULL
+CREATE TABLE T_USER_PESO (
+    T_PESO_CD_PESO   NUMBER(6) NOT NULL,
+    T_USER_CD_USER   NUMBER(6) NOT NULL
 );
 
-ALTER TABLE t_user_peso ADD CONSTRAINT pk_ht_uspe PRIMARY KEY ( t_peso_cd_peso,
-t_user_cd_user );
+ALTER TABLE T_USER_PESO ADD CONSTRAINT PK_HT_USPE PRIMARY KEY ( T_PESO_CD_PESO,
+T_USER_CD_USER );
 
-ALTER TABLE t_user_art
-    ADD CONSTRAINT fk_usart_art FOREIGN KEY ( t_prearterial_cd_pres_art )
-        REFERENCES t_prearterial ( cd_pres_art );
+ALTER TABLE T_USER_ART
+    ADD CONSTRAINT FK_USART_ART FOREIGN KEY ( T_PREARTERIAL_CD_PRES_ART )
+        REFERENCES T_PREARTERIAL ( CD_PRES_ART );
 
-ALTER TABLE t_user_art
-    ADD CONSTRAINT fk_usart_us FOREIGN KEY ( t_user_cd_user )
-        REFERENCES t_user ( cd_user );
+ALTER TABLE T_USER_ART
+    ADD CONSTRAINT FK_USART_US FOREIGN KEY ( T_USER_CD_USER )
+        REFERENCES T_USER ( CD_USER );
 
-ALTER TABLE t_user_dieta
-    ADD CONSTRAINT fk_usdi_di FOREIGN KEY ( t_dieta_cd_dieta )
-        REFERENCES t_dieta ( cd_dieta );
+ALTER TABLE T_USER_DIETA
+    ADD CONSTRAINT FK_USDI_DI FOREIGN KEY ( T_DIETA_CD_DIETA )
+        REFERENCES T_DIETA ( CD_DIETA );
 
-ALTER TABLE t_user_dieta
-    ADD CONSTRAINT fk_usdi_us FOREIGN KEY ( t_user_cd_user )
-        REFERENCES t_user ( cd_user );
+ALTER TABLE T_USER_DIETA
+    ADD CONSTRAINT FK_USDI_US FOREIGN KEY ( T_USER_CD_USER )
+        REFERENCES T_USER ( CD_USER );
 
-ALTER TABLE t_user_end
-    ADD CONSTRAINT fk_used_end FOREIGN KEY ( t_endereco_cd_endereco )
-        REFERENCES t_endereco ( cd_endereco );
+ALTER TABLE T_USER_END
+    ADD CONSTRAINT FK_USED_END FOREIGN KEY ( T_ENDERECO_CD_ENDERECO )
+        REFERENCES T_ENDERECO ( CD_ENDERECO );
 
-ALTER TABLE t_user_end
-    ADD CONSTRAINT fk_used_us FOREIGN KEY ( t_user_cd_user )
-        REFERENCES t_user ( cd_user );
+ALTER TABLE T_USER_END
+    ADD CONSTRAINT FK_USED_US FOREIGN KEY ( T_USER_CD_USER )
+        REFERENCES T_USER ( CD_USER );
 
-ALTER TABLE t_user_ex
-    ADD CONSTRAINT fk_usex_ex FOREIGN KEY ( t_exercicio_cd_exercicio )
-        REFERENCES t_exercicio ( cd_exercicio );
+ALTER TABLE T_USER_EX
+    ADD CONSTRAINT FK_USEX_EX FOREIGN KEY ( T_EXERCICIO_CD_EXERCICIO )
+        REFERENCES T_EXERCICIO ( CD_EXERCICIO );
 
-ALTER TABLE t_user_ex
-    ADD CONSTRAINT fk_usex_us FOREIGN KEY ( t_user_cd_user )
-        REFERENCES t_user ( cd_user );
+ALTER TABLE T_USER_EX
+    ADD CONSTRAINT FK_USEX_US FOREIGN KEY ( T_USER_CD_USER )
+        REFERENCES T_USER ( CD_USER );
 
-ALTER TABLE t_user_peso
-    ADD CONSTRAINT fk_uspe_pe FOREIGN KEY ( t_peso_cd_peso )
-        REFERENCES t_peso ( cd_peso );
+ALTER TABLE T_USER_PESO
+    ADD CONSTRAINT FK_USPE_PE FOREIGN KEY ( T_PESO_CD_PESO )
+        REFERENCES T_PESO ( CD_PESO );
 
-ALTER TABLE t_user_peso
-    ADD CONSTRAINT fk_uspe_us FOREIGN KEY ( t_user_cd_user )
-        REFERENCES t_user ( cd_user );
+ALTER TABLE T_USER_PESO
+    ADD CONSTRAINT FK_USPE_US FOREIGN KEY ( T_USER_CD_USER )
+        REFERENCES T_USER ( CD_USER );
 
 --	Consultar os dados de um determinado usuário (filtrar a partir do seu código);
-SELECT * FROM t_user WHERE cd_user = ?;
+SELECT * FROM T_USER WHERE CD_USER = ?;
 --	Consultar todos os dados de todos os registros de peso de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
-SELECT * FROM t_peso WHERE cd_user = ? ORDER BY dt_data ASC;
+SELECT * FROM T_PESO WHERE CD_USER = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de um único registro de peso de um determinado usuário (filtrar a partir do código do usuário e do código de peso);
-SELECT nr_peso FROM t_peso WHERE cd_user = ? AND cd_peso = ? ORDER BY dt_data ASC;
+SELECT NR_PESO FROM T_PESO WHERE CD_USER = ? AND CD_PESO = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de todos os registros de pressão arterial de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
-SELECT * FROM t_prearterial WHERE cd_user = ? ORDER BY dt_data ASC;
+SELECT * FROM T_PREARTERIAL WHERE CD_USER = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de um único registro de pressão arterial de um determinado usuário (filtrar a partir do código do usuário e do código de pressão);
-SELECT * FROM t_prearterial WHERE cd_user = ? AND cd_pres_art = ? ORDER BY dt_data ASC;
+SELECT * FROM T_PREARTERIAL WHERE CD_USER = ? AND CD_PRE_ART = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de todos os registros de atividade física de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
-SELECT * FROM t_exercicio WHERE cd_user = ? ORDER BY dt_data ASC;
+SELECT * FROM T_EXERCICIO WHERE CD_USER = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de um único registro de atividade física de um determinado usuário (filtrar a partir do código do usuário e do código de atividade);
-SELECT * FROM t_exercicio WHERE cd_user = ? AND cd_exercicio = ? ORDER BY dt_data ASC;
+SELECT * FROM T_EXERCICIO WHERE CD_USER = ? AND CD_EXERCICIO = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de todos os registros de alimentos ingeridos de um determinado usuário, ordenando-os dos registros mais recentes para os mais antigos (filtrar a partir do seu código);
-SELECT * FROM t_dieta WHERE cd_user = ? ORDER BY dt_data ASC;
+SELECT * FROM T_DIETA WHERE CD_USER = ? ORDER BY DT_DATA ASC;
 --	Consultar todos os dados de um único registro de alimento ingerido de um determinado usuário (filtrar a partir do código do usuário e do código de alimento);
-SELECT * FROM t_dieta WHERE cd_user = ? AND cd_dieta = ? ORDER BY dt_data ASC;
+SELECT * FROM T_DIETA WHERE CD_USER = ? AND CD_DIETA = ? ORDER BY DT_DATA ASC;
 --	Consultar os dados básicos de um determinado usuário, o último peso registrado e a última pressão arterial registrada (filtrar a partir do código de usuário – consulta necessária para o dashboard, dica: veja consulta com junções).
 -- INNER JOIN COMO DUAS OU MAIS TABELAS e peso é um atributo de Usuário, não fiz como entity.
 SELECT * 
-FROM t_user U INNER JOIN
-t_prearterial P
-USING (cd_user)
-INNER JOIN t_peso PS
-USING (cd_peso)
-ORDER BY PS.nr_peso ASC AND PS.dt_data ASC;
+FROM T_USER U INNER JOIN
+T_PREARTERIAL P
+USING (CD_USER)
+INNER JOIN T_PESO PS
+USING (CD_PESO)
+ORDER BY PS.NR_PESO ASC AND PS.DT_DATA ASC;
