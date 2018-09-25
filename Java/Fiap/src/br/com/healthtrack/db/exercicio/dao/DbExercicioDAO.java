@@ -43,6 +43,7 @@ public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
 					+ "VALUES(SQ_EXERCICIO.NEXTVAL ?, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')))";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, ex.cadastrar(excercicio.getCdExercicio()));
+			//Não consegui ir adiante, pois vai muito além do conhecimento que tenho até aqui. 
 			
 			conexao.commit();
 		} catch (SQLException e) {
