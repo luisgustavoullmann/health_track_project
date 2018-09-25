@@ -162,7 +162,7 @@ public class DbDietaDAO implements DietaDAO {
 		}
 	}
 	
-	//SEARCH por nome do alimento e CD_DIETA
+	//SEARCH  pelo CD_DIETA
 	@Override
 	public Dieta searchName (int code) {
 		Dieta dieta = null;

@@ -27,7 +27,7 @@ public abstract class DAOFactory {
 	
 	public static <T> ExercicioDAO getExercicioDAO(Class<T> tipo) {
 		return tipo.equals("br.com.healthtrack.exercicio.outdoor.Natacao") ? new Natacao() : Corrida() : Caminhada();
-	}
+	}//Não consegui ir adiante, isso vai muito além do que a atividade pede. E dos meus conhecimentos também.
 
 	public static PresArtDAO getPresArtDAO() {
 		return new DbPresArtDAO();
