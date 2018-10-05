@@ -52,7 +52,7 @@ public class DbPresArtDAO implements PresArtDAO {
 		
 		try {
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			stmt = conexao.prepareStatement("SELECT * FROM T_PRESARTERIAL");
+			stmt = conexao.prepareStatement("SELECT * FROM T_PRESARTERIAL WHERE CD_PRES_ART = ?");
 			rs = stmt.executeQuery();
 			
 			//Percorre a lista inteira

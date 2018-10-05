@@ -1,9 +1,7 @@
 package br.com.healthtrack.db.exercicio.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 
 import br.com.healthtrack.exercicio.Exercicio;
 import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
@@ -13,7 +11,7 @@ import br.com.healthtrack.jdbc.CompanyDBManager;
 
 /*Classe DAO da classe Exercicio - CRUD
  * @author Luis Gustavo Ullmann
- * @version 1.3
+ * @version 1.4
  * */
 public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
 	public Class<T> tipo;
