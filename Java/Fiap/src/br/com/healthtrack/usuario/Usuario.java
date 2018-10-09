@@ -2,13 +2,6 @@ package br.com.healthtrack.usuario;
 
 import java.util.*;
 
-import br.com.healthtrack.dieta.Dieta;
-import br.com.healthtrack.endereco.Endereco;
-import br.com.healthtrack.exercicio.outdoor.Caminhada;
-import br.com.healthtrack.exercicio.outdoor.Corrida;
-import br.com.healthtrack.exercicio.outdoor.Natacao;
-import br.com.healthtrack.peso.Peso;
-import br.com.healthtrack.pressaoarterial.PresArterial;
 
 /* Classe que abstrai o cadastro de um Usuario e seu Endereço
  * @author Luis Gustavo Ullmann
@@ -47,7 +40,7 @@ public class Usuario {
 	
 	public Usuario() {}
 
-
+	
 	public void dadoUser() {
 		/*Instancia class Usuario
 		 * @param A nome do usuario
@@ -86,63 +79,42 @@ public class Usuario {
 		/*Objeto de Endereco para Usuario
 		 * @param dados do Endereco do Usuario
 		*/
-		Endereco endereco = new Endereco();
-		endereco.dadoEndereco();
+		//Endereco endereco = new Endereco();
+		//endereco.dadoEndereco();
 		
 		
 		/*=========== INICIA A DIETA ==========*/
 		/*Objeto de Endereco para Usuario
 		 * @param dados do Dieta do Usuario
 		*/
-		Dieta dieta = new Dieta(cdUsuario, email, cdUsuario, email, cdUsuario, cadastro);
-		dieta.dadoDieta();
+		//Dieta dieta = new Dieta();
+		//dieta.dadoDieta();
 		
 		
 		/*=========== INICIA A PRESSAO ARTERIAL ==========*/
 		/*Objeto de Endereco para Usuario
 		 * @param dados da Pressao Arterial do Usuario
 		*/
-		PresArterial pressao = new PresArterial(cdUsuario, cdUsuario, cadastro, cdUsuario);
-		pressao.dadoPres();
+		//PresArterial pressao = new PresArterial();
+		//pressao.dadoPresArt();
 
 		
-		/*=========== INICIA OS EXERCICIOS - poderia ter feito apenas uma classe exercicio, mas queria testar meus conhecimentos ==========*/
-				
-		/*Como fazer o max.length?*/
-		for(int i = 0; i < 2; i++) {
-			System.out.println("Qual exercício você realizou?");
-			System.out.println("1. Natação");
-			System.out.println("2. Corrida");
-			System.out.println("3. Caminhada");
-			Scanner exercicio = new Scanner(System.in);
-			if(exercicio.equals(1) || exercicio.equals("Natação") || exercicio.equals("natação") || exercicio.equals("natacao")) {
-				Natacao natacao = new Natacao();
-				natacao.dadoExercicio();
-				natacao.infoEx();
-			} else if(exercicio.equals(2) || exercicio.equals("Corrida") || exercicio.equals("corrida") || exercicio.equals("corida")) {
-				Corrida corrida = new Corrida();
-				corrida.dadoExercicio();
-				corrida.infoEx();
-			} else if(exercicio.equals(3) || exercicio.equals("Caminhada") || exercicio.equals("caminha")) {
-				Caminhada caminhada = new Caminhada();
-				caminhada.dadoExercicio();
-				caminhada.infoEx();
-			} else {
-				System.out.println("Escolha uma das opções anteriores.");
-			}
-			exercicio.close();
-		}
+		/*=========== INICIA OS EXERCICIOS - */
+		//Exercicio ex = new Exercicio();
+		
 				
 		
 		/*Metodo com retorno dos dados*/
-		endereco.retornoEndereco();
-		dieta.infoDieta();
-		pressao.infoPres();
+		//endereco.retornoEndereco();
+		//dieta.infoDieta();
+		//pressao.infoPres();
+		//ex.dadoExercicio();
 		
 				
 		/*Fecha o objeto*/
 				us.close();
 	}
+	
 		
 	
 	//Método que cálcula o IMC e imprime o seu resultado
@@ -152,17 +124,17 @@ public class Usuario {
 		/*Objeto de PESO para Usuario
 		 * @param dados do Peso do Usuario
 		*/
-		Peso peso = new Peso(cdUsuario, cdUsuario, cdUsuario, cadastro);
-		peso.peso();
+		//Peso peso = new Peso(cdUsuario, cdUsuario, cdUsuario, cadastro);
+		//peso.peso();
 		
-		System.out.println("Seu nome é: " + this.getNome() + ", é do sexo " + this.getSexo() + "." );
-		System.out.println("Você tem " + this.getIdade() + " anos.");
-		System.out.println("Com um peso de " + peso.getPeso() + " e com " + peso.getAltura() + "m de altura.");
+		//System.out.println("Seu nome é: " + this.getNome() + ", é do sexo " + this.getSexo() + "." );
+		//System.out.println("Você tem " + this.getIdade() + " anos.");
+		//System.out.println("Com um peso de " + peso.getPeso() + " e com " + peso.getAltura() + "m de altura.");
 		
 		/*
 		 * @param Call method imcPeso()
 		 * */
-		peso.imcPeso();
+		//peso.imcPeso();
 	}
 	
 	//Getters and Setters

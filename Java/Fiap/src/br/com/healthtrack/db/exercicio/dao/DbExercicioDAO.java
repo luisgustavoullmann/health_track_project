@@ -4,44 +4,49 @@ import java.sql.*;
 import java.util.*;
 
 import br.com.healthtrack.exercicio.Exercicio;
-import br.com.healthtrack.exercicio.outdoor.ExercicioOutdoor;
-import br.com.healthtrack.factory.DAOFactory;
 import br.com.healthtrack.jdbc.CompanyDBManager;
 
 
 /*Classe DAO da classe Exercicio - CRUD
  * @author Luis Gustavo Ullmann
- * @version 1.4
+ * @version 1.8
  * */
-public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
-	public Class<T> tipo;
-	
-	public DbExercicioDAO(Class<T> tipo) {
-		this.tipo = tipo;
-	}
+public class DbExercicioDAO implements ExercicioDAO {
 	
 	private Connection conexao;
 	
-	
-	
-	/*
-	 *INSERT 
-	 */
 	@Override
-	public void cadastrar(ExercicioOutdoor excercicio) throws SQLException {
+	public void cadastrar(Exercicio ex) throws SQLException {
 		PreparedStatement stmt = null;
-		ExercicioDAO ex = DAOFactory.getExercicioDAO(tipo);
 		
 		try {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "INSERT INTO T_EXERCICIO(CD_EXERCICIO, NM_TIPO, DT_DATA"
-					+ "NR_KM, QTD_TEMPO, NR_PADRAOKM, QTD_PADRAOTEMPO) "
-					+ "VALUES(SQ_EXERCICIO.NEXTVAL ?, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')))";
+			
+			String sql = "INSERT INTO T_EXERCICIO(CD_EXERCICIO,"
+					+ " NM_MOD,"
+					+ " NM_TIPO,"
+					+ " DT_DATA,"
+					+ " NR_KM,"
+					+ "NR_PADRAOKM,"
+					+ "QTD_TEMPO,"
+					+ "QTD_PADRAOTEMPO"
+					+ "VALUES (SQ_EXERCICIO.NEXTVAL, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), TO_DATE(('??/??/????'),('DD/MM/YYYY')))";
 			stmt = conexao.prepareStatement(sql);
-			stmt.setInt(1, ex.cadastrar(excercicio.getCdExercicio()));
-			//Não consegui ir adiante, pois vai muito além do conhecimento que tenho até aqui. 
+			
+			stmt.setString(1, ex.getModalidade());
+			stmt.setString(2, ex.getTipo());
+			java.sql.Date data = new  java.sql.Date(ex.getData().getTimeInMillis());
+			stmt.setDate(3, data);
+			stmt.setDouble(4, ex.getKm());
+			stmt.setDouble(5, ex.getPadraoKm());
+			java.sql.Date dataTempo = new  java.sql.Date(ex.getTempo().getTimeInMillis());
+			stmt.setDate(6, dataTempo);
+			java.sql.Date dataPadTempo = new  java.sql.Date(ex.getPadraoTempo().getTimeInMillis());
+			stmt.setDate(7, dataPadTempo);
+			
+			stmt.executeUpdate();
 			
 			conexao.commit();
 		} catch (SQLException e) {
@@ -51,19 +56,185 @@ public class DbExercicioDAO<T extends Exercicio> implements ExercicioDAO {
 			try {
 				stmt.close();
 				conexao.close();
-			} catch(SQLException e) {
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	
+	@Override
+	public List<Exercicio> getAll() {
+		//Cria uma lista de exercicio para ser consultada
+		List<Exercicio> lista = new ArrayList<Exercicio>();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conexao = CompanyDBManager.getInstance().obterConexao();
+			stmt = conexao.prepareStatement("SELECT * FROM T_EXERCICIO");
+			
+			rs = stmt.executeQuery();
+			
+			//Percorre todos os registros
+			while(rs.next()) {
+				int code = rs.getInt("CD_EXERCICIO");
+				String mod = rs.getString("NM_MOD");
+				String type = rs.getString("NM_TIPO");
+				java.sql.Date data = rs.getDate("DT_DATA");
+				Calendar dataExercicio = Calendar.getInstance();
+				dataExercicio.setTimeInMillis(data.getTime());
+				double km = rs.getDouble("NR_KM");
+				double padKm = rs.getDouble("NR_PADRAOKM");
+				java.sql.Date dataT = rs.getDate("QTD_TEMPO");
+				Calendar dataTempo = Calendar.getInstance();
+				dataTempo.setTimeInMillis(dataT.getTime());
+				java.sql.Date dataPadTempo = rs.getDate("QTD_PADRAOTEMPO");
+				Calendar dataPaTempo = Calendar.getInstance();
+				dataPaTempo.setTimeInMillis(dataPadTempo.getTime());
+				
+				Exercicio exercicio = new Exercicio(code, mod, type, dataExercicio,
+						km, padKm, dataTempo, dataPaTempo);
+				lista.add(exercicio);
+				
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				rs.close();
+				conexao.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return getAll();
+	}
+	
+	
+	@Override
+	public void atualizar(Exercicio ex) throws SQLException {
+		PreparedStatement stmt = null;
+		
+		try {
+			conexao.setAutoCommit(false);
+			
+			conexao = CompanyDBManager.getInstance().obterConexao();
+			String sql = "UPDATE T_EXERCICIO SET "
+					+ " NM_MOD = ?,"
+					+ " NM_TIPO = ?,"
+					+ " DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')),"
+					+ " NR_KM = ?,"
+					+ "NR_PADRAOKM = ?,"
+					+ "QTD_TEMPO = TO_DATE(('??/??/????'),('DD/MM/YYYY')),"
+					+ "QTD_PADRAOTEMPO = TO_DATE(('??/??/????'),('DD/MM/YYYY')) WHERE CD_EXERCICIO = ?";
+					
+			stmt = conexao.prepareStatement(sql);
+			stmt.setString(1, ex.getModalidade());
+			stmt.setString(2, ex.getTipo());
+			java.sql.Date data = new  java.sql.Date(ex.getData().getTimeInMillis());
+			stmt.setDate(3, data);
+			stmt.setDouble(4, ex.getKm());
+			stmt.setDouble(5, ex.getPadraoKm());
+			java.sql.Date dataTempo = new  java.sql.Date(ex.getTempo().getTimeInMillis());
+			stmt.setDate(6, dataTempo);
+			java.sql.Date dataPadTempo = new  java.sql.Date(ex.getPadraoTempo().getTimeInMillis());
+			stmt.setDate(7, dataPadTempo);
+			
+			
+			conexao.commit();
+		} catch(SQLException e) {
+			conexao.rollback();
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				conexao.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+	@Override
+	public void remover(int code) throws SQLException {
+		PreparedStatement stmt = null;
+		
+		try {
+			conexao.setAutoCommit(false);
+			
+			conexao = CompanyDBManager.getInstance().obterConexao();
+			String sql = "DELETE FROM T_EXERCICIO WHERE CD_EXERCICIO = ?";
+			stmt = conexao.prepareStatement(sql);
+			stmt.setInt(1, code);
+			
+			stmt.executeUpdate();
+			conexao.commit();
+		} catch(SQLException e) {
+			conexao.rollback();
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				conexao.close();
+			} catch(SQLException e){
 				e.printStackTrace();
 			}
 		}
 	}
 	
-	@Override
-	public <T> List<T> getAll(){
 	
+	@Override
+	public Exercicio searchId (int id) throws SQLException {
+		Exercicio ex = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
 		
-		
-		return getAll();
+		try {
+			conexao = CompanyDBManager.getInstance().obterConexao();
+			stmt = conexao.prepareStatement("SELECT * FROM T_EXERCICIO WHERE CD_EXERCICIO = ?");
+			
+			stmt.setInt(1, id);
+			rs = stmt.executeQuery();
+			
+			if(rs.next()) {
+				int code = rs.getInt("CD_EXERCICIO");
+				String mod = rs.getString("NM_MOD");
+				String type = rs.getString("NM_TIPO");
+				java.sql.Date data = rs.getDate("DT_DATA");
+				Calendar dataExercicio = Calendar.getInstance();
+				dataExercicio.setTimeInMillis(data.getTime());
+				double km = rs.getDouble("NR_KM");
+				double padKm = rs.getDouble("NR_PADRAOKM");
+				java.sql.Date dataT = rs.getDate("QTD_TEMPO");
+				Calendar dataTempo = Calendar.getInstance();
+				dataTempo.setTimeInMillis(dataT.getTime());
+				java.sql.Date dataPadTempo = rs.getDate("QTD_PADRAOTEMPO");
+				Calendar dataPaTempo = Calendar.getInstance();
+				dataPaTempo.setTimeInMillis(dataPadTempo.getTime());
+				
+				ex = new Exercicio(code, mod, type, dataExercicio,
+						km, padKm, dataTempo, dataPaTempo);
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				rs.close();
+				conexao.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return ex;
 	}
-	 
 	
 }//done here

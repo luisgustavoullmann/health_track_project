@@ -12,9 +12,7 @@ import br.com.healthtrack.db.pressaoarterial.dao.DbPresArtDAO;
 import br.com.healthtrack.db.pressaoarterial.dao.PresArtDAO;
 import br.com.healthtrack.db.usuario.dao.DbUserDAO;
 import br.com.healthtrack.db.usuario.dao.UserDAO;
-import br.com.healthtrack.exercicio.outdoor.Natacao;
-import br.com.healthtrack.exercicio.outdoor.Corrida;
-import br.com.healthtrack.exercicio.outdoor.Caminhada;
+
 
 public abstract class DAOFactory {
 	public static DietaDAO getDietaDAO() {
@@ -25,9 +23,9 @@ public abstract class DAOFactory {
 		return new DbPesoDAO();
 	}
 	
-	public static <T> ExercicioDAO getExercicioDAO(Class<T> tipo) {
-		return tipo.equals("br.com.healthtrack.exercicio.outdoor.Natacao") ? new Natacao() : Corrida() : Caminhada();
-	}//Não consegui ir adiante, isso vai muito além do que a atividade pede. E dos meus conhecimentos também.
+	public static ExercicioDAO getExercicioDAO() {
+		return new DbExercicioDAO();
+	}
 
 	public static PresArtDAO getPresArtDAO() {
 		return new DbPresArtDAO();
