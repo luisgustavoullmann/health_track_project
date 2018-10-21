@@ -60,22 +60,31 @@
         <section class="container-fluid pt-md-4">
             <div class="row">
                 <sidenav class="d-md-inline col-md-3 p-0 text-lg-left text-sm-center">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Exercícios</li>
-                        <li class="list-group-item">Dieta</li>
-                        <li class="list-group-item">Pressão Arterial</li>
-                        <li class="list-group-item">Peso</li>
-                    </ul>
-                </sidenav>
-                <div class="d-md-inline col-md-9">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="bg-light rounded box-shadow py-3 form-group">
-                            <h2 class="h6">Formulário exercício</h2>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active" id="v-pills-ex-tab" data-toggle="pill" href="#v-pills-exercio" role="tab" aria-controls="v-pills-exercio" aria-selected="true">Exercícios</a>
+                      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-dieta" role="tab" aria-controls="v-pills-dieta" aria-selected="false">Dieta</a>
+                      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-pressao" role="tab" aria-controls="v-pills-pressao" aria-selected="false">Pressão Arterial</a>
+                      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-peso" role="tab" aria-controls="v-pills-peso" aria-selected="false">Peso e Altura</a>
+                    </div>
+                    
+                    <div class="tab-content" id="v-pills-tabContent">
+                      <div class="tab-pane fade show active" id="v-pills-exercio" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="d-md-inline col-md-9">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="bg-light rounded box-shadow py-3 form-group">
+                                    <h2 class="h6 text-center">Formulário exercício</h2>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                        
+                      <div class="tab-pane fade" id="v-pills-dieta" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                      <div class="tab-pane fade" id="v-pills-pressao" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                      <div class="tab-pane fade" id="v-pills-peso" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                    </div>
+                </sidenav>
             </div>
         </section>
        
