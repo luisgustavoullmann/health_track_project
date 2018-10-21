@@ -59,7 +59,7 @@
         
         <section class="container-fluid pt-4">
             <div class="row">
-                <sidenav class="col-md-2 d-flex text-lg-left text-sm-center">
+                <sidenav class="d-flex text-lg-left text-sm-center mr-3">
                     <div class="nav flex-column justify-content-md-left nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                       <a class="nav-link active pr-5" id="v-pills-ex-tab" data-toggle="pill" href="#v-pills-exercio" role="tab" aria-controls="v-pills-exercio" aria-selected="true">Exercícios</a>
                       <a class="nav-link px-auto" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-dieta" role="tab" aria-controls="v-pills-dieta" aria-selected="false">Dieta</a>
@@ -69,26 +69,21 @@
                 </sidenav>
                 
                 <section class="float-right">
-                    <div class="tab-content" id="v-pills-tabContent">
+                    <div class="col-6 tab-content" id="v-pills-tabContent">
                       <div class="tab-pane fade show active" id="v-pills-exercio" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="bg-color">
                             <div class="row">
-                                <div class="col my-1 p-2">
-                                    <div class="bg-light rounded box-shadow p-2 form-group">
-                                    <h1 class="h4 text-center">Formulário exercício</h1>
-                                        <h3 class="h6">Escolha o seu exercício</h3>
-                                        <form>
-                                           
-                                        </form>
-                                    </div>
-                                </div>
                                 
-                                <div class="col my-1 p-2">
+                                <div class="my-1 p-2">
                                     <div class="bg-light rounded box-shadow p-2 form-group">
                                     <h1 class="h4 text-center">Formulário exercício</h1>
                                         <h3 class="h6">Escolha o seu exercício</h3>
                                         <form>
-                                           
+                                          <div class="form-group">
+                                           <label for="inputData"> Data do Exercício</label> 
+                                            <input type="date" class="form-control">
+                                          </div>
+                                          
                                         </form>
                                     </div>
                                 </div>
