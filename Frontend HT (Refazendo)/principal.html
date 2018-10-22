@@ -57,9 +57,9 @@
             </div>
         </header>
         
-        <section class="container-fluid pt-4 px-4">
+        <section class="container-fluid pt-md-4 px-md-4">
             <div class="row">
-                <sidenav class="d-flex text-lg-left text-sm-center mr-3">
+                <sidenav class="mr-md-3">
                     <div class="nav flex-column justify-content-md-left nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                       <a class="nav-link active pr-5" id="v-pills-ex-tab" data-toggle="pill" href="#v-pills-exercio" role="tab" aria-controls="v-pills-exercio" aria-selected="true">Exercícios</a>
                       <a class="nav-link px-auto" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-dieta" role="tab" aria-controls="v-pills-dieta" aria-selected="false">Dieta</a>
@@ -68,14 +68,12 @@
                     </div>
                 </sidenav>
                 
-                <section class="float-right">
-                    <div class="col-6 tab-content" id="v-pills-tabContent">
+                <section class="container">
+                    <div class="col-md-12 d-flex justify-content-center tab-content" id="v-pills-tabContent">
                       <div class="tab-pane fade show active" id="v-pills-exercio" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                        <div class="bg-color">
                             <div class="row">
-                                
-                                <div class="">
-                                    <div class="bg-light rounded box-shadow form-group px-3 py-2">
+                                <div class="mr-md-3">
+                                    <div class="bg-light rounded box-shadow form-group px-2 py-2">
                                     <h1 class="h6 text-center">Formulário exercício</h1>
                                        <form>
                                           <div class="form-row">
@@ -106,8 +104,40 @@
                                     </div>
                                 </div>
                                 
+                                <div class="ml-md-3">
+                                    <div class="bg-light rounded box-shadow form-group px-2 py-2">
+                                    <h1 class="h6 text-center">Formulário exercício</h1>
+                                       <form>
+                                          <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                              <label for="inputEmail4">Email</label>
+                                              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                              <label for="inputPassword4">Password</label>
+                                              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputAddress">Address</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                          </div>
+                                          <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                              <label for="inputState">State</label>
+                                              <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <button type="submit" class="btn btn-primary">Enviar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                 
+                                
                             </div>
-                        </div>
                     </div>
                         
                       <div class="tab-pane fade" id="v-pills-dieta" role="tabpanel" aria-labelledby="v-pills-profile-tab">
