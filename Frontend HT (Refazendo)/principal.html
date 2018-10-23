@@ -176,7 +176,7 @@
                                       <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputHora">Horário</label>
-                                          <input type="datetime" class="form-control" id="inputHora" placeholder="00:00:00">
+                                          <input type="time" class="form-control" id="inputHora" placeholder="00:00:00">
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputData">Data</label>
@@ -232,44 +232,36 @@
                             <div class="tab-pane fade show active" id="v-pills-pressao" role="tabpanel" aria-labelledby="v-pills-home-tab">
                             <div class="col-lg-5 float-md-left">
                                 <div class="bg-light rounded box-shadow form-group p-3">
-                                <h1 class="h6 text-center">Novo Exercício</h1>
+                                <h1 class="h6 text-center">Insira a Pressão Arefira</h1>
                                    <form>
                                        <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputExercicio">Exercício</label>
-                                          <select id="inputExercicio" class="form-control">
-                                            <option selected>Selecione</option>
-                                            <option>Caminhada</option>
-                                            <option>Corrida</option>
-                                            <option>Bicicleta</option>
-                                            <option>Natação</option>
-                                          </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                           <label for="inputData">Data</label>
                                           <input type="date" class="form-control" id="inputData" placeholder="">
                                         </div>
+                                        
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-6">
-                                          <label for="inputTempo">Tempo percorrido</label>
-                                          <input type="text" class="form-control" id="inputTempo" placeholder="00:00:00">
+                                          <label for="inputMax">Ponto máximo da pressão</label>
+                                          <input type="number" class="form-control" id="inputMax">
                                         </div>
                                         <div class="form-group col-md-6">
-                                          <label for="inputPadraoTempo">Padrão de Tempo</label>
-                                          <input type="text" class="form-control" id="inputPadraoTempo" placeholder="00:00:00">
+                                          <label for="inputMin">Ponto mínimo da pressão</label>
+                                          <input type="number" class="form-control" id="inputMin">
                                         </div>
                                       </div>
-                                      <div class="form-row">
+                                       <div class="form-row">
                                         <div class="form-group col-md-6">
-                                          <label for="inputKm">Quilometragem</label>
-                                          <input type="text" class="form-control" id="inputKm" placeholder="">
+                                          <label for="inputMaxPad">Ponto máximo do Padrão</label>
+                                          <input type="number" class="form-control" id="inputMaxPad">
                                         </div>
                                         <div class="form-group col-md-6">
-                                          <label for="inputKmPadrao">Padrão de Quilometrage,</label>
-                                          <input type="text" class="form-control" id="inputKmPadrao" placeholder="">
+                                          <label for="inputMinPad">Ponto mínimo do Padrão</label>
+                                          <input type="number" class="form-control" id="inputMinPad">
                                         </div>
                                       </div>
+                                      
                                       <button type="submit" class="btn btn-outline-primary">Enviar</button>
                                     </form>
                                 </div>
