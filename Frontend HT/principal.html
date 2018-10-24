@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="HealthTrack - Your Health App">
+        <meta name="author" content="Luis Gustavo Ullmann">
+        
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="HealthTrack - Your Health App">
+        <meta property="og:description" content="Health Track it is an academic project about health tecnologies.">
+        <meta property="og:url" content="http://www.healthtrackapp.com.br">
+        <meta property="og:image" content="">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css"> 
+       
+                    
+        <meta name="keywords" content="">
+        <!-- content: palavras chaves para SEO -->
+        
+        <title>Health Track - Your Future Health APP</title>
+    </head>
+    <body> 
+        <!-- Não esquecer do alt= para imagens -->
+        <!-- A tela é divida em um grid de 12 colunas -->
+        <!-- Usar div="container" e depois class="row" e "col" -->
+
+        <header class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top box-shadow py-2 px-5">
+                      <a class="navbar-brand font-weight-bold" href="index.html">HEALTH TRACK</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item disabled">
+                            <a class="nav-link" href="#">Dados <span class="sr-only">(current)</span></a>
+                          </li>                      
+                          <li class="nav-item">
+                            
+                          </li>
+                            <li class="nav-item">
+                                <form class="form-inline my-lg- my-lg-0">
+                                <a href="#"><button class="btn btn-outline-primary ml-md-2" href="index.html" type="submit">Sair</button></a>         
+                            </form>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <section class="container-fluid pt-4">
+            <div class="row">
+                
+                <!-- NAVEGACAO INTERNA -->
+                <sidenav class="col-md-3 col-lg-2 m-1 px-sm-0">
+                    <div class="nav flex-md-column justify-content-sm-center justify-content-center nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active mx-md-0 mx-sm-2 px-2" id="v-pills-exercicio-tab" data-toggle="pill" href="#v-pills-exercio" role="tab" aria-controls="v-pills-exercio" aria-selected="true">Exercícios</a>
+                      <a class="nav-link mx-md-0 mx-sm-4 px-2" id="v-pills-dieta-tab" data-toggle="pill" href="#v-pills-dieta" role="tab" aria-controls="v-pills-dieta" aria-selected="false">Dieta</a>
+                      <a class="nav-link mx-md-0 mx-sm-2 px-2" id="v-pills-pressao-tab" data-toggle="pill" href="#v-pills-pressao" role="tab" aria-controls="v-pills-pressao" aria-selected="false">Pressão Arterial</a>
+                      <a class="nav-link mx-md-0 mx-sm-2 px-2" id="v-pills-peso-tab" data-toggle="pill" href="#v-pills-peso" role="tab" aria-controls="v-pills-peso" aria-selected="false">Peso</a>
+                    </div>
+                </sidenav>
+                <!-- FIM NAVEGACAO INTERNA -->
+                
+                <section class="col py-3 bg-color">
+                    <div class="justify-content-lg-center tab-content" id="v-pills-tabContent">
+                        
+                    <!-- CONTEÚDO Exercicio -->    
+                      <div class="tab-pane fade show active" id="v-pills-exercio" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div class="col-lg-5 float-md-left">
+                                    <div class="bg-light rounded box-shadow form-group p-3">
+                                    <h1 class="h6 text-center">Novo Exercício</h1>
+                                       <form>
+                                           <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                              <label for="inputExercicio">Exercício</label>
+                                              <select id="inputExercicio" class="form-control">
+                                                <option selected>Selecione</option>
+                                                <option>Caminhada</option>
+                                                <option>Corrida</option>
+                                                <option>Bicicleta</option>
+                                                <option>Natação</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                              <label for="inputData">Data</label>
+                                              <input type="date" class="form-control" id="inputData" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                              <label for="inputTempo">Tempo percorrido</label>
+                                              <input type="time" class="form-control" id="inputTempo">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                              <label for="inputPadraoTempo">Padrão de Tempo</label>
+                                              <input type="time" class="form-control" id="inputPadraoTempo">
+                                            </div>
+                                          </div>
+                                          <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                              <label for="inputKm">Quilometragem</label>
+                                              <input type="text" class="form-control" id="inputKm" placeholder="">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                              <label for="inputKmPadrao">Padrão de Quilometragem</label>
+                                              <input type="text" class="form-control" id="inputKmPadrao" placeholder="">
+                                            </div>
+                                          </div>
+                                          <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-7 float-md-right">
+                                    <div class="bg-light rounded box-shadow form-group p-lg-2">
+                                    <h1 class="h6 text-center">Tabela</h1>
+                                       <p>huahauhauhauhau</p>
+                                    </div>
+                                </div>
+                          <div class="container-fluid d-flex flex-column justify-content-end">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="bg-light rounded box-shadow form-group p-2">
+                                        <h1 class="h6 text-center">Gráfico</h1>
+                                            <p>huahauhauhauhau</p>
+                                            <p>huahauhauhauhau</p>
+                                            <p>huahauhauhauhau</p>
+                                            <p>huahauhauhauhau</p>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          
+                    </div>
+                    <!-- FIM CONTEÚDO Exercicio -->
+                        
+                    
+                        
+                      <div class="tab-pane fade" id="v-pills-dieta" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div class="bg-color">
+                    
+                        <!-- CONTEÚDO Dieta -->    
+                            <div class="tab-pane fade show active" id="v-pills-dieta" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="col-lg-5 float-md-left">
+                                <div class="bg-light rounded box-shadow form-group p-3">
+                                <h1 class="h6 text-center">Nova Dieta</h1>
+                                   <form>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputDieta">Refeição do dia</label>
+                                          <select id="inputDieta" class="form-control">
+                                            <option selected>Selecione</option>
+                                            <option>Café da Manhã</option>
+                                            <option>Almoço</option>
+                                            <option>Lanche</option>
+                                            <option>Jantar</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for=inputAlimento>Alimentos</label>
+                                            <input type="text" class="form-control" id="inputAlimento" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputHora">Horário</label>
+                                          <input type="time" class="form-control" id="inputHora" placeholder="00:00:00">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputData">Data</label>
+                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputCalorias">Calorias</label>
+                                          <input type="text" class="form-control" id="inputKm" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputCaloriasPadrao">Padrão de Calorias</label>
+                                          <input type="text" class="form-control" id="inputCaloriasPadrao" placeholder="">
+                                        </div>
+                                      </div>
+                                      <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 float-md-right">
+                                <div class="bg-light rounded box-shadow form-group p-lg-2">
+                                <h1 class="h6 text-center">Tabela</h1>
+                                   <p>huahauhauhauhau</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid d-flex flex-column justify-content-end">
+                            <div class="row">
+                            <div class="col-12">
+                                <div class="bg-light rounded box-shadow form-group p-2">
+                                    <h1 class="h6 text-center">Gráfico</h1>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+
+                            </div>
+                        <!-- FIM CONTEÚDO Dieta -->
+                            
+                        </div>
+                      </div>
+                        
+                        
+                      <div class="tab-pane fade" id="v-pills-pressao" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                          
+                          
+                        <!-- CONTEÚDO Pressao -->    
+                            <div class="tab-pane fade show active" id="v-pills-pressao" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="col-lg-5 float-md-left">
+                                <div class="bg-light rounded box-shadow form-group p-3">
+                                <h1 class="h6 text-center">Insira a Pressão Arefira</h1>
+                                   <form>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputData">Data</label>
+                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                                        </div>
+                                        
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMax">Ponto máximo da pressão</label>
+                                          <input type="number" class="form-control" id="inputMax">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMin">Ponto mínimo da pressão</label>
+                                          <input type="number" class="form-control" id="inputMin">
+                                        </div>
+                                      </div>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMaxPad">Ponto máximo do Padrão</label>
+                                          <input type="number" class="form-control" id="inputMaxPad">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMinPad">Ponto mínimo do Padrão</label>
+                                          <input type="number" class="form-control" id="inputMinPad">
+                                        </div>
+                                      </div>
+                                      
+                                      <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 float-md-right">
+                                <div class="bg-light rounded box-shadow form-group p-lg-2">
+                                <h1 class="h6 text-center">Tabela</h1>
+                                   <p>huahauhauhauhau</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid d-flex flex-column justify-content-end">
+                            <div class="row">
+                            <div class="col-12">
+                                <div class="bg-light rounded box-shadow form-group p-2">
+                                    <h1 class="h6 text-center">Gráfico</h1>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+
+                            </div>
+                        <!-- FIM CONTEÚDO Pressao -->
+                          
+                      </div>
+                        <div class="tab-pane fade" id="v-pills-peso" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            
+                            <!-- CONTEÚDO Peso -->    
+                            <div class="tab-pane fade show active" id="v-pills-peso" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="col-lg-5 float-md-left">
+                                <div class="bg-light rounded box-shadow form-group p-3">
+                                <h1 class="h6 text-center">Nova Medida de Peso</h1>
+                                   <form>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputData">Data</label>
+                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputAltura">Altura</label>
+                                          <input type="text" class="form-control" id="inputAltura" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPeso">Peso</label>
+                                          <input type="text" class="form-control" id="inputPeso">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPadraoPeso">Padrão de Pesagem</label>
+                                          <input type="text" class="form-control" id="inputPadraoPeso" placeholder="">
+                                        </div>
+                                      </div>
+                                      
+                                      <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 float-md-right">
+                                <div class="bg-light rounded box-shadow form-group p-lg-2">
+                                <h1 class="h6 text-center">Tabela</h1>
+                                   <p>huahauhauhauhau</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid d-flex flex-column justify-content-end">
+                            <div class="row">
+                            <div class="col-12">
+                                <div class="bg-light rounded box-shadow form-group p-2">
+                                    <h1 class="h6 text-center">Gráfico</h1>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                        <p>huahauhauhauhau</p>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+
+                            </div>
+                            <!-- FIM CONTEÚDO Peso -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+       
+ 
+    </body>
+        
+        
+    <footer>
+        
+    </footer>
+    
+    <!-- USAR APENAS O QUE INCLUIR NO PROJETO -->
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+</html>
