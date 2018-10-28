@@ -1,1 +1,15 @@
+br.com.healthtrack.db.dieta.dao
+br.com.healthtrack.db.endereco.dao
+br.com.healthtrack.db.exercicio.dao
+br.com.healthtrack.db.peso.dao
+br.com.healthtrack.db.pressaoarterial.dao
+br.com.healthtrack.db.usuario.dao
+br.com.healthtrack.dieta
+br.com.healthtrack.endereco
+br.com.healthtrack.exercicio
+br.com.healthtrack.factory
+br.com.healthtrack.jdbc
+br.com.healthtrack.peso
+br.com.healthtrack.pressaoarterial
+br.com.healthtrack.test.dao
 br.com.healthtrack.usuario
