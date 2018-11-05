@@ -78,10 +78,39 @@
                         
                     <!-- CONTEÚDO Exercicio -->    
                       <div class="tab-pane fade show active" id="v-pills-exercio" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                <div class="col-lg-5 float-md-left">
+                                                                
+                                <div class="col-lg-7 float-md-right">
+                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
+                                        <div class="row pt-1 mx-2">
+                                            <div class="col-8 d-flex justify-content-left">
+                                                <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
+                                            </div>
+                                            <div class="col-4 pl-5">
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                  Novo Exercício
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <!-- Modal Exercício -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                          <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Exercício</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                
+                                                  
+                                    <div class="col-lg-12 float-md-left">
                                     <div class="bg-light rounded box-shadow form-group p-3">
                                     <div class="d-flex justify-content-center">
-                                        <h1 class="h5 text-center border-bottom border-primary">Novo Exercício</h1>
+                                    
                                     </div>
                                        <form>
                                            <div class="form-row">
@@ -120,16 +149,22 @@
                                               <input type="text" class="form-control" id="inputKmPadrao" placeholder="">
                                             </div>
                                           </div>
-                                          <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
                                         </form>
                                     </div>
                                 </div>
-                                
-                                <div class="col-lg-7 float-md-right">
-                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
-                                        <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
+                                                  
+                                                  
+                                                  
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
+                                        <!-- END Modal Exercício -->
+                                        
                                        
                                     </div>
                                 </div>
@@ -137,7 +172,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="bg-light rounded box-shadow form-group p-2 table">
-                                        <div class="d-flex justify-content-center">
+                                        <div class="d-flex justify-content-left pt-1 mx-2">
                                             <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
                                         </div>
                                             
