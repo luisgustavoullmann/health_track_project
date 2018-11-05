@@ -214,7 +214,7 @@
                                         </div>
                                         
                                         
-                                        <!-- Modal Exercício -->
+                                        <!-- Modal Dieta -->
                                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -227,7 +227,50 @@
                                               <div class="modal-body">
                                                 
                                             <!-- INSERIR CONTEUDO -->
-                                                  
+                                         <!-- Interno Modal Dieta -->
+                                <div class="bg-light rounded box-shadow form-group p-3">
+                                
+                                   <form>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputDieta">Refeição do dia</label>
+                                          <select id="inputDieta" class="form-control">
+                                            <option selected>Selecione</option>
+                                            <option>Café da Manhã</option>
+                                            <option>Almoço</option>
+                                            <option>Lanche</option>
+                                            <option>Jantar</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for=inputAlimento>Alimentos</label>
+                                            <input type="text" class="form-control" id="inputAlimento" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputHora">Horário</label>
+                                          <input type="time" class="form-control" id="inputHora" placeholder="00:00:00">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputData">Data</label>
+                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputCalorias">Calorias</label>
+                                          <input type="text" class="form-control" id="inputKm" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputCaloriasPadrao">Padrão de Calorias</label>
+                                          <input type="text" class="form-control" id="inputCaloriasPadrao" placeholder="">
+                                        </div>
+                                      </div>
+                                    </form>
+                                </div>
+                                <!-- Interno Modal Dieta -->
+
                                                   
                                               </div>
                                               <div class="modal-footer">
@@ -237,7 +280,7 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <!-- END Modal Exercício -->
+                                        <!-- END Modal Dieta -->
                                         
                                        
                                     </div>
@@ -280,7 +323,7 @@
                                             <div class="col-4">
                                                 <div class="d-flex justify-content-right float-right">
                                                 <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoModal">
                                                   Nova Pressão
                                                 </button>
                                                 </div>
@@ -288,12 +331,12 @@
                                         </div>
                                         
                                         
-                                        <!-- Modal Exercício -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <!-- Modal Pressão -->
+                                        <div class="modal fade" id="pressaoModal" tabindex="-1" role="dialog" aria-labelledby="pressaoModalTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                               <div class="modal-header">
-                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Dieta</h5>
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="pressaoModalTitle">Pressão Arterial</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                   <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -301,6 +344,41 @@
                                               <div class="modal-body">
                                                 
                                             <!-- INSERIR CONTEUDO -->
+                                            <!-- Internal Modal Pressão -->
+                                <div class="bg-light rounded box-shadow form-group p-3">
+                                    
+                                   <form>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                          <label for="inputData">Data</label>
+                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                                        </div>
+                                        
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMax">Ponto máximo da pressão</label>
+                                          <input type="number" class="form-control" id="inputMax">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMin">Ponto mínimo da pressão</label>
+                                          <input type="number" class="form-control" id="inputMin">
+                                        </div>
+                                      </div>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMaxPad">Ponto máximo do Padrão</label>
+                                          <input type="number" class="form-control" id="inputMaxPad">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputMinPad">Ponto mínimo do Padrão</label>
+                                          <input type="number" class="form-control" id="inputMinPad">
+                                        </div>
+                                      </div>
+                                    </form>
+                                </div>
+                                <!-- Internal Modal Pressão -->
+
                                                   
                                                   
                                               </div>
@@ -311,7 +389,7 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <!-- END Modal Exercício -->
+                                        <!-- END Modal Pressão -->
                                         
                                        
                                     </div>
@@ -358,7 +436,7 @@
                                             <div class="col-4">
                                                 <div class="d-flex justify-content-right float-right">
                                                 <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pesoModal">
                                                   Novo Peso
                                                 </button>
                                                 </div>
@@ -366,12 +444,12 @@
                                         </div>
                                         
                                         
-                                        <!-- Modal Exercício -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <!-- Modal Peso -->
+                                        <div class="modal fade" id="pesoModal" tabindex="-1" role="dialog" aria-labelledby="pesoModalTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                               <div class="modal-header">
-                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Dieta</h5>
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="pesoModalTitle">Peso</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                   <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -379,7 +457,35 @@
                                               <div class="modal-body">
                                                 
                                             <!-- INSERIR CONTEUDO -->
-                                                  
+                                            <!-- Internal Modal Peso -->
+                                <div class="bg-light rounded box-shadow form-group">
+                                  
+                                   <form>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputData">Data</label>
+                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputAltura">Altura</label>
+                                          <input type="text" class="form-control" id="inputAltura" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPeso">Peso</label>
+                                          <input type="text" class="form-control" id="inputPeso">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPadraoPeso">Padrão de Peso</label>
+                                          <input type="text" class="form-control" id="inputPadraoPeso" placeholder="">
+                                        </div>
+                                      </div>
+                                      
+                                    </form>
+                                </div>
+                                <!-- Internal Modal Peso -->
+
                                                   
                                               </div>
                                               <div class="modal-footer">
@@ -389,7 +495,7 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <!-- END Modal Exercício -->
+                                        <!-- END Modal Peso -->
                                         
                                        
                                     </div>
