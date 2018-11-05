@@ -78,28 +78,31 @@
                         
                     <!-- CONTEÚDO Exercicio -->    
                       <div class="tab-pane fade show active" id="v-pills-exercio" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                                                
-                                <div class="col-lg-7 float-md-right">
+                        <div class="row">
+                          
+                            <div class="col-lg-12 float-md-right">
                                     <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
-                                        <div class="row pt-1 mx-2">
+                                        <div class="row pt-1 mx-1">
                                             <div class="col-8 d-flex justify-content-left">
                                                 <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
                                             </div>
-                                            <div class="col-4 pl-5">
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                            <div class="col-4">
+                                                <div class="d-flex justify-content-right float-right">
+                                                    <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exercicioModal">
                                                   Novo Exercício
                                                 </button>
+                                                </div>
                                             </div>
                                         </div>
                                         
                                         
                                         <!-- Modal Exercício -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal fade" id="exercicioModal" tabindex="-1" role="dialog" aria-labelledby="exercicioModalTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                               <div class="modal-header">
-                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Exercício</h5>
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="exercicioModalTitle">Exercício</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                   <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -172,7 +175,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="bg-light rounded box-shadow form-group p-2 table">
-                                        <div class="d-flex justify-content-left pt-1 mx-2">
+                                        <div class="d-flex justify-content-left pt-1 mx-3">
                                             <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
                                         </div>
                                             
@@ -180,7 +183,8 @@
                                 </div>
                             </div>
                           </div>
-                          
+                            
+                        </div>  
                     </div>
                     <!-- FIM CONTEÚDO Exercicio -->
                         
@@ -191,72 +195,68 @@
                     
                         <!-- CONTEÚDO Dieta -->    
                             <div class="tab-pane fade show active" id="v-pills-dieta" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <div class="col-lg-5 float-md-left">
-                                <div class="bg-light rounded box-shadow form-group p-3">
-                                    <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Nova Dieta</h1>
+                                <div class="row">
+                                    <!-- Insert -->
+                            <div class="col-lg-12 float-md-right">
+                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
+                                        <div class="row pt-1 mx-1">
+                                            <div class="col-8 d-flex justify-content-left">
+                                                <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="d-flex justify-content-right float-right">
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                  Novo Dieta
+                                                </button>
+                                                </div>
+                                            </div>
                                         </div>
-                                   <form>
-                                       <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputDieta">Refeição do dia</label>
-                                          <select id="inputDieta" class="form-control">
-                                            <option selected>Selecione</option>
-                                            <option>Café da Manhã</option>
-                                            <option>Almoço</option>
-                                            <option>Lanche</option>
-                                            <option>Jantar</option>
-                                          </select>
+                                        
+                                        
+                                        <!-- Modal Exercício -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                          <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Dieta</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                
+                                            <!-- INSERIR CONTEUDO -->
+                                                  
+                                                  
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for=inputAlimento>Alimentos</label>
-                                            <input type="text" class="form-control" id="inputAlimento" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputHora">Horário</label>
-                                          <input type="time" class="form-control" id="inputHora" placeholder="00:00:00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputData">Data</label>
-                                          <input type="date" class="form-control" id="inputData" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputCalorias">Calorias</label>
-                                          <input type="text" class="form-control" id="inputKm" placeholder="">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputCaloriasPadrao">Padrão de Calorias</label>
-                                          <input type="text" class="form-control" id="inputCaloriasPadrao" placeholder="">
-                                        </div>
-                                      </div>
-                                      <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
-                                    </form>
+                                        <!-- END Modal Exercício -->
+                                        
+                                       
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-7 float-md-right">
-                                <div class="bg-light table rounded box-shadow form-group p-lg-2">
-                                    <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid d-flex flex-column justify-content-end">
+                          <div class="container-fluid d-flex flex-column justify-content-end">
                             <div class="row">
-                            <div class="col-12">
-                                <div class="bg-light rounded box-shadow form-group p-2 table">
-                                    <div class="d-flex justify-content-center">
-                                        <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
-                                    </div>        
+                                <div class="col-12">
+                                    <div class="bg-light rounded box-shadow form-group p-2 table">
+                                        <div class="d-flex justify-content-left pt-1 mx-3">
+                                            <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
+                                        </div>
+                                            
+                                    </div>
                                 </div>
                             </div>
-                            </div>
-                            </div>
-
+                          </div>
+                                
+                        <!-- Insert -->
+                                </div>
                             </div>
                         <!-- FIM CONTEÚDO Dieta -->
                             
@@ -269,123 +269,145 @@
                           
                         <!-- CONTEÚDO Pressao -->    
                             <div class="tab-pane fade show active" id="v-pills-pressao" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <div class="col-lg-5 float-md-left">
-                                <div class="bg-light rounded box-shadow form-group p-3">
-                                    <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Nova Pressão Aferida</h1>
-                                        </div>
-                                   <form>
-                                       <div class="form-row">
-                                        <div class="form-group col-md-12">
-                                          <label for="inputData">Data</label>
-                                          <input type="date" class="form-control" id="inputData" placeholder="">
+                            <div class="row">
+                                <!-- Insert -->
+                            <div class="col-lg-12 float-md-right">
+                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
+                                        <div class="row pt-1 mx-1">
+                                            <div class="col-8 d-flex justify-content-left">
+                                                <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="d-flex justify-content-right float-right">
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                  Nova Pressão
+                                                </button>
+                                                </div>
+                                            </div>
                                         </div>
                                         
-                                      </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputMax">Ponto máximo da pressão</label>
-                                          <input type="number" class="form-control" id="inputMax">
+                                        
+                                        <!-- Modal Exercício -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                          <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Dieta</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                
+                                            <!-- INSERIR CONTEUDO -->
+                                                  
+                                                  
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputMin">Ponto mínimo da pressão</label>
-                                          <input type="number" class="form-control" id="inputMin">
-                                        </div>
-                                      </div>
-                                       <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputMaxPad">Ponto máximo do Padrão</label>
-                                          <input type="number" class="form-control" id="inputMaxPad">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputMinPad">Ponto mínimo do Padrão</label>
-                                          <input type="number" class="form-control" id="inputMinPad">
-                                        </div>
-                                      </div>
-                                      
-                                      <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
-                                    </form>
+                                        <!-- END Modal Exercício -->
+                                        
+                                       
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-7 float-md-right">
-                                <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
-                                    <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid d-flex flex-column justify-content-end">
+                          <div class="container-fluid d-flex flex-column justify-content-end">
                             <div class="row">
-                            <div class="col-12">
-                                <div class="bg-light rounded box-shadow form-group p-2 table">
-                                    <div class="d-flex justify-content-center">
+                                <div class="col-12">
+                                    <div class="bg-light rounded box-shadow form-group p-2 table">
+                                        <div class="d-flex justify-content-left pt-1 mx-3">
                                             <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
-                                        </div> 
+                                        </div>
+                                            
+                                    </div>
                                 </div>
                             </div>
-                            </div>
+                          </div>
+                                
+                        <!-- Insert -->
+                            
+                                
+                                
                             </div>
 
-                            </div>
+                            
+                            
+
+                        </div>
                         <!-- FIM CONTEÚDO Pressao -->
+                          
+                          
                           
                       </div>
                         <div class="tab-pane fade" id="v-pills-peso" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                             
                             <!-- CONTEÚDO Peso -->    
-                            <div class="tab-pane fade show active" id="v-pills-peso" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <div class="col-lg-5 float-md-left">
-                                <div class="bg-light my-5 rounded box-shadow form-group p-3">
-                                    <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Nova Medição de Peso</h1>
-                                        </div>
-                                   <form>
-                                       <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputData">Data</label>
-                                          <input type="date" class="form-control" id="inputData" placeholder="">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputAltura">Altura</label>
-                                          <input type="text" class="form-control" id="inputAltura" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputPeso">Peso</label>
-                                          <input type="text" class="form-control" id="inputPeso">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputPadraoPeso">Padrão de Peso</label>
-                                          <input type="text" class="form-control" id="inputPadraoPeso" placeholder="">
-                                        </div>
-                                      </div>
-                                      
-                                      <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-7 float-md-right">
-                                <div class="bg-light table rounded box-shadow form-group p-lg-2">
-                                    <div class="d-flex justify-content-center">
-                                            <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid d-flex flex-column justify-content-end">
                             <div class="row">
-                            <div class="col-12">
-                                <div class="bg-light rounded box-shadow form-group p-2 table">
-                                    <div class="d-flex justify-content-center">
-                                        <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
+                                <!-- Insert -->
+                            <div class="col-lg-12 float-md-right">
+                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
+                                        <div class="row pt-1 mx-1">
+                                            <div class="col-8 d-flex justify-content-left">
+                                                <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="d-flex justify-content-right float-right">
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                  Novo Peso
+                                                </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <!-- Modal Exercício -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                          <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="exampleModalCenterTitle">Dieta</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                
+                                            <!-- INSERIR CONTEUDO -->
+                                                  
+                                                  
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- END Modal Exercício -->
+                                        
+                                       
+                                    </div>
+                                </div>
+                          <div class="container-fluid d-flex flex-column justify-content-end">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="bg-light rounded box-shadow form-group p-2 table">
+                                        <div class="d-flex justify-content-left pt-1 mx-3">
+                                            <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
+                                        </div>
+                                            
                                     </div>
                                 </div>
                             </div>
-                            </div>
-                            </div>
-
+                          </div>
+                                
+                        <!-- Insert -->
                             </div>
                             <!-- FIM CONTEÚDO Peso -->
                         </div>
