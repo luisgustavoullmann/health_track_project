@@ -423,7 +423,7 @@
                                       <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputPeso">Peso</label>
-                                          <input type="text" name="peso" class="form-control" id="inputPeso">
+                                          <input type="text" name="pesagem" class="form-control" id="inputPeso">
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputPadraoPeso">Padrão de Peso</label>

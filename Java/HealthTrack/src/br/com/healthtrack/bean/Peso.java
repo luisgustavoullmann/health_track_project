@@ -13,13 +13,15 @@ public class Peso {
 	float peso;
 	float altura;
 	Calendar data;
+	float padraoPeso;
 	
-	public Peso(int cdPeso, float ps, float altura, Calendar dataPeso) {
+	public Peso(int cdPeso, float ps, float altura, Calendar dataPeso, float padraoPeso) {
 		super();
 		this.cdPeso = cdPeso;
 		this.peso = ps;
 		this.altura = altura;
 		this.data = dataPeso;
+		this.padraoPeso = padraoPeso;
 	}
 	
 	public Peso() {}
@@ -97,6 +99,14 @@ public class Peso {
 
 	public void setAltura(float altura) {
 		this.altura = altura;
+	}
+
+	public float getPadraoPeso() {
+		return padraoPeso;
+	}
+
+	public void setPadraoPeso(float padraoPeso) {
+		this.padraoPeso = padraoPeso;
 	}
 	
 	

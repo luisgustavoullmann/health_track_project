@@ -22,8 +22,8 @@ public class OraclePesoDAO implements PesoDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA)"
-					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')))";
+			String sql = "INSERT INTO T_PESO(CD_PESO, NR_PESO, NR_ALTURA, DT_DATA, NR_PADRAO)"
+					+ "VALUES (SQ_PESO.NEXTVAL ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?";
 			
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, peso.getCdPeso());
@@ -31,6 +31,8 @@ public class OraclePesoDAO implements PesoDAO {
 			stmt.setFloat(3, peso.getAltura());
 			java.sql.Date data = new java.sql.Date(peso.getData().getTimeInMillis());
 			stmt.setDate(4, data);
+			stmt.setFloat(5, peso.getPadraoPeso());
+			
 			
 			stmt.executeUpdate();
 			
@@ -69,11 +71,12 @@ public class OraclePesoDAO implements PesoDAO {
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataPeso = Calendar.getInstance();
 				dataPeso.setTimeInMillis(data.getTime());
+				float padraoPeso = rs.getFloat("NR_PADRAO");
 				
 				/*
 				 * Create an object Peso with all informations 
 				 */
-				Peso peso = new Peso(cdPeso, ps, altura, dataPeso);
+				Peso peso = new Peso(cdPeso, ps, altura, dataPeso, padraoPeso);
 				//add lista
 				lista.add(peso);
 			}
@@ -104,12 +107,13 @@ public class OraclePesoDAO implements PesoDAO {
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_PESO SET NR_PESO = ?, NR_ALTURA = ?, "
-					+ "DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')) WHERE CD_PESO = ?";
+					+ "DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')), NR_PADRAO = ? WHERE CD_PESO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setFloat(1, peso.getPeso());
 			stmt.setFloat(2, peso.getAltura());
 			java.sql.Date data = new java.sql.Date(peso.getData().getTimeInMillis());
 			stmt.setDate(3, data);
+			stmt.setFloat(4, peso.getPadraoPeso());
 			
 			stmt.executeUpdate();
 			
@@ -182,8 +186,9 @@ public class OraclePesoDAO implements PesoDAO {
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataPeso = Calendar.getInstance();
 				dataPeso.setTimeInMillis(data.getTime());
+				float padraoPeso = rs.getFloat("NR_PADRAO");
 				
-				peso = new Peso(cdPeso, ps, altura, dataPeso);
+				peso = new Peso(cdPeso, ps, altura, dataPeso, padraoPeso);
 				
 			}
 		} catch (SQLException e) {
