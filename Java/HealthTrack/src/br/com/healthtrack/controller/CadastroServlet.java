@@ -50,7 +50,7 @@ public class CadastroServlet extends HttpServlet {
 			String tel = request.getParameter("telefone");
 			String cpf = request.getParameter("cpf");
 			String sexo = request.getParameter("sexo");
-			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yy");
+			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 			Calendar nascimento = Calendar.getInstance();
 			nascimento.setTime(format.parse(request.getParameter("nascimento")));
 			String password = request.getParameter("password");

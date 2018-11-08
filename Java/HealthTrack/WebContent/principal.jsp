@@ -184,12 +184,11 @@
                                        <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputDieta">Refeição do dia</label>
-                                          <select id="inputDieta" name="refeicao" class="form-control">
-                                            <option selected>Selecione</option>
-                                            <option>Café da Manhã</option>
-                                            <option>Almoço</option>
-                                            <option>Lanche</option>
-                                            <option>Jantar</option>
+                                          <select id="inputDieta" name="tipo" class="form-control">
+                                            <option name="Café da Manhã" value="Café da Manhã">Café da Manhã</option>
+                                            <option name="Almoço" value="Almoço">Almoço</option>
+                                            <option name="Lanche" value="Lanche">Lanche</option>
+                                            <option name="Jantar" valeu="Jantar">Jantar</option>
                                           </select>
                                         </div>
                                         <div class="form-group col-md-6">
@@ -204,7 +203,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputData">Data</label>
-                                          <input type="date" name="datacaloria" class="form-control" id="inputData" placeholder="">
+                                          <input type="date" name="dataDieta" class="form-control" id="inputData" placeholder="">
                                         </div>
                                       </div>
                                       <div class="form-row">

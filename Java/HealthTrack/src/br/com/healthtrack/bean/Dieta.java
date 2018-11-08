@@ -11,13 +11,14 @@ public class Dieta {
 	//Atributos
 	private int cdDieta;
 	private Calendar data;
+	private Calendar horario;
 	private String nomeAlimento;
 	private double caloria;
 	private String tipo; //almoço, café, janta e etc..
 	private double padraoCaloria; //ds_caloria: quantas calorias consumidas era o ideal por refeição?
 
 	//Métodos
-	public Dieta(int code, String name, double caloria, String type, double padcaloria, Calendar dataDieta) {
+	public Dieta(int code, String name, double caloria, String type, double padcaloria, Calendar dataDieta, Calendar horario) {
 		super();
 		this.cdDieta = code;
 		this.nomeAlimento = name;
@@ -25,39 +26,12 @@ public class Dieta {
 		this.tipo = type;
 		this.padraoCaloria = padcaloria;
 		this.data = dataDieta;
+		this.horario = horario;
 	}
 	
 	public Dieta() {}
 
-	public void dadoDieta() {
-		Scanner alimento = new Scanner(System.in);
-		/*Instancia class Dieta
-		 * @param O Nome do alimento consumido
-		 */
-		System.out.println("O que você comeu ontem?");
-		this.setNomeAlimento(alimento.nextLine());
-		
-		/*Instancia class Dieta
-		 * @param Adiciona uma quantidade de calorias por refeição
-		 */
-		System.out.println("Quantas calorias foram consumidas?");
-		this.addCaloria(alimento.nextDouble());
-		
-		/*Instancia class Dieta
-		 * @param O tipo da refeição
-		 */
-		System.out.println("Qual refeição do dia?");
-		this.setTipo(alimento.nextLine());
-		
-		/*Instancia class Dieta
-		 * @param Se a quantidade consumida de calorias é maior, igual ou menor que o padrao para a refeição
-		 */
-		System.out.println("Qual padrão de calorias que deseja consumir por dia?");
-		this.setPadraoCaloria(alimento.nextDouble());
-		
-		/*Fecha o objeto*/
-		alimento.close();
-	}
+	
 	
 	/*Retorna informações da Dieta*/
 	public void infoDieta() {
@@ -140,8 +114,14 @@ public class Dieta {
 	public void setData(Calendar data) {
 		this.data = data;
 	}
-	
-	
 
+	public Calendar getHorario() {
+		return horario;
+	}
+
+	public void setHorario(Calendar horario) {
+		this.horario = horario;
+	}
+	
 }
 	

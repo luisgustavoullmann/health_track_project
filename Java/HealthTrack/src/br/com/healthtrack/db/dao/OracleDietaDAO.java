@@ -25,8 +25,8 @@ public class OracleDietaDAO implements DietaDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA)"
-					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY'))";
+			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA, DT_HORARIO)"
+					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, dieta.getCdDieta());
 			stmt.setString(2, dieta.getNomeAlimento());
@@ -35,6 +35,8 @@ public class OracleDietaDAO implements DietaDAO {
 			stmt.setDouble(5, dieta.getPadraoCaloria());
 			java.sql.Date data = new java.sql.Date(dieta.getData().getTimeInMillis());
 			stmt.setDate(6, data);
+			java.sql.Date horario = new java.sql.Date(dieta.getHorario().getTimeInMillis());
+			stmt.setDate(7, horario);
 			
 			stmt.executeUpdate();
 			
@@ -75,9 +77,12 @@ public class OracleDietaDAO implements DietaDAO {
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataDieta = Calendar.getInstance();
 				dataDieta.setTimeInMillis(data.getTime());
+				java.sql.Date horario = rs.getDate("DT_HORARIO");
+				Calendar horarioDieta = Calendar.getInstance();
+				horarioDieta.setTimeInMillis(horario.getTime());
 				
 				//Instancia new Object Dieta com as informações encontradas
-				Dieta dieta = new Dieta(code, name, caloria, type, padcaloria, dataDieta);
+				Dieta dieta = new Dieta(code, name, caloria, type, padcaloria, dataDieta, horarioDieta);
 												
 				//Add a dieta a lista
 				lista.add(dieta);
@@ -108,7 +113,7 @@ public class OracleDietaDAO implements DietaDAO {
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_DIETA SET NM_ALIMENTO = ?, QTD_CALORIA = ?, DS_TIPO = ?, QTD_PADRAOCALORIA = ?,"
-					+ " DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')) WHERE CD_DIETA = ?";
+					+ " DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')), DT_HORARIO = ? WHERE CD_DIETA = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setString(1, dieta.getNomeAlimento());
 			stmt.setDouble(2, dieta.getCaloria());
@@ -116,6 +121,8 @@ public class OracleDietaDAO implements DietaDAO {
 			stmt.setDouble(4, dieta.getPadraoCaloria());
 			java.sql.Date data = new java.sql.Date(dieta.getData().getTimeInMillis());
 			stmt.setDate(5, data);
+			java.sql.Date horario = new java.sql.Date(dieta.getHorario().getTimeInMillis());
+			stmt.setDate(7, horario);
 			
 			stmt.executeUpdate();
 			
@@ -189,8 +196,12 @@ public class OracleDietaDAO implements DietaDAO {
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataDieta = Calendar.getInstance();
 				dataDieta.setTimeInMillis(data.getTime());
+				java.sql.Date horario = rs.getDate("DT_HORARIO");
+				Calendar horarioDieta = Calendar.getInstance();
+				horarioDieta.setTimeInMillis(horario.getTime());
 				
-				dieta = new Dieta(code1, name, caloria, type, padcaloria, dataDieta);
+				
+				dieta = new Dieta(code1, name, caloria, type, padcaloria, dataDieta, horarioDieta);
 				
 			}
 			
