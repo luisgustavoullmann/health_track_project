@@ -77,7 +77,7 @@ public class CadastroServlet extends HttpServlet {
 			e.printStackTrace();
 			request.setAttribute("erro", "Por favor, valide os dados");
 		}
-		request.getRequestDispatcher("cadastro.jsp").forward(request, response);
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }

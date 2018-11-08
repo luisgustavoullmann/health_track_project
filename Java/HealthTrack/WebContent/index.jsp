@@ -52,7 +52,15 @@
         
                 <!-- login -->
                 <div class="col-lg-6 p-5 mb-auto bg-color">
-                    <form class="mt-5" action="principal.jsp" method="post">
+                			
+                			<c:if test="${not empty msg}">
+                        		<div class="alert alert-sucess">${msg}</div>
+                        	</c:if>
+                        	<c:if test="${not empty erro}">
+                        		<div class="alert alert-danger">${erro}</div>
+                        	</c:if>
+                        	
+                    <form class="mt-5" action="principal.jsp" method="post">  
                       <div class="form-group">
                         <label for="inputEmail"></label>
                         <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
