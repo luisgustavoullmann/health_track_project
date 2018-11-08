@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/annotations-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/catalina.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/catalina-ant.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/catalina-ha.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/catalina-storeconfig.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/catalina-tribes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/ecj-4.7.3a.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/el-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/jasper.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/jasper-el.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/jaspic-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/jsp-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-coyote.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-dbcp.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-i18n-es.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-i18n-ru.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-jdbc.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-jni.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-util.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-util-scan.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/tomcat-websocket.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/lib/websocket-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/bin/bootstrap.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/bin/commons-daemon.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luis Gustavo Ullmann/Downloads/apache-tomcat-9.0.12/bin/tomcat-juli.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_161">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
