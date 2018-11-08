@@ -10,8 +10,7 @@ import java.util.*;
 public class Exercicio {
 	//Atributos
 	private int cdExercicio;
-	private String modalidade; //Indoor ou Outdoor
-	private String tipo; //natação, corrida, caminhada..
+	private String modalidade;
 	private Calendar data;
 	private double km;
 	private double padraoKm;
@@ -20,11 +19,10 @@ public class Exercicio {
 	
 		
 	
-	public Exercicio(int code, String mod, String type, Calendar dataExercicio, double km2, double padKm,
+	public Exercicio(int code, String mod, Calendar dataExercicio, double km2, double padKm,
 			Calendar dataTempo, Calendar dataPaTempo) {
 		this.cdExercicio = code;
 		this.modalidade = mod;
-		this.tipo = type;
 		this.data = dataExercicio;
 		this.km = km2;
 		this.padraoKm = padKm;
@@ -33,35 +31,18 @@ public class Exercicio {
 	}
 
 
-	/*Input dados do exercicio*/
-	public void dadoExercicio() {
-		Scanner ex = new Scanner(System.in);
-		System.out.println("Data do exercício? ");
-		this.setData(data);
-		
-		System.out.println("Tempo de excecução do exercício?");
-		this.setTempo(tempo);
-		
-		System.out.println("Qual o seu padrão de tempo: ");
-		this.setPadraoTempo(padraoTempo);
-		
-		/*Fecha o objeto*/
-		ex.close();
-				
-	}
-	
 	
 	public void infoEx() {
 		if(!(this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() < this.getPadraoKm())) {
-			System.out.println("O seu tempo e Km na " + this.getTipo() + ", estão abaixo do padrão.");
+			System.out.println("O seu tempo e Km na " + this.getModalidade() + ", estão abaixo do padrão.");
 		} else if((this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() < this.getPadraoKm())) {
-			System.out.println("Os kms da " + this.getTipo() + " estão fora do padrão.");
+			System.out.println("Os kms da " + this.getModalidade() + " estão fora do padrão.");
 		} else if(!(this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() == this.getPadraoKm())) {
-			System.out.println("O seu tempo da " + this.getTipo() + " está fora do padrão.");
+			System.out.println("O seu tempo da " + this.getModalidade() + " está fora do padrão.");
 		} else if((this.getTempo().equals(this.getPadraoTempo())) && (this.getKm() >= this.getPadraoKm())) {
-			System.out.println("O seu tempo e km dentro da "+ this.getTipo() +" estão dentro do padrão mínimo.");
+			System.out.println("O seu tempo e km dentro da "+ this.getModalidade() +" estão dentro do padrão mínimo.");
 		} else {
-			System.out.println("Há algo de errado com os dados da "+ this.getTipo() +".");
+			System.out.println("Há algo de errado com os dados da "+ this.getModalidade() +".");
 		}
 	}
 
@@ -85,16 +66,6 @@ public class Exercicio {
 
 	public void setModalidade(String modalidade) {
 		this.modalidade = modalidade;
-	}
-
-
-	public String getTipo() {
-		return tipo;
-	}
-
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
 	}
 
 

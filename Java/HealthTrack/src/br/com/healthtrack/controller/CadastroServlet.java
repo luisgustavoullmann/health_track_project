@@ -61,7 +61,7 @@ public class CadastroServlet extends HttpServlet {
 			String bairro = request.getParameter("bairro");
 			String estado = request.getParameter("estado");
 			String pais = request.getParameter("pais");
-			int numero = Integer.parseInt("numero");
+			int numero = Integer.parseInt(request.getParameter("numero"));
 			
 			
 			Usuario user = new Usuario(0, nome, sobrenome, email, tel, cpf, sexo, password, nascimento, password);

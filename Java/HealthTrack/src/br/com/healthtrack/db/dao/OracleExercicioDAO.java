@@ -28,7 +28,6 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			
 			String sql = "INSERT INTO T_EXERCICIO(CD_EXERCICIO,"
 					+ " NM_MOD,"
-					+ " NM_TIPO,"
 					+ " DT_DATA,"
 					+ " NR_KM,"
 					+ "NR_PADRAOKM,"
@@ -38,7 +37,6 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			stmt = conexao.prepareStatement(sql);
 			
 			stmt.setString(1, ex.getModalidade());
-			stmt.setString(2, ex.getTipo());
 			java.sql.Date data = new  java.sql.Date(ex.getData().getTimeInMillis());
 			stmt.setDate(3, data);
 			stmt.setDouble(4, ex.getKm());
@@ -84,7 +82,6 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			while(rs.next()) {
 				int code = rs.getInt("CD_EXERCICIO");
 				String mod = rs.getString("NM_MOD");
-				String type = rs.getString("NM_TIPO");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataExercicio = Calendar.getInstance();
 				dataExercicio.setTimeInMillis(data.getTime());
@@ -97,7 +94,7 @@ public class OracleExercicioDAO implements ExercicioDAO {
 				Calendar dataPaTempo = Calendar.getInstance();
 				dataPaTempo.setTimeInMillis(dataPadTempo.getTime());
 				
-				Exercicio exercicio = new Exercicio(code, mod, type, dataExercicio,
+				Exercicio exercicio = new Exercicio(code, mod, dataExercicio,
 						km, padKm, dataTempo, dataPaTempo);
 				lista.add(exercicio);
 				
@@ -131,7 +128,6 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			String sql = "UPDATE T_EXERCICIO SET "
 					+ " NM_MOD = ?,"
-					+ " NM_TIPO = ?,"
 					+ " DT_DATA = TO_DATE(('??/??/????'),('DD/MM/YYYY')),"
 					+ " NR_KM = ?,"
 					+ "NR_PADRAOKM = ?,"
@@ -140,7 +136,6 @@ public class OracleExercicioDAO implements ExercicioDAO {
 					
 			stmt = conexao.prepareStatement(sql);
 			stmt.setString(1, ex.getModalidade());
-			stmt.setString(2, ex.getTipo());
 			java.sql.Date data = new  java.sql.Date(ex.getData().getTimeInMillis());
 			stmt.setDate(3, data);
 			stmt.setDouble(4, ex.getKm());
@@ -212,7 +207,6 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			if(rs.next()) {
 				int code = rs.getInt("CD_EXERCICIO");
 				String mod = rs.getString("NM_MOD");
-				String type = rs.getString("NM_TIPO");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataExercicio = Calendar.getInstance();
 				dataExercicio.setTimeInMillis(data.getTime());
@@ -225,7 +219,7 @@ public class OracleExercicioDAO implements ExercicioDAO {
 				Calendar dataPaTempo = Calendar.getInstance();
 				dataPaTempo.setTimeInMillis(dataPadTempo.getTime());
 				
-				ex = new Exercicio(code, mod, type, dataExercicio,
+				ex = new Exercicio(code, mod, dataExercicio,
 						km, padKm, dataTempo, dataPaTempo);
 			}
 		} catch(SQLException e) {

@@ -71,11 +71,10 @@
                                             <div class="form-group col-md-6">
                                               <label for="inputExercicio">Exercício</label>
                                               <select id="inputExercicio" name="exercicio" class="form-control">
-                                                <option selected>Selecione</option>
-                                                <option>Caminhada</option>
-                                                <option>Corrida</option>
-                                                <option>Bicicleta</option>
-                                                <option>Natação</option>
+                                                <option name="Caminhada" value="Caminhada">Caminhada</option>
+                                                <option name="Corrida" value="Corrida">Corrida</option>
+                                                <option name="Bicicleta" value="Bicicleta">Bicicleta</option>
+                                                <option name="Natação" value="Natação">Natação</option>
                                               </select>
                                             </div>
                                             <div class="form-group col-md-6">
