@@ -42,7 +42,7 @@ public class ExercicioServlet extends HttpServlet {
 		try {
 			
 			String mod = request.getParameter("exercicio");
-			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yy");
+			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 			Calendar data = Calendar.getInstance();
 			data.setTime(format.parse(request.getParameter("dataexercicio")));
 			Calendar tempo = Calendar.getInstance();
