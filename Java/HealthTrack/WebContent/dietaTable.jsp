@@ -19,6 +19,13 @@
 				      <td>${x.tipo}</td>
 				      <td>${x.caloria}</td>
 				      <td>${x.horario}</td>
+				      <td>
+				      	<c:url value="dieta" var="link">
+				      	<c:param name="acao" value="abrir-form-edicao"/>
+				      	<c:param name="codigo" value="${x.codigo}"/>
+				      	</c:url>
+				      	<a href="${link}">Editar</a>
+				      </td>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

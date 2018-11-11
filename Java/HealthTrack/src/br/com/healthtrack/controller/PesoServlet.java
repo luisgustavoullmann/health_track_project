@@ -32,9 +32,20 @@ public class PesoServlet extends HttpServlet {
     
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Peso> lista = pesoDAO.getALl();
-		request.setAttribute("peso", lista);
-		request.getRequestDispatcher("principal.jsp").forward(request, response);
+		String acao = request.getParameter("acao");
+		switch (acao) {
+		case "lista":
+			List<Peso> lista = pesoDAO.getALl();
+			request.setAttribute("peso", lista);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			break;
+		case "abrir-form-edicao":
+			int id = Integer.parseInt(request.getParameter("codigo"));
+			Peso peso = pesoDAO.searchId(id);
+			request.setAttribute("peso", peso);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			break;
+		}
 	}
 	
 	

@@ -80,7 +80,7 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			
 			//Percorre todos os registros
 			while(rs.next()) {
-				int code = rs.getInt("CD_EXERCICIO");
+				int codigo = rs.getInt("CD_EXERCICIO");
 				String mod = rs.getString("NM_MOD");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataExercicio = Calendar.getInstance();
@@ -94,7 +94,7 @@ public class OracleExercicioDAO implements ExercicioDAO {
 				Calendar dataPaTempo = Calendar.getInstance();
 				dataPaTempo.setTimeInMillis(dataPadTempo.getTime());
 				
-				Exercicio exercicio = new Exercicio(code, mod, dataExercicio,
+				Exercicio exercicio = new Exercicio(codigo, mod, dataExercicio,
 						km, padKm, dataTempo, dataPaTempo);
 				lista.add(exercicio);
 				
@@ -205,7 +205,7 @@ public class OracleExercicioDAO implements ExercicioDAO {
 			rs = stmt.executeQuery();
 			
 			if(rs.next()) {
-				int code = rs.getInt("CD_EXERCICIO");
+				int codigo = rs.getInt("CD_EXERCICIO");
 				String mod = rs.getString("NM_MOD");
 				java.sql.Date data = rs.getDate("DT_DATA");
 				Calendar dataExercicio = Calendar.getInstance();
@@ -219,7 +219,7 @@ public class OracleExercicioDAO implements ExercicioDAO {
 				Calendar dataPaTempo = Calendar.getInstance();
 				dataPaTempo.setTimeInMillis(dataPadTempo.getTime());
 				
-				ex = new Exercicio(code, mod, dataExercicio,
+				ex = new Exercicio(codigo, mod, dataExercicio,
 						km, padKm, dataTempo, dataPaTempo);
 			}
 		} catch(SQLException e) {

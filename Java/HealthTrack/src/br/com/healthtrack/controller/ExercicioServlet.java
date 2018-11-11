@@ -35,9 +35,21 @@ public class ExercicioServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Exercicio> lista = exercicioDAO.getAll();
-		request.setAttribute("exercicio", lista);
-		request.getRequestDispatcher("principal.jsp").forward(request, response);
+		String acao = request.getParameter("acao");
+		switch(acao) {
+		case "lista":
+			List<Exercicio> lista = exercicioDAO.getAll();
+			request.setAttribute("exercicio", lista);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			break;
+		case "abrir-form-edicao":
+			int id = Integer.parseInt(request.getParameter("codigo"));
+			Exercicio exercicio = exercicioDAO.searchId(id);
+			request.setAttribute("exercicio", exercicio);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+		
+		}
+
 	}
 
 

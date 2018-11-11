@@ -32,9 +32,20 @@ public class PresServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<PresArterial> lista = presDAO.getAll();
-		request.setAttribute("pressao", lista);
-		request.getRequestDispatcher("principal.jsp").forward(request, response);
+		String acao = request.getParameter("acao");
+		switch(acao) {
+		case "lista":
+			List<PresArterial> lista = presDAO.getAll();
+			request.setAttribute("pressao", lista);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			break;
+		case "abrir-form-edicao":
+			int id = Integer.parseInt(request.getParameter("codigo"));
+			PresArterial pressao = presDAO.searchId(id);
+			request.setAttribute("pressao", pressao);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			break;
+		}
 	}
 
 	

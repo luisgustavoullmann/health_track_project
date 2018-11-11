@@ -8,7 +8,7 @@
 			      <!-- <th scope="col">IMC</th> -->
 			      <th scope="col">Peso</th>
 			      <th scope="col">Altura</th>
-			      <th scope="col">Padão de Peso</th>
+			      <th scope="col">Padrão de Peso</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -19,6 +19,13 @@
 				      <td>${x.peso}</td>
 				      <td>${x.altura}</td>
 				      <td>${x.padraoPeso}</td>
+				      <td>
+				      	<c:url value="peso" var="link">
+				      	<c:param name="acao" value="abrir-form-edicao"/>
+				      	<c:param name="codigo" value="${x.codigo}"/>
+				      	</c:url>
+				      	<a href="${link}">Editar</a>
+				      </td>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

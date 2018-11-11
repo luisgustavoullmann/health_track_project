@@ -17,6 +17,13 @@
 				      <td>${x.modalidade}</td>
 				      <td>${x.tempo}</td>
 				      <td>${x.km}</td>
+				      <td>
+				      	<c:url value="exercicio" var="link">
+				      	<c:param name="acao" value="abrir-form-edicao"/>
+				      	<c:param name="codigo" value="${x.codigo}"/>
+				      	</c:url>
+				      	<a href="${link}">Editar</a>
+				      </td>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

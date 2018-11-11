@@ -16,5 +16,5 @@ public interface DietaDAO {
 	
 	public void remover(int codigo) throws DBException;
 	
-	public Dieta searchName (int code);
+	public Dieta searchId (int code);
 }

@@ -14,6 +14,13 @@
                                             <!-- Internal Modal Pressão -->
                                 <div class="bg-light rounded box-shadow form-group p-3">
                                     
+                                    <c:if test="${not empty msg}">
+		                        		<div class="alert alert-sucess">${msg}</div>
+		                        	</c:if>
+		                        	<c:if test="${not empty erro}">
+		                        		<div class="alert alert-danger">${erro}</div>
+		                        	</c:if>
+                                    
                                    <form action="pressao" method="post">
                                        <div class="form-row">
                                         <div class="form-group col-md-12">
@@ -49,10 +56,17 @@
                                                   
                                                   
                                               </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
-                                                <button type="submit" class="btn col-3 btn-outline-primary">Enviar</button>
-                                              </div>
+                                              
+                                              <nav>
+                                               <div class="modal-footer nav-item">
+	                                             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
+	                                                <a class="" href="principal.jsp">
+	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
+	                                                </a>
+	                                              </div>
+                                              </nav>
+                                              
+                                              
                                             </div>
                                           </div>
                                         </div>

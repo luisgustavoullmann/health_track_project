@@ -31,9 +31,22 @@ public class DietaServlet extends HttpServlet {
     
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Dieta> lista = dietaDAO.getAll();
-		request.setAttribute("dieta", lista);
-		request.getRequestDispatcher("principal.jsp").forward(request, response);
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "lista":
+			List<Dieta> lista = dietaDAO.getAll();
+			request.setAttribute("dieta", lista);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+		break;
+		case "abrir-form-edicao":
+			int id = Integer.parseInt(request.getParameter("codigo"));
+			Dieta dieta = dietaDAO.searchId(id);
+			request.setAttribute("dieta", dieta);
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+		break;
+		
+		}
 	}
 
 	

@@ -69,7 +69,7 @@ public class OracleDietaDAO implements DietaDAO {
 			
 			//Precorre todos os registros encontrados
 			while (rs.next()) {
-				int code = rs.getInt("CD_DIETA");
+				int codigo = rs.getInt("CD_DIETA");
 				String name = rs.getString("NM_ALIMENTO");
 				double caloria = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
@@ -82,7 +82,7 @@ public class OracleDietaDAO implements DietaDAO {
 				horarioDieta.setTimeInMillis(horario.getTime());
 				
 				//Instancia new Object Dieta com as informações encontradas
-				Dieta dieta = new Dieta(code, name, caloria, type, padcaloria, dataDieta, horarioDieta);
+				Dieta dieta = new Dieta(codigo, name, caloria, type, padcaloria, dataDieta, horarioDieta);
 												
 				//Add a dieta a lista
 				lista.add(dieta);
@@ -175,7 +175,7 @@ public class OracleDietaDAO implements DietaDAO {
 	
 	//SEARCH  pelo CD_DIETA
 	@Override
-	public Dieta searchName (int code) {
+	public Dieta searchId (int code) {
 		Dieta dieta = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -188,7 +188,7 @@ public class OracleDietaDAO implements DietaDAO {
 			rs = stmt.executeQuery();
 			
 			if(rs.next()) {
-				int code1 = rs.getInt("CD_DIETA");
+				int codigo = rs.getInt("CD_DIETA");
 				String name = rs.getString("NM_ALIMENTO");
 				double caloria = rs.getInt("QTD_CALORIA");
 				String type = rs.getString("DS_TIPO");
@@ -201,7 +201,7 @@ public class OracleDietaDAO implements DietaDAO {
 				horarioDieta.setTimeInMillis(horario.getTime());
 				
 				
-				dieta = new Dieta(code1, name, caloria, type, padcaloria, dataDieta, horarioDieta);
+				dieta = new Dieta(codigo, name, caloria, type, padcaloria, dataDieta, horarioDieta);
 				
 			}
 			
