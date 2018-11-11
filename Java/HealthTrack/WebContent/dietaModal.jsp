@@ -12,7 +12,7 @@
                                                 
                                             <!-- INSERIR CONTEUDO -->
                                          <!-- Interno Modal Dieta -->
-                                <div class="bg-light rounded box-shadow form-group p-3">
+                                	<div class="bg-light rounded box-shadow form-group p-3">
                                 
                                 	<c:if test="${not empty msg}">
 		                        		<div class="alert alert-sucess">${msg}</div>
@@ -22,6 +22,7 @@
 		                        	</c:if>
                                 
                                    <form action="dieta" method="post">
+                                   <input type="hidden" value="dieta" name="acao">
                                        <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputDieta">Refeição do dia</label>

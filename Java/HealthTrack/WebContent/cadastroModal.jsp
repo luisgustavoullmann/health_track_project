@@ -13,10 +13,16 @@
 			        <%@ include file="cadastro.jsp" %>
 			        
 			      </div>
-			      <div class="modal-footer">
-			        <button type="button" value="Sair" class="btn btn-outline-secondary col-2" data-dismiss="modal">Sair</button>
-			        <button type="button" value="Enviar" class="btn btn-outline-primary col-3">Enviar</button>
-			      </div>
+			      
+			      
+			     <nav>
+					<div class="modal-footer nav-item">
+	                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
+	                    <a class="" href="index.jsp">
+	                      <button type="submit" class="btn btn-outline-primary">Enviar</button>
+	                    </a>
+	                </div>
+                 </nav>
 			    </div>
 			  </div>
 			</div>
