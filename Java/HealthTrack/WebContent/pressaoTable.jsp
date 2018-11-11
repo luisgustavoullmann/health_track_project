@@ -20,7 +20,16 @@
 				      	<c:param name="acao" value="abrir-form-edicao"/>
 				      	<c:param name="codigo" value="${x.codigo}"/>
 				      	</c:url>
-				      	<a href="${link}">Editar</a>
+				      	<a href="${link}">
+				      		<div class="col-4">
+                             <div class="d-flex justify-content-right float-right">
+                             <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoModalEdit">
+                               Editar
+                              </button>
+                             </div>
+                         </div>
+                        </a>
 				      </td>
 				    </tr>
 			    </c:forEach>

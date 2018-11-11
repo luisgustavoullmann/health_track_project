@@ -56,7 +56,7 @@ public class ExercicioServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			
-			String modalidade = request.getParameter("exercicio");
+			String modalidade = request.getParameter("modalidade");
 			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 			Calendar data = Calendar.getInstance();
 			data.setTime(format.parse(request.getParameter("dataexercicio")));

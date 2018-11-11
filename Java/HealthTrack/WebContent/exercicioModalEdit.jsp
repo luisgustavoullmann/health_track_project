@@ -1,9 +1,9 @@
-					<!-- Modal Exercício -->
-                                        <div class="modal fade" id="exercicioModal" tabindex="-1" role="dialog" aria-labelledby="exercicioModalTitle" aria-hidden="true">
+<!-- Modal Edição Exercício -->
+                                        <div class="modal fade" id="exercicioEditModal" tabindex="-1" role="dialog" aria-labelledby="exercicioModalEditTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                               <div class="modal-header">
-                                                <h5 class="modal-title text-center border-bottom border-primary" id="exercicioModalTitle">Exercício</h5>
+                                                <h5 class="modal-title text-center border-bottom border-primary" id="exercicioModalEditTitle">Exercício</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                   <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -26,11 +26,12 @@
 				                                    
 				                                    
 				                                       <form action="exercicio" method="post">
-				                                       <input type="hidden" value="exercicio" name="acao">
+				                                       <input type="hidden" value="exercicioEditar" name="acao">
+				                                       <input type="hidden" value="${exercicio.codigo}" name="codigo">
 				                                           <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputExercicio">Exercício</label>
-				                                              <select id="inputExercicio" name="modalidade" class="form-control">
+				                                              <select id="inputExercicio" name="modalidade" value="${exercicio.modalidade}" class="form-control">
 				                                                <option name="Caminhada" value="Caminhada">Caminhada</option>
 				                                                <option name="Corrida" value="Corrida">Corrida</option>
 				                                                <option name="Bicicleta" value="Bicicleta">Bicicleta</option>
@@ -39,27 +40,27 @@
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputData">Data</label>
-				                                              <input type="date" name="dataexercicio" class="form-control" id="inputData" placeholder="">
+				                                              <input type="date" name="dataexercicio" value='<fmt:formatDate value="${exercicio.dataexercicio.time }" pattern="dd/MM/yyyy"/>' class="form-control" id="inputData" placeholder="">
 				                                            </div>
 				                                          </div>
 				                                          <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputTempo">Tempo percorrido</label>
-				                                              <input type="time" name="tempo" class="form-control" id="inputTempo">
+				                                              <input type="time" name="tempo" value="${exericio.tempo}" class="form-control" id="inputTempo">
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputPadraoTempo">Padrão de Tempo</label>
-				                                              <input type="time" name="padraotempo" class="form-control" id="inputPadraoTempo">
+				                                              <input type="time" name="padraotempo" value="${exercicio.padraotempo}" class="form-control" id="inputPadraoTempo">
 				                                            </div>
 				                                          </div>
 				                                          <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputKm">Quilometragem</label>
-				                                              <input type="text" name="km" class="form-control" id="inputKm" placeholder="">
+				                                              <input type="text" name="km" value="${exercicio.km}" class="form-control" id="inputKm" placeholder="">
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputKmPadrao">Padrão de Quilometragem</label>
-				                                              <input type="text" name="padraokm" class="form-control" id="inputKmPadrao" placeholder="">
+				                                              <input type="text" name="padraokm" value="${exercicio.padraokm }" class="form-control" id="inputKmPadrao" placeholder="">
 				                                            </div>
 				                                          </div>
 				                                        </form>
@@ -72,7 +73,9 @@
                                               
                                               <nav>
                                                <div class="modal-footer nav-item">
-	                                             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
+	                                             <a href="exercicio?acao=listar">
+	                                             	<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
+	                                             </a>
 	                                                <a class="" href="principal.jsp">
 	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
 	                                                </a>

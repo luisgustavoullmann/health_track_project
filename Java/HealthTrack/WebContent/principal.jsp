@@ -56,6 +56,7 @@
                                         <!-- Tabela Exercicio -->
                                         <%@include file="exercicioTable.jsp" %>
                                        
+                                       
                                     </div>
                                 </div>
                           <div class="container-fluid d-flex flex-column justify-content-end">
