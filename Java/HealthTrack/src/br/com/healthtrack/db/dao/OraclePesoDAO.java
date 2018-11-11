@@ -52,7 +52,7 @@ public class OraclePesoDAO implements PesoDAO {
 	}
 	
 	@Override
-	public List<Peso> listar(){
+	public List<Peso> getAll() {
 		//Cria uma lista de pesos
 		List<Peso> lista = new ArrayList<Peso>();
 		PreparedStatement stmt = null;
@@ -92,7 +92,7 @@ public class OraclePesoDAO implements PesoDAO {
 					e.printStackTrace();
 				}
 			}
-		return lista;
+		return getAll();
 	}
 	
 	/*
@@ -204,6 +204,12 @@ public class OraclePesoDAO implements PesoDAO {
 		}
 		
 		return peso;
+	}
+
+	@Override
+	public List<Peso> getALl() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }//done here

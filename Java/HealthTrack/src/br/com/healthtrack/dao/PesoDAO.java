@@ -9,11 +9,13 @@ import br.com.healthtrack.dbexception.DBException;
 public interface PesoDAO {
 	public void cadastrar(Peso peso) throws DBException;
 	
-	public List<Peso> listar();
+	public List<Peso> getALl();
 	
 	public void atualizar(Peso peso) throws DBException;
 	
 	public void remover(int code) throws DBException;
 	
 	public Peso searchId(int codeSearch);
+
+	List<Peso> getAll();
 }

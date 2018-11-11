@@ -1,1 +1,8 @@
+br.com.healthtrack.bean
 br.com.healthtrack.controller
+br.com.healthtrack.dao
+br.com.healthtrack.db.dao
+br.com.healthtrack.dbexception
+br.com.healthtrack.factory
+br.com.healthtrack.singleton
+br.com.healthtrack.test

@@ -2,7 +2,8 @@ package br.com.healthtrack.controller;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.*;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,9 +33,11 @@ public class ExercicioServlet extends HttpServlet {
 	}
 	
 	
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		List<Exercicio> lista = exercicioDAO.getAll();
+		request.setAttribute("exercicio", lista);
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
 	}
 
 
