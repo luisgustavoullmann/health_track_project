@@ -44,7 +44,7 @@ public class ExercicioServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			
-			String mod = request.getParameter("exercicio");
+			String modalidade = request.getParameter("exercicio");
 			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 			Calendar data = Calendar.getInstance();
 			data.setTime(format.parse(request.getParameter("dataexercicio")));
@@ -55,7 +55,7 @@ public class ExercicioServlet extends HttpServlet {
 			double km = Double.parseDouble(request.getParameter("km"));
 			double padraokm = Double.parseDouble(request.getParameter("padraokm"));
 			
-			Exercicio exercicio = new Exercicio(0, mod, data, km, padraokm, tempo, padraotempo);
+			Exercicio exercicio = new Exercicio(0, modalidade, data, km, padraokm, tempo, padraotempo);
 			
 			exercicioDAO.cadastrar(exercicio);
 			
