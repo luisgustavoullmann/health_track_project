@@ -60,21 +60,28 @@
                         		<div class="alert alert-danger">${erro}</div>
                         	</c:if>
                         	
-                    <form class="mt-5" action="principal.jsp" method="post">  
-                      <div class="form-group">
-                        <label for="inputEmail"></label>
-                        <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPassword"></label>
-                        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
-                      </div>
-                      <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
-                      </div>
-                      <button type="submit" class="btn btn-outline-primary col-3">Entrar</button>
-                    </form>
+                        	
+                    <nav class="nav-item">
+                    	<div class="nav-item">
+                    		<form class="mt-5" action="principal.jsp" method="post">  
+		                      <div class="form-group">
+		                        <label for="inputEmail"></label>
+		                        <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+		                      </div>
+		                      <div class="form-group">
+		                        <label for="inputPassword"></label>
+		                        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
+		                      </div>
+		                      <div class="form-group form-check">
+		                        <input type="checkbox" class="form-check-input" id="inputManter">
+		                        <label class="form-check-label" for="inputManter">Manter conectado</label>
+		                      </div>
+		                      <a class="nav-link" href="principal.jsp">
+		                      	<button type="submit" class="btn btn-outline-primary col-3">Entrar</button>
+		                      </a>
+		                    </form>
+                    	</div>
+                    </nav>  
                 </div>
             </div>
         </section>

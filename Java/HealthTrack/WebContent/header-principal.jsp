@@ -9,16 +9,16 @@
 
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                          <li class="nav-item disabled">
+                          <li class="nav-item disabled mt-2">
                             <a class="nav-link menu" href="#">Dados</a>
                           </li>                      
-                          <li class="nav-item disabled">
+                          <li class="nav-item disabled mt-2">
                             <a class="nav-link menu" href="contato.jsp">Contato</a>
                           </li> 
-                            <li class="nav-item">
-                                <form class="form-inline my-lg- my-lg-0" action="index.jsp">
-                                <button class="btn btn-outline-primary ml-md-2" type="submit">Sair</button>         
-                            </form>
+                          <li class="nav-item disabled">
+                          	<a class="nav-link" href="index.jsp">
+                          		<button class="btn btn-outline-primary py-auto">Sair</button>
+                          	</a> 
                           </li>
                         </ul>
                       </div>

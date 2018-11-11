@@ -14,7 +14,7 @@
 			  <tbody>
 			    <c:forEach items="${dieta}" var="x">
 				    <tr>
-				      <th scope="row"><fmt:formatDate value="${x.data.time}" pattern="dd/MM/yyyy"/></th>
+				      <th scope="row"><fmt:formatDate value="${x.dataDieta.time}" pattern="dd/MM/yyyy"/></th>
 				      <td>${x.nome}</td>
 				      <td>${x.tipo}</td>
 				      <td>${x.caloria}</td>
