@@ -35,9 +35,7 @@ public class PresServlet extends HttpServlet {
 		String acao = request.getParameter("acao");
 		switch(acao) {
 		case "lista":
-			List<PresArterial> lista = presDAO.getAll();
-			request.setAttribute("pressao", lista);
-			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			listar(request, response);
 			break;
 		case "abrir-form-edicao":
 			int id = Integer.parseInt(request.getParameter("codigo"));
@@ -48,8 +46,55 @@ public class PresServlet extends HttpServlet {
 		}
 	}
 
+	private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<PresArterial> lista = presDAO.getAll();
+		request.setAttribute("pressao", lista);
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
+
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "cadastrar":
+			cadastrar(request, response);
+			break;
+			
+		case "editar":
+			editar(request, response);
+			break;
+		}
+	}
+
+	private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			int codigo = Integer.parseInt(request.getParameter("codigo"));
+			Double dadoMax = Double.parseDouble(request.getParameter("max"));
+			Double dadoMin = Double.parseDouble(request.getParameter("min"));
+			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+			Calendar data = Calendar.getInstance();
+			data.setTime(format.parse(request.getParameter("datapressao")));
+			Double padraoMax = Double.parseDouble(request.getParameter("padraomax"));
+			Double padraoMin = Double.parseDouble(request.getParameter("padraomin"));
+			
+			PresArterial pressao = new PresArterial(codigo, dadoMax, dadoMin, data, padraoMax, padraoMin);
+			presDAO.atualizar(pressao);
+			
+			request.setAttribute("msg", "Parabéns, você atualizou uma nova medida de pressão arterial!");	
+		} catch(DBException db) {
+			db.printStackTrace();
+			request.setAttribute("erro", "Erro ao atualizou nova pressão arterial!");
+		} catch(Exception e) {
+			e.printStackTrace();
+			request.setAttribute("erro", "Por favor, valide os dados");
+		}
+		
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
+
+	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
 			
 			Double dadoMax = Double.parseDouble(request.getParameter("max"));

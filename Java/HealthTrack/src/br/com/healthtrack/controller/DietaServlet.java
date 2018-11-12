@@ -35,9 +35,7 @@ public class DietaServlet extends HttpServlet {
 		
 		switch(acao) {
 		case "lista":
-			List<Dieta> lista = dietaDAO.getAll();
-			request.setAttribute("dieta", lista);
-			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			listar(request, response);
 		break;
 		case "abrir-form-edicao":
 			int id = Integer.parseInt(request.getParameter("codigo"));
@@ -49,8 +47,29 @@ public class DietaServlet extends HttpServlet {
 		}
 	}
 
+	private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Dieta> lista = dietaDAO.getAll();
+		request.setAttribute("dieta", lista);
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
+
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String acao = request.getParameter("acao");
+		
+		switch (acao){
+			case "cadastrar":
+				cadastrar(request, response);
+				break;
+			case "editar":
+				editar(request, response);
+				break;
+		}
+		
+	}
+
+	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
 			
 			String nome = request.getParameter("alimento");
@@ -77,5 +96,35 @@ public class DietaServlet extends HttpServlet {
 		}
 		request.getRequestDispatcher("principal.jsp").forward(request, response);
 	}
-
+	
+	
+	
+	private void editar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		try {
+			int codigo = Integer.parseInt(request.getParameter("codigo"));
+			String nome = request.getParameter("alimento");
+			String tipo = request.getParameter("tipo");
+			Calendar horario = Calendar.getInstance();
+			horario.setTimeInMillis(Integer.parseInt(request.getParameter("horario")));
+			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+			Calendar dataDieta = Calendar.getInstance();
+			dataDieta.setTime(format.parse(request.getParameter("dataDieta")));
+			double caloria = Double.parseDouble(request.getParameter("caloria"));
+			double padraocaloria = Double.parseDouble(request.getParameter("padraocaloria"));
+			
+			
+			Dieta dieta = new Dieta(codigo, nome, caloria, tipo, padraocaloria, dataDieta, horario);
+			dietaDAO.atualizar(dieta);
+			
+			request.setAttribute("msg", "Dieta atualizada com sucesso!");
+		} catch(DBException db) {
+			db.printStackTrace();
+			request.setAttribute("erro", "Erro ao atualizar nova dieta!");
+		} catch(Exception e) {
+			e.printStackTrace();
+			request.setAttribute("erro", "Por favor, valide os dados");
+		}
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
 }

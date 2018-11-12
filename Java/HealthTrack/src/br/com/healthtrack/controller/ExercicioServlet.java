@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import br.com.healthtrack.bean.Exercicio;
 import br.com.healthtrack.dao.ExercicioDAO;
 import br.com.healthtrack.dbexception.DBException;
@@ -38,9 +39,7 @@ public class ExercicioServlet extends HttpServlet {
 		String acao = request.getParameter("acao");
 		switch(acao) {
 		case "lista":
-			List<Exercicio> lista = exercicioDAO.getAll();
-			request.setAttribute("exercicio", lista);
-			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			listar(request, response);
 			break;
 		case "abrir-form-edicao":
 			int id = Integer.parseInt(request.getParameter("codigo"));
@@ -53,7 +52,62 @@ public class ExercicioServlet extends HttpServlet {
 	}
 
 
+	private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Exercicio> lista = exercicioDAO.getAll();
+		request.setAttribute("exercicio", lista);
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
+
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "cadastrar":
+			cadastrar(request, response);
+			break;
+		case "editar":
+			editar(request, response);
+			break;
+		
+		}
+	}
+
+	private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		try {
+				int codigo = Integer.parseInt(request.getParameter("codigo"));
+				String modalidade = request.getParameter("modalidade");
+				SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+				Calendar data = Calendar.getInstance();
+				data.setTime(format.parse(request.getParameter("dataexercicio")));
+				Calendar tempo = Calendar.getInstance();
+				tempo.setTimeInMillis(Integer.parseInt(request.getParameter("tempo")));
+				Calendar padraotempo = Calendar.getInstance();
+				padraotempo.setTimeInMillis(Integer.parseInt(request.getParameter("padraotempo")));
+				double km = Double.parseDouble(request.getParameter("km"));
+				double padraokm = Double.parseDouble(request.getParameter("padraokm"));
+				
+				Exercicio exercicio = new Exercicio(codigo, modalidade, data, km, padraokm, tempo, padraotempo);
+				
+				exercicioDAO.atualizar(exercicio);
+				
+				request.setAttribute("msg", "Exercício atualizado com sucesso!");
+			} catch(DBException db) {
+				db.printStackTrace();
+				request.setAttribute("erro", "Erro, exercício não foi atualizado!");
+			} catch(Exception e) {
+				e.printStackTrace();
+				request.setAttribute("erro", "Por favor, valide os dados");
+			}
+			
+			request.getRequestDispatcher("principal.jsp").forward(request, response);
+		
+	}
+
+	
+	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
 			
 			String modalidade = request.getParameter("modalidade");

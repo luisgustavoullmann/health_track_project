@@ -35,9 +35,7 @@ public class PesoServlet extends HttpServlet {
 		String acao = request.getParameter("acao");
 		switch (acao) {
 		case "lista":
-			List<Peso> lista = pesoDAO.getALl();
-			request.setAttribute("peso", lista);
-			request.getRequestDispatcher("principal.jsp").forward(request, response);
+			listar(request, response);
 			break;
 		case "abrir-form-edicao":
 			int id = Integer.parseInt(request.getParameter("codigo"));
@@ -47,9 +45,53 @@ public class PesoServlet extends HttpServlet {
 			break;
 		}
 	}
+
+	private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Peso> lista = pesoDAO.getALl();
+		request.setAttribute("peso", lista);
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "acao":
+			cadastrar(request, response);
+			break;
+		case "editar":
+			editar(request, response);
+			break;
+		}
+	}
+
+	private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			int codigo = Integer.parseInt(request.getParameter("codigo"));
+			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+			Calendar dataPeso = Calendar.getInstance();
+			dataPeso.setTime(format.parse(request.getParameter("datapeso")));
+			float altura = Float.parseFloat(request.getParameter("altura"));
+			float peso = Float.parseFloat(request.getParameter("peso"));
+			float padraoPeso = Float.parseFloat(request.getParameter("padraopeso"));
+			
+			Peso pesagem = new Peso(codigo, peso, altura, dataPeso, padraoPeso);
+			pesoDAO.atualizar(pesagem);
+			
+			request.setAttribute("msg", "Pesagem atualizada!");
+		} catch(DBException db) {
+			db.printStackTrace();
+			request.setAttribute("erro", "Erro ao atualizar a pesagem!");
+		} catch(Exception e) {
+			e.printStackTrace();
+			request.setAttribute("erro", "Por favor, valide os dados!");
+		}
+		request.getRequestDispatcher("principal.jsp").forward(request, response);
+	}
+
+	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
 			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 			Calendar dataPeso = Calendar.getInstance();
