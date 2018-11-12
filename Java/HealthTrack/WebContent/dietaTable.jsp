@@ -25,11 +25,21 @@
 				      	<c:param name="codigo" value="${x.codigo}"/>
 				      	</c:url>
 				      	<a href="${link}">
-				      		<div class="col-4">
+				      		<div class="col-3">
                               <div class="d-flex justify-content-right float-right">
                               <!-- Button trigger modal -->
-                              	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dietaModalEdit">
+                              	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dietaModalEdit" onclick="codigoEdit.value = ${x.codigo}">
                               	Editar
+                              	<%@include file="dietaModalEdit.jsp" %>
+                              	</button>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                            	<div class="d-flex justify-content-right float-right">
+                              <!-- Button trigger modal -->
+                              	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dietaModalDelete" onclick="codigoDelete.value = ${x.codigo}">
+                              	Excluir
+                              	<%@include file="dietaModalDelete.jsp" %>
                               	</button>
                               </div>
                             </div>

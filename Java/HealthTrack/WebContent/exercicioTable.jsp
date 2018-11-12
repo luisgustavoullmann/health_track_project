@@ -26,10 +26,20 @@
 				      		<div class="col-4">
                             	<div class="d-flex justify-content-right float-right">
                                 <!-- Button trigger modal -->
-                                	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exercicioEditModal">
+                                	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exercicioEditModal" onclick="codigoEdit.value = ${x.codigo}">
                                     Editar
+                                    <%@include file="exercicioModalEdit.jsp" %>
                                     </button>
                                 </div>
+                            </div>
+                             <div class="col-3">
+                            	<div class="d-flex justify-content-right float-right">
+                              <!-- Button trigger modal -->
+                              	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exercicioModalDelete" onclick="codigoDelete.value = ${x.codigo}">
+                              	Excluir
+                              	<%@include file="exercicioModalDelete.jsp" %>
+                              	</button>
+                              </div>
                             </div>
 				      	</a>
 				      </td>

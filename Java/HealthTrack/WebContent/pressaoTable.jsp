@@ -22,14 +22,24 @@
 				      	</c:url>
 				      	<a href="${link}">
 				      		<div class="col-4">
-                             <div class="d-flex justify-content-right float-right">
-                             <!-- Button trigger modal -->
-                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoModalEdit">
-                               Editar
-                              </button>
-                             </div>
-                         </div>
-                        </a>
+                            	<div class="d-flex justify-content-right float-right">
+                                <!-- Button trigger modal -->
+                                	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoEditModal" onclick="codigoEdit.value = ${x.codigo}">
+                                    Editar
+                                    <%@include file="pressaoModalEdit.jsp" %>
+                                    </button>
+                                </div>
+                            </div>
+                             <div class="col-3">
+                            	<div class="d-flex justify-content-right float-right">
+                              <!-- Button trigger modal -->
+                              	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoModalDelete" onclick="codigoDelete.value = ${x.codigo}">
+                              	Excluir
+                              	<%@include file="pressaoModalDelete.jsp" %>
+                              	</button>
+                              </div>
+                            </div>
+				      	</a>
 				      </td>
 				    </tr>
 			    </c:forEach>

@@ -23,7 +23,7 @@
                                     
                                    <form action="pressao" method="post">
                                    <input type="hidden" value="editar" name="acao">
-                                   <input type="hidden" value="${pressao.codigo}" name="codigo">
+                                   <input type="hidden" value="${pressao.codigo}" name="codigo" id="codigoEdit">
                                        <div class="form-row">
                                         <div class="form-group col-md-12">
                                           <label for="inputData">Data</label>

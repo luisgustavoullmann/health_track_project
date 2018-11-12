@@ -26,13 +26,23 @@
 				      	</c:url>
 				      	<a href="${link}">
 				      		<div class="col-4">
-                             <div class="d-flex justify-content-right float-right">
-                              <!-- Button trigger modal -->
-                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pesoModalEdit">
-                              Editar
-                             </button>
+                            	<div class="d-flex justify-content-right float-right">
+                                <!-- Button trigger modal -->
+                                	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pesoEditModal" onclick="codigoEdit.value = ${x.codigo}">
+                                    Editar
+                                    <%@include file="pesoModalEdit.jsp" %>
+                                    </button>
+                                </div>
                             </div>
-                           </div>
+                             <div class="col-3">
+                            	<div class="d-flex justify-content-right float-right">
+                              <!-- Button trigger modal -->
+                              	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pesoModalDelete" onclick="codigoDelete.value = ${x.codigo}">
+                              	Excluir
+                              	<%@include file="pesoModalDelete.jsp" %>
+                              	</button>
+                              </div>
+                            </div>
 				      	</a>
 				      </td>
 				    </tr>
