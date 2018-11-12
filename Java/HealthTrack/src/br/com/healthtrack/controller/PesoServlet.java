@@ -87,7 +87,7 @@ public class PesoServlet extends HttpServlet {
 			e.printStackTrace();
 			request.setAttribute("erro", "Por favor, valide os dados!");
 		}
-		request.getRequestDispatcher("principal.jsp").forward(request, response);
+		listar(request, response);
 	}
 
 	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
