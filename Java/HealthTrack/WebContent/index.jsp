@@ -52,7 +52,8 @@
         
                 <!-- login -->
                 <div class="col-lg-6 p-5 mb-auto bg-color">
-                	<form class="mt-5" action="login" method="post"> 
+                	<div class="mt-5 pt-2 align-self-center">
+                	<form action="login" method="post"> 
 			        	<div class="form-group">
 			             <label for="inputEmail"></label>
 			             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
@@ -68,7 +69,8 @@
 			            <a href="principal.jsp">
 			           		<button type="submit" class="btn btn-outline-primary col-3">Entrar</button>
 			            </a>	
-			        </form>   
+			        </form> 
+			        </div>  
 			                    
 			        <div class="pt-3">
 			        	<c:if test="${not empty msg}">
