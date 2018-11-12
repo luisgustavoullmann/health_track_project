@@ -2,6 +2,12 @@ package br.com.healthtrack.bo;
 
 import java.util.*;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+import br.com.healthtrack.dbexception.EmailException;
+
 public class EmailBO {
 	
 	//EDITAR PARA ENVIAR EMAIL A MENSAGEM NO CONTATO!
@@ -26,8 +32,8 @@ public class EmailBO {
 	});
 		
 		try {
-			Message email = new MineMessage(session);
-			email.setForm(new InternetAddress(username));
+			Message email = new MimeMessage(session);
+			email.setFrom(new InternetAddress(username));
 			email.setRecipients(Message.RecipientType.TO, InternetAddress.parse(destinatario));
 			email.setSubject(assunto);
 			email.setText(mensagem);

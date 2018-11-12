@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import br.com.healthtrack.bean.Usuario;
 import br.com.healthtrack.bo.EmailBO;
 import br.com.healthtrack.dao.UserDAO;
+import br.com.healthtrack.dbexception.EmailException;
 import br.com.healthtrack.factory.DAOFactory;
 
 /**
@@ -21,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
 	private UserDAO userDAO;
-	private EmialBO bo;
+	private EmailBO bo;
 	
     /**
      * @see HttpServlet#HttpServlet()
@@ -56,7 +57,7 @@ public class LoginServlet extends HttpServlet {
 			String mensagem = "Um login foi realizado.";
 			
 			try {
-				bo.enviarEmail (email, "Login realizado", mensagem);
+				bo.enviarEmail(email, "Login realizado", mensagem);
 			} catch(EmailException e) {
 				e.printStackTrace();
 			}
