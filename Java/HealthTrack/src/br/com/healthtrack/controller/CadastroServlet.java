@@ -88,7 +88,7 @@ public class CadastroServlet extends HttpServlet {
 			request.setAttribute("erro", "Erro ao cadastrar!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("erro", "Por favor, você precisa se cadastrar");
+			request.setAttribute("erro", "Por favor, você precisa se cadastrar!");
 		}
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}

@@ -16,8 +16,14 @@
                     <a class="nav-link" href="contato.jsp">Contato</a>
                   </li>
                 </ul>
+                <c:if test="${empty user }">
+                    <div class="alert alert-danger">${erro}</div>
                   <form class="form-inline my-2 my-lg-0">
                     <button type="button" class="btn btn-outline-primary ml-md-2" data-toggle="modal" data-target="#cadastroModal">Inscreva-se</button>         
                   </form>
+                </c:if>
+                <c:if test="${not empty user }">
+			    	<button type="submit" class="btn btn-outline-primary col-3">Sair</button>
+			    </c:if>
               </div>
             </nav>

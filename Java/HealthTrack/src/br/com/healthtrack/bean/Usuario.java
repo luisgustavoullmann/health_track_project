@@ -2,6 +2,8 @@ package br.com.healthtrack.bean;
 
 import java.util.*;
 
+import br.com.healthtrack.util.CriptografiaUtils;
+
 
 /* Classe que abstrai o cadastro de um Usuario e seu Endereço
  * @author Luis Gustavo Ullmann
@@ -37,6 +39,12 @@ public class Usuario {
 		this.cadastro = dataCadast;
 		this.password = password;
 		
+	}
+	
+	public Usuario(String email, String password) {
+		super();
+		this.email = email;
+		setPassword(email);
 	}
 	
 	public Usuario() {}
@@ -120,7 +128,11 @@ public class Usuario {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		try {
+			this.password = CriptografiaUtils.criptografar(password);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public Endereco getEndereco() {

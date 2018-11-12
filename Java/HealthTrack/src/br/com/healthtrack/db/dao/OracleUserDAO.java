@@ -250,4 +250,39 @@ public class OracleUserDAO implements UserDAO {
 		return user;
 	}//
 	
+	
+	//Validando Usuario
+	@Override
+	public boolean validarUsuario(Usuario usuario) {
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		try {			
+			conexao = CompanyDBManager.getInstance().obterConexao();
+			
+			stmt = conexao.prepareStatement("SELECT * FROM T_USUARIO"
+					+ " WHERE NM_EMAIL = ?, NR_PASSWORD = ?");
+			stmt.setString(1, usuario.getEmail());
+			stmt.setString(2, usuario.getPassword());
+			rs = stmt.executeQuery();
+			
+			if (rs.next()) {
+				return true;
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				rs.close();
+				conexao.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return false;
+	}//
+	
+	
 }//done here

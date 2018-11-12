@@ -16,7 +16,7 @@
                             <a class="nav-link menu" href="contato.jsp">Contato</a>
                           </li> 
                           <li class="nav-item disabled">
-                          	<a class="nav-link" href="index.jsp">
+                          	<a class="nav-link" href="login">
                           		<button class="btn btn-outline-primary">Sair</button>
                           	</a> 
                           </li>
