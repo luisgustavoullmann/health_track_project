@@ -61,12 +61,16 @@
                                               
                                               <nav>
                                                <div class="modal-footer nav-item">
+                                               <form action="pressao" method="post">
+                                               <input type="hidden" name="acao" value="editar">
+                                               <input type="hidden" name="codigo" id="codigoEdit">
 	                                             <a href="pressao?acao=listar">
 	                                             	<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
 	                                             </a>
 	                                                <a class="" href="principal.jsp">
 	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
 	                                                </a>
+	                                                </form>
 	                                              </div>
                                               </nav>
                                               

@@ -64,6 +64,9 @@ public class DietaServlet extends HttpServlet {
 			case "editar":
 				editar(request, response);
 				break;
+			case "excluir":
+				excluir(request, response);
+				break;
 		}
 		
 	}
@@ -121,6 +124,25 @@ public class DietaServlet extends HttpServlet {
 		} catch(DBException db) {
 			db.printStackTrace();
 			request.setAttribute("erro", "Erro ao atualizar nova dieta!");
+		} catch(Exception e) {
+			e.printStackTrace();
+			request.setAttribute("erro", "Por favor, valide os dados");
+		}
+		listar(request, response);
+	}
+	
+	
+	private void excluir(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		int codigo = Integer.parseInt(request.getParameter("codigo"));
+		try {
+			dietaDAO.remover(codigo);
+			
+			request.setAttribute("msg", "Dieta removido com sucesso!");
+		} catch(DBException db) {
+			db.printStackTrace();
+			request.setAttribute("erro", "Erro ao remover nova dieta!");
 		} catch(Exception e) {
 			e.printStackTrace();
 			request.setAttribute("erro", "Por favor, valide os dados");

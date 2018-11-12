@@ -61,7 +61,7 @@
                         	</c:if>
                      
                         	
-                    <form class="mt-5" action="principal.jsp" method="post">  
+                    <form class="mt-5" action="principal.jsp" method="post"> 
                       <div class="form-group">
                         <label for="inputEmail"></label>
                         <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">

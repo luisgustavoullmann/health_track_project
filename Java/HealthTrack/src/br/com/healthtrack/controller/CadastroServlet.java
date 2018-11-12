@@ -43,6 +43,19 @@ public class CadastroServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "cadastrar":
+			cadastrar(request, response);
+			break;
+		}
+	}
+
+
+	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
 			String nome = request.getParameter("name");
 			String sobrenome = request.getParameter("lastname");
@@ -75,7 +88,7 @@ public class CadastroServlet extends HttpServlet {
 			request.setAttribute("erro", "Erro ao cadastrar!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("erro", "Por favor, valide os dados");
+			request.setAttribute("erro", "Por favor, você precisa se cadastrar");
 		}
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
