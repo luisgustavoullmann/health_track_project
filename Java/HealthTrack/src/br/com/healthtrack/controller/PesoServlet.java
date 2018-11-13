@@ -57,7 +57,7 @@ public class PesoServlet extends HttpServlet {
 		String acao = request.getParameter("acao");
 		
 		switch(acao) {
-		case "acao":
+		case "cadastrar":
 			cadastrar(request, response);
 			break;
 		case "editar":

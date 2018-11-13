@@ -1,5 +1,12 @@
 				<div class="col-12 d-flex justify-content-center">
                     <div class="bg-light rounded box-shadow p-3">
+                    	
+                    	<c:if test="${not empty msg}">
+		            	    <div class="alert alert-sucess">${msg}</div>
+		                </c:if>
+		                <c:if test="${not empty erro}">
+		                	<div class="alert alert-danger">${erro}</div>
+		                </c:if>
                     		
                     <form class="mt-3" action="cadastro" method="post">
                     	<input type="hidden" value="cadastrar" name="acao">

@@ -22,7 +22,7 @@
 		                        	</c:if>
                                   
                                    <form action="peso" method="post">
-                                   <input type="hidden" value="peso" name="acao">
+                                   <input type="hidden" value="cadastrar" name="acao">
                                        <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputData">Data</label>

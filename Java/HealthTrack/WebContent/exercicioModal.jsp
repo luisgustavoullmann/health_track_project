@@ -26,7 +26,7 @@
 				                                    
 				                                    
 				                                       <form action="exercicio" method="post">
-				                                       <input type="hidden" value="exercicio" name="acao">
+				                                       <input type="hidden" value="cadastrar" name="acao">
 				                                           <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputExercicio">Exercício</label>

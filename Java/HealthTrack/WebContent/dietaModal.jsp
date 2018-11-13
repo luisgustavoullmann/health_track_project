@@ -22,7 +22,7 @@
 		                        	</c:if>
                                 
                                    <form action="dieta" method="post">
-                                   <input type="hidden" value="dieta" name="acao">
+                                   <input type="hidden" value="cadastrar" name="acao">
                                        <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputDieta">Refeição do dia</label>

@@ -13,13 +13,9 @@
 			        <%@ include file="cadastro.jsp" %>
 			        
 			      </div>
-			      
-			      
 			     <nav>
 					<div class="modal-footer nav-item">
-					<form action="cadastro" method="post">
                      <input type="hidden" name="acao" value="cadastrar">
-                     <input type="hidden" name="codigo" id="codigoEdit">
 	                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
 	                    <a class="" href="index.jsp">
 	                      <button type="submit" class="btn btn-outline-primary">Enviar</button>

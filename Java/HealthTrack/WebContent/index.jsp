@@ -29,10 +29,10 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img class="d-block w-100" src="resources/img/foto-1.jpg" alt="Foto um">
+                              <img class="d-block w-100" src="resources/img/foto-1.jpg" alt="Foto 1">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block w-100" src="resources/img/foto-2.jpg" alt="Foto dois">
+                              <img class="d-block w-100" src="resources/img/foto-2.jpg" alt="Foto 2">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block w-100" src="resources/img/foto-3.jpg" alt="Foto 3">
@@ -53,23 +53,23 @@
                 <!-- login -->
                 <div class="col-lg-6 p-5 mb-auto bg-color">
                 	<div class="mt-5 pt-2 align-self-center">
-                	<form action="login" method="post"> 
-			        	<div class="form-group">
-			             <label for="inputEmail"></label>
-			             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
-			            </div>
-			            <div class="form-group">
-			             <label for="inputPassword"></label>
-			             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
-			           </div>
-			           <div class="form-group form-check">
-			            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-			            <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
-			           </div>
-			            <a href="principal.jsp">
-			           		<button type="submit" class="btn btn-outline-primary col-3">Entrar</button>
-			            </a>	
-			        </form> 
+	                	<form action="login" method="post">
+				        	<div class="form-group">
+				             <label for="inputEmail"></label>
+				             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+				            </div>
+				            <div class="form-group">
+				             <label for="inputPassword"></label>
+				             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
+				           </div>
+				           <div class="form-group form-check">
+				            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				            <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
+				           </div>
+				            <a href="principal.jsp">
+				           		<button type="submit" class="btn btn-outline-primary col-3">Entrar</button>
+				            </a>	
+				        </form> 
 			        </div>  
 			                    
 			        <div class="pt-3">
