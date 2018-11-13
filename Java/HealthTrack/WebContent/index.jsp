@@ -76,7 +76,7 @@
 			        	<c:if test="${not empty msg}">
                     		<div class="alert alert-sucess">${msg}</div>
                    		</c:if>
-                   		<c:if test="${not empty erro}">
+                   		<c:if test="${empty erro}">
                    			<div class="alert alert-danger">${erro}</div>
                    		</c:if>
 			        </div>             			
