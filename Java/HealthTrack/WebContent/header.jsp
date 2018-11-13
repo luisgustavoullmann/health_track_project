@@ -5,7 +5,7 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto my-auto">
+                <ul class="navbar-nav ml-auto my-auto pt-1 pt-sm-auto">
                   <li class="nav-item menu">
                     <a class="nav-link" href="index.jsp">Home</a>
                   </li>
