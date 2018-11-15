@@ -24,7 +24,7 @@ public class CompanyDBManager {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			conexao = DriverManager.getConnection("jdbc:oracle:thin:oracle.fiap.com.br:ORCL", "RM80167", "050589");
+			conexao = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "RM80167", "050589");
 			
 		} catch(Exception e) {
 			e.printStackTrace();

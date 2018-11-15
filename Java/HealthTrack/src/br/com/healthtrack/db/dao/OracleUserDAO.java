@@ -22,7 +22,7 @@ public class OracleUserDAO implements UserDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "INSERT INTO T_USUARIO(CD_USUARIO, NM_USUARIO, NM_LAST, NM_EMAIL,"
+			String sql = "INSERT INTO T_USER(CD_USUARIO, NM_USUARIO, NM_LAST, NM_EMAIL,"
 					+ " NR_TELEFONE, NR_CPF, DS_SEXO, DT_NASCIMENTO, DT_CADASTRO, NR_PASSWORD, CD_ENDERECO)"
 					+ " VALUES(SQ_USER.NEXTVAL, ?, ?, ?, ?, ?, ?,"
 					+ " ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?, ?)";
@@ -260,8 +260,8 @@ public class OracleUserDAO implements UserDAO {
 		try {			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			
-			stmt = conexao.prepareStatement("SELECT * FROM T_USUARIO"
-					+ " WHERE NM_EMAIL = ?, NR_PASSWORD = ?");
+			stmt = conexao.prepareStatement("SELECT * FROM T_USER"
+					+ " WHERE NM_EMAIL = ? AND NR_PASSWORD = ?");
 			stmt.setString(1, usuario.getEmail());
 			stmt.setString(2, usuario.getPassword());
 			rs = stmt.executeQuery();

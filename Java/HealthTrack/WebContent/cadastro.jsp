@@ -101,6 +101,8 @@
                         	<input type="text" name="pais" class="form-control" id="inputPais" placeholder="País">
                      	 </div>
                       </div>
+                      <!-- Botão -->
+                      <button type="submit" class="btn btn-outline-primary">Enviar</button>
                     </form>
                 </div>
                </div>
