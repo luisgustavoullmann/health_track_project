@@ -25,7 +25,8 @@ public class OracleDietaDAO implements DietaDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO, QTD_PADRAOCALORIA, DT_DATA, DT_HORARIO)"
+			String sql = "INSERT INTO T_DIETA(CD_DIETA, NM_ALIMENTO, QTD_CALORIA, DS_TIPO,"
+					+ " QTD_PADRAOCALORIA, DT_DATA, DT_HORARIO)"
 					+ "VALUES (SQ_DIETA.NEXTVAL, ?, ?, ?, ?, ?, TO_DATE(('??/??/????'),('DD/MM/YYYY')), ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, dieta.getCdDieta());

@@ -66,8 +66,8 @@ public class OracleUserDAO implements UserDAO {
 		
 		try {
 		conexao = CompanyDBManager.getInstance().obterConexao();
-		stmt = conexao.prepareStatement("SELECT * FROM T_USUARIO"
-				+ "INNER JOIN T_ENDERECO ON T_USUARIO.CD_ENDERECO = T_ENDERECO.CD_ENDERECO");
+		stmt = conexao.prepareStatement("SELECT * FROM T_USER"
+				+ "INNER JOIN T_ENDERECO ON T_USER.CD_ENDERECO = T_ENDERECO.CD_ENDERECO");
 		rs = stmt.executeQuery();
 		
 		//Percorre todos os usuarios encontrados
@@ -127,7 +127,7 @@ public class OracleUserDAO implements UserDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "UPDATE T_USUARIO SET NM_USUARIO = ?, NM_LAST = ?, NM_EMAIL = ?,"
+			String sql = "UPDATE T_USER SET NM_USUARIO = ?, NM_LAST = ?, NM_EMAIL = ?,"
 					+ " NR_TELEFONE = ?, NR_CPF = ?, DS_SEXO = ?, DT_NASCIMENTO = ?, "
 					+  "NR_PASSWORD = ?,"
 					+ "CD_ENDERECO = ?"
@@ -172,7 +172,7 @@ public class OracleUserDAO implements UserDAO {
 			conexao.setAutoCommit(false);
 			
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			String sql = "DELETE FROM T_USUARIO WHERE CD_USUARIO = ?";
+			String sql = "DELETE FROM T_USER WHERE CD_USUARIO = ?";
 			stmt = conexao.prepareStatement(sql);
 			stmt.setInt(1, codigo);
 			stmt.executeUpdate();
@@ -202,8 +202,8 @@ public class OracleUserDAO implements UserDAO {
 		
 		try {
 			conexao = CompanyDBManager.getInstance().obterConexao();
-			stmt = conexao.prepareStatement("SELECT * FROM T_USUARIO"
-					+ " INNER JOIN T_ENDERECO ON T_USUARIO.CD_ENDERECO = T_ENDERECO.CD_ENDERECO"
+			stmt = conexao.prepareStatement("SELECT * FROM T_USER"
+					+ " INNER JOIN T_ENDERECO ON T_USER.CD_ENDERECO = T_ENDERECO.CD_ENDERECO"
 					+ " WHERE CD_USUARIO = ?");
 			stmt.setInt(1, id);
 			rs = stmt.executeQuery();
