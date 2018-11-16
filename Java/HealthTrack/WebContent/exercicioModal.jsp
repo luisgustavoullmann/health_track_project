@@ -1,4 +1,5 @@
 					<!-- Modal Exercício -->
+									<form action="exercicio" method="post">
                                         <div class="modal fade" id="exercicioModal" tabindex="-1" role="dialog" aria-labelledby="exercicioModalTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -25,7 +26,7 @@
 				                                    </div>
 				                                    
 				                                    
-				                                       <form action="exercicio" method="post">
+				                                       
 				                                       <input type="hidden" value="cadastrar" name="acao">
 				                                           <div class="form-row">
 				                                            <div class="form-group col-md-6">
@@ -82,4 +83,5 @@
                                             </div>
                                           </div>
                                         </div>
+                                        </form>
                                         <!-- END Modal Exercício -->

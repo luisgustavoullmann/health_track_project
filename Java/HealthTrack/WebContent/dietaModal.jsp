@@ -1,4 +1,5 @@
-<!-- Modal Dieta -->
+<!-- Modal Dieta -->					
+								<form action="dieta" method="post">
                                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -21,7 +22,7 @@
 		                        		<div class="alert alert-danger">${erro}</div>
 		                        	</c:if>
                                 
-                                   <form action="dieta" method="post">
+                                   
                                    <input type="hidden" value="cadastrar" name="acao">
                                        <div class="form-row">
                                         <div class="form-group col-md-6">
@@ -58,7 +59,6 @@
                                           <input type="text" name="padraocaloria" class="form-control" id="inputCaloriasPadrao" placeholder="">
                                         </div>
                                       </div>
-                                    </form>
                                 </div>
                                 <!-- Interno Modal Dieta -->
 
@@ -78,4 +78,5 @@
                                             </div>
                                           </div>
                                         </div>
+                                        </form>
                                         <!-- END Modal Dieta -->

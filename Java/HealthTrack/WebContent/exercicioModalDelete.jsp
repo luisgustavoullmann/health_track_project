@@ -1,4 +1,5 @@
 <!-- Modal Exercício -->
+									<form action="exercicio" method="post">	
                                         <div class="modal fade" id="exercicioModalDelete" tabindex="-1" role="dialog" aria-labelledby="exercicioModalDeleteTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -15,18 +16,17 @@
                                               </div>
                                               <nav>
                                                <div class="modal-footer nav-item">
-                                               <form action="exercicio" method="post">
                                                	<input type="hidden" name="acao" value="excluir">
                                                	<input type="hidden" name="codigo" id="codigoDelete">
 	                                             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
 	                                                <a class="" href="principal.jsp">
 	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
 	                                                </a>
-	                                               </form>
 	                                              </div>
                                               </nav>
                                               
                                             </div>
                                           </div>
                                         </div>
+                                        </form>
                                         <!-- END Modal Exercício -->

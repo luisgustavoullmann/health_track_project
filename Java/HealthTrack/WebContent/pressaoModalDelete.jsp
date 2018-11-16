@@ -1,4 +1,5 @@
 <!-- Modal Peso -->
+									<form action="pressao" method="post">
                                         <div class="modal fade" id="pressaoModalDelete" tabindex="-1" role="dialog" aria-labelledby="pressaoModalDeleteTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -17,7 +18,7 @@
                                               
                                               <nav>
                                                <div class="modal-footer nav-item">
-                                               	<form action="pressao" method="post">
+                                               	
                                                	<input type="hidden" name="acao" value="excluir">
                                                	<input type="hidden" name="codigo" id="codigoDelete">
                                                		<a href="dieta?acao=listar">
@@ -26,11 +27,12 @@
 	                                                <a class="" href="principal.jsp">
 	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
 	                                                </a>
-                                               	</form>
+                                               	
 	                                              </div>
                                               </nav>
                                               
                                             </div>
                                           </div>
                                         </div>
+                                      </form>
                                         <!-- END Modal Peso -->

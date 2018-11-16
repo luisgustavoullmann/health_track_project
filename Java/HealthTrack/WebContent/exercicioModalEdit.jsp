@@ -1,4 +1,5 @@
 <!-- Modal Edição Exercício -->
+									<form action="exercicio" method="post">
                                         <div class="modal fade" id="exercicioEditModal" tabindex="-1" role="dialog" aria-labelledby="exercicioModalEditTitle" aria-hidden="true">
                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -25,7 +26,7 @@
 				                                    </div>
 				                                    
 				                                    
-				                                       <form action="exercicio" method="post">
+				                                       
 				                                       <input type="hidden" value="editar" name="acao">
 				                                       <input type="hidden" value="${exercicio.codigo}" name="codigo" id="codigoEdit">
 				                                           <div class="form-row">
@@ -63,7 +64,7 @@
 				                                              <input type="text" name="padraokm" value="${exercicio.padraokm }" class="form-control" id="inputKmPadrao" placeholder="">
 				                                            </div>
 				                                          </div>
-				                                        </form>
+				                                        
 				                                    </div>
 				                                </div>
                                                   
@@ -73,7 +74,7 @@
                                               
                                               <nav>
                                                <div class="modal-footer nav-item">
-                                               <form action="exercicio" method="post">
+                                               
                                                <input type="hidden" name="acao" value="editar">
                                                <input type="hidden" name="codigo" id="codigoEdit">
 		                                             <a href="exercicio?acao=listar">
@@ -82,11 +83,12 @@
 	                                               	 <a class="" href="principal.jsp">
 	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
 	                                                </a>
-	                                                </form>
+	                                                
 	                                              </div>
                                               </nav>
                                               
                                             </div>
                                           </div>
                                         </div>
+                                      </form>
                                         <!-- END Modal Exercício -->
