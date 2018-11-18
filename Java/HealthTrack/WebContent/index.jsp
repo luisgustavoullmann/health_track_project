@@ -55,31 +55,32 @@
                 	<div class="mt-5 pt-2 align-self-center">
 	                	<form action="login" method="post">
 				        	<div class="form-group">
-				             <label for="inputEmail"></label>
-				             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+					             <label for="inputEmail"></label>
+					             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
 				            </div>
 				            <div class="form-group">
-				             <label for="inputPassword"></label>
-				             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
+					             <label for="inputPassword"></label>
+					             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
 				           </div>
 				           <div class="form-group form-check">
-				            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-				            <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
+					            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+					            <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
 				           </div>
 				            <a href="principal.jsp">
 				           		<button type="submit" class="btn btn-outline-primary col-3">Entrar</button>
-				            </a>	
+				            </a>
+				            <div class="pt-3">
+					        	<c:if test="${not empty msg}">
+		                    		<div class="alert alert-sucess">${msg}</div>
+		                   		</c:if>
+		                   		<c:if test="${empty erro}">
+		                   			<div class="alert alert-danger">${erro}</div>
+		                   		</c:if>
+				       		 </div>            	
 				        </form> 
 			        </div>  
 			                    
-			        <div class="pt-3">
-			        	<c:if test="${not empty msg}">
-                    		<div class="alert alert-sucess">${msg}</div>
-                   		</c:if>
-                   		<c:if test="${empty erro}">
-                   			<div class="alert alert-danger">${erro}</div>
-                   		</c:if>
-			        </div>             			
+				      			
                 </div>
             </div>
         </section>

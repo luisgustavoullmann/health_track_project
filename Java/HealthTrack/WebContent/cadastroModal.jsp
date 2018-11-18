@@ -1,5 +1,6 @@
 			<!-- Modal -->
 			<form class="mt-3" action="cadastro" method="post">
+			<input type="hidden" value="cadastrar" name="acao">
 			<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalTitle" aria-hidden="true">
 			  <div class="modal-dialog modal-dialog-centered" role="document">
 			    <div class="modal-content">
@@ -14,15 +15,9 @@
 				        <div class="col-12 d-flex justify-content-center">
 	                    <div class="bg-light rounded box-shadow p-3">
 	                    	
-	                    	<c:if test="${not empty msg}">
-			            	    <div class="alert alert-sucess">${msg}</div>
-			                </c:if>
-			                <c:if test="${not empty erro}">
-			                	<div class="alert alert-danger">${erro}</div>
-			                </c:if>
-	                    		
+	                    	          		
 	                    
-	                    	<input type="hidden" value="cadastrar" name="acao">
+	                    	
 	                        <div class="form-row">
 	                        <div class="form-group col-md-6 m-auto">
 	                          <label for="inputNome"></label>
@@ -123,7 +118,7 @@
 			      </div>
 			     <nav>
 					<div class="modal-footer nav-item">
-                     <input type="hidden" name="acao" value="cadastrar">
+                     
 	                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
 	                    <a class="" href="index.jsp">
 	                      <button type="submit" class="btn btn-outline-primary">Enviar</button>

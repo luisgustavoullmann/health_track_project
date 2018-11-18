@@ -139,49 +139,49 @@
                             <div class="tab-pane fade show active" id="v-pills-pressao" role="tabpanel" aria-labelledby="v-pills-home-tab">
                             <div class="row">
                                 <!-- Insert -->
-                            <div class="col-lg-12 float-md-right">
-                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
-                                        <div class="row pt-1 mx-1">
-                                            <div class="col-8 d-flex justify-content-left">
-                                                <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="d-flex justify-content-right float-right">
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoModal">
-                                                  Nova Pressão
-                                                </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                       <!-- Modal Pressao -->
-                                        <%@ include file="pressaoModal.jsp" %>
-                                        
-                                        <!-- Pressao Table -->
-                                       <%@ include file="pressaoTable.jsp" %>
-                                       
-                                    </div>
-                                </div>
-                          <div class="container-fluid d-flex flex-column justify-content-end">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="bg-light rounded box-shadow form-group p-2 table">
-                                        <div class="d-flex justify-content-left pt-1 mx-3">
-                                            <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
-                                        </div>
-                                            
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                                
-                        <!-- Insert -->
+		                            <div class="col-lg-12 float-md-right">
+		                                    <div class="bg-light table align-items-stretch rounded box-shadow form-group p-lg-2">
+		                                        <div class="row pt-1 mx-1">
+		                                            <div class="col-8 d-flex justify-content-left">
+		                                                <h1 class="h5 text-center border-bottom border-primary">Tabela</h1>
+		                                            </div>
+		                                            <div class="col-4">
+		                                                <div class="d-flex justify-content-right float-right">
+		                                                <!-- Button trigger modal -->
+		                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pressaoModal">
+		                                                  Nova Pressão
+		                                                </button>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                        
+		                                        
+		                                       <!-- Modal Pressao -->
+		                                        <%@ include file="pressaoModal.jsp" %>
+		                                        
+		                                        <!-- Pressao Table -->
+		                                       <%@ include file="pressaoTable.jsp" %>
+		                                       
+		                                    </div>
+		                                </div>
+		                          <div class="container-fluid d-flex flex-column justify-content-end">
+		                            <div class="row">
+		                                <div class="col-12">
+		                                    <div class="bg-light rounded box-shadow form-group p-2 table">
+		                                        <div class="d-flex justify-content-left pt-1 mx-3">
+		                                            <h1 class="h5 text-center border-bottom border-primary">Gráfico</h1>
+		                                        </div>
+		                                            
+		                                    </div>
+		                                </div>
+		                            </div>
+		                          </div>
+		                                
+		                        <!-- Insert -->
                             
                                 
                                 
-                            </div>
+                        </div>
 
                             
                             
