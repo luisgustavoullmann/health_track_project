@@ -47,7 +47,7 @@
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputData">Data</label>
-				                                          <input type="date" name="dataDieta" value='<fmt:formatDate value="${dieta.dataDieta.time }" pattern="dd/MM/yyyy"/>' class="form-control" id="inputData" placeholder="">
+				                                          <input type="date" name="dataDieta" value='<fmt:formatDate value="${dieta.dataDieta.time }" pattern="dd/MM/yyyy" class="form-control" id="inputData" placeholder="">
 				                                        </div>
 				                                      </div>
 				                                      <div class="form-row">

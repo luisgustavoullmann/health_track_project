@@ -28,7 +28,7 @@
 				                                       <div class="form-row">
 				                                        <div class="form-group col-md-12">
 				                                          <label for="inputData">Data</label>
-				                                          <input type="date" name="datapressao" value="${pressao.datapressao.time }" pattern="dd/MM/yyyy"/>' class="form-control" id="inputData" placeholder="">
+				                                          <input type="date" name="datapressao" value="${pressao.datapressao.time }" pattern="dd/MM/yyyy" class="form-control" id="inputData" placeholder="">
 				                                        </div>
 				                                        
 				                                      </div>

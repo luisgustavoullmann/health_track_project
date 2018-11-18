@@ -69,7 +69,7 @@
 	                        <div class="form-group col-md-6 m-auto">
 	                          <label for="inputNascimento"></label>
 	                          <!-- incluir tooltip para informar que é um campo para data de nascimento -->
-	                          <input type="date" name="nascimento" class="form-control" id="inputNascimento" placeholder="Data de Nascimento">
+	                          <input type="date" name="nascimento" class="form-control" id="inputData" placeholder="Data de Nascimento">
 	                        </div>
 	                      </div>
 	                      
