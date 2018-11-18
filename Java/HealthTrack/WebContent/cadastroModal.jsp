@@ -36,16 +36,16 @@
 	                        </div>
 	                        <div class="form-group col-md-6 m-auto pt-2 pl-2" name="sexo">
 	                          <div class="form-check">
-								  <input class="form-check-input" type="radio" name="masculino" id="inputMasculino" value="masculino">
-								  <label class="form-check-label" for="inputMasculino">
+	                          	  <label class="form-check-label" for="masculino">
 								    Masculino
 								  </label>
+								  <input class="form-check-input" type="radio" name="masculino" id="masculino" value="masculino">
 								</div>
 								<div class="form-check">
-								  <input class="form-check-input" type="radio" name="feminino" id="inputFeminino" value="feminino">
-								  <label class="form-check-label" for="inputFeminino">
+								  <label class="form-check-label" for="feminino">
 								    Feminino
 								  </label>
+								  <input class="form-check-input" type="radio" name="feminino" id="feminino" value="feminino">
 								</div>
 	                        </div>
 	                      </div>
