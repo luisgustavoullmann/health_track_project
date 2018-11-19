@@ -34,18 +34,18 @@
 	                          <label for="inputEmail"></label>
 	                          <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
 	                        </div>
-	                        <div class="form-group col-md-6 m-auto pt-2 pl-2" name="sexo">
+	                        <div class="form-group col-md-6 m-auto pt-2 pl-2" name="sexo" id="sexo">
 	                          <div class="form-check">
-	                          	  <label class="form-check-label" for="masculino">
+								  <input class="form-check-input" type="radio" name="masculino" id="masculino" value="masculino">
+								  <label class="form-check-label" for="masculino">
 								    Masculino
 								  </label>
-								  <input class="form-check-input" type="radio" name="masculino" id="masculino" value="masculino">
 								</div>
 								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="feminino" id="feminino" value="feminino">
 								  <label class="form-check-label" for="feminino">
 								    Feminino
 								  </label>
-								  <input class="form-check-input" type="radio" name="feminino" id="feminino" value="feminino">
 								</div>
 	                        </div>
 	                      </div>
@@ -121,7 +121,7 @@
                      
 	                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
 	                    <a class="" href="index.jsp">
-	                      <button type="submit" class="btn btn-outline-primary">Enviar</button>
+	                      <button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
 	                    </a>
 	                </div>
                  </nav>

@@ -53,7 +53,7 @@
 				                                      <div class="form-row">
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputCalorias">Calorias</label>
-				                                          <input type="text" name="caloria" value="${dieta.caloria }" class="form-control" id="inputKm" placeholder="">
+				                                          <input type="text" name="caloria" value="${dieta.caloria }" class="form-control" id="inputCaloria" placeholder="">
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputCaloriasPadrao">Padrão de Calorias</label>
@@ -77,7 +77,7 @@
 	                                             	<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
 	                                             </a>
 	                                                <a class="" href="principal.jsp">
-	                                                	<button type="submit" class="btn btn-outline-primary">Enviar</button>
+	                                                	<button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
 	                                                </a>
 	                                                
 	                                              </div>
