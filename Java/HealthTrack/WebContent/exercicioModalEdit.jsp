@@ -32,7 +32,7 @@
 				                                           <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputExercicio">Exercício</label>
-				                                              <select id="inputExercicio" name="modalidade" value="${exercicio.modalidade}" class="form-control">
+				                                              <select id="inputExercicio" name="modalidade" value="${exercicio.modalidade}" class="form-control" data-toggle="tooltip" data-placement="top" title="Escolha o tipo de exercício">
 				                                                <option name="Caminhada" value="Caminhada">Caminhada</option>
 				                                                <option name="Corrida" value="Corrida">Corrida</option>
 				                                                <option name="Bicicleta" value="Bicicleta">Bicicleta</option>
@@ -47,21 +47,21 @@
 				                                          <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputTempo">Tempo percorrido</label>
-				                                              <input type="time" name="tempo" value="${exericio.tempo}" class="form-control" id="inputTempo">
+				                                              <input type="time" name="tempo" value="${exericio.tempo}" class="form-control" id="inputTempo" data-toggle="tooltip" data-placement="top" title="Tempo do exercício realizado">
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputPadraoTempo">Padrão de Tempo</label>
-				                                              <input type="time" name="padraotempo" value="${exercicio.padraotempo}" class="form-control" id="inputPadraoTempo">
+				                                              <input type="time" name="padraotempo" value="${exercicio.padraotempo}" class="form-control" id="inputPadraoTempo" data-toggle="tooltip" data-placement="top" title="Padrão de tempo dos seus exercícios">
 				                                            </div>
 				                                          </div>
 				                                          <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputKm">Quilometragem</label>
-				                                              <input type="text" name="km" value="${exercicio.km}" class="form-control" id="inputKm" placeholder="">
+				                                              <input type="text" name="km" value="${exercicio.km}" class="form-control" id="inputKm" placeholder="" data-toggle="tooltip" data-placement="top" title="Km percorridos">
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputKmPadrao">Padrão de Quilometragem</label>
-				                                              <input type="text" name="padraokm" value="${exercicio.padraokm }" class="form-control" id="inputKmPadrao" placeholder="">
+				                                              <input type="text" name="padraokm" value="${exercicio.padraokm }" class="form-control" id="inputKmPadrao" placeholder="" data-toggle="tooltip" data-placement="top" title="Padrão de Km do usuário">
 				                                            </div>
 				                                          </div>
 				                                        

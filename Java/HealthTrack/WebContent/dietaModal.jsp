@@ -27,7 +27,7 @@
                                        <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputDieta">Refeição do dia</label>
-                                          <select id="inputDieta" name="tipo" class="form-control">
+                                          <select id="inputDieta" name="tipo" class="form-control" data-toggle="tooltip" data-placement="top" title="Escolha uma refeição">
                                             <option name="Café da Manhã" value="Café da Manhã">Café da Manhã</option>
                                             <option name="Almoço" value="Almoço">Almoço</option>
                                             <option name="Lanche" value="Lanche">Lanche</option>
@@ -36,13 +36,13 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for=inputAlimento>Alimentos</label>
-                                            <input type="text" name="alimento" class="form-control" id="inputAlimento" placeholder="">
+                                            <input type="text" name="alimento" class="form-control" id="inputAlimento" placeholder="" data-toggle="tooltip" data-placement="top" title="Insira o alimento consumido">
                                         </div>
                                       </div>
                                       <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputHora">Horário</label>
-                                          <input type="time" name="horario" class="form-control" id="inputHora" placeholder="00:00:00">
+                                          <input type="time" name="horario" class="form-control" id="inputHora" placeholder="00:00:00" data-toggle="tooltip" data-placement="top" title="Horário da refeição">
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputData">Data</label>
@@ -52,11 +52,11 @@
                                       <div class="form-row">
                                         <div class="form-group col-md-6">
                                           <label for="inputCalorias">Calorias</label>
-                                          <input type="text" name="caloria" class="form-control" id="inputCaloria" placeholder="">
+                                          <input type="text" name="caloria" class="form-control" id="inputCaloria" placeholder="" data-toggle="tooltip" data-placement="top" title="Insira a quantidade de calorias">
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputCaloriasPadrao">Padrão de Calorias</label>
-                                          <input type="text" name="padraocaloria" class="form-control" id="inputCaloriasPadrao" placeholder="">
+                                          <input type="text" name="padraocaloria" class="form-control" id="inputCaloriasPadrao" placeholder="" data-toggle="tooltip" data-placement="top" title="Padrão de calorias">
                                         </div>
                                       </div>
                                 </div>

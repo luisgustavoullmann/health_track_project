@@ -31,7 +31,7 @@
 				                                           <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputExercicio">Exercício</label>
-				                                              <select id="inputExercicio" name="modalidade" class="form-control">
+				                                              <select id="inputExercicio" name="modalidade" class="form-control" data-toggle="tooltip" data-placement="top" title="Escolha um excercício">
 				                                                <option name="Caminhada" value="Caminhada">Caminhada</option>
 				                                                <option name="Corrida" value="Corrida">Corrida</option>
 				                                                <option name="Bicicleta" value="Bicicleta">Bicicleta</option>
@@ -46,21 +46,21 @@
 				                                          <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputTempo">Tempo percorrido</label>
-				                                              <input type="time" name="tempo" class="form-control" id="inputTempo">
+				                                              <input type="time" name="tempo" class="form-control" id="inputTempo" data-toggle="tooltip" data-placement="top" title="Insira o tempo">
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputPadraoTempo">Padrão de Tempo</label>
-				                                              <input type="time" name="padraotempo" class="form-control" id="inputPadraoTempo">
+				                                              <input type="time" name="padraotempo" class="form-control" id="inputPadraoTempo" data-toggle="tooltip" data-placement="top" title="Insira o padrão de tempo">
 				                                            </div>
 				                                          </div>
 				                                          <div class="form-row">
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputKm">Quilometragem</label>
-				                                              <input type="text" name="km" class="form-control" id="inputKm" placeholder="">
+				                                              <input type="text" name="km" class="form-control" id="inputKm" placeholder="" data-toggle="tooltip" data-placement="top" title="Insira os km percorridos">
 				                                            </div>
 				                                            <div class="form-group col-md-6">
 				                                              <label for="inputKmPadrao">Padrão de Quilometragem</label>
-				                                              <input type="text" name="padraokm" class="form-control" id="inputKmPadrao" placeholder="">
+				                                              <input type="text" name="padraokm" class="form-control" id="inputKmPadrao" placeholder="" data-toggle="tooltip" data-placement="top" title="Padrão de km">
 				                                            </div>
 				                                          </div>
 				                                        </form>

@@ -56,11 +56,11 @@
 	                	<form action="login" method="post">
 				        	<div class="form-group">
 					             <label for="inputEmail"></label>
-					             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+					             <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email" data-toggle="tooltip" data-placement="top" title="Insira o seu email">
 				            </div>
 				            <div class="form-group">
 					             <label for="inputPassword"></label>
-					             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha">
+					             <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Senha" data-toggle="tooltip" data-placement="top" title="Insira a sua senha">
 				           </div>
 				           <div class="form-group form-check">
 					            <input type="checkbox" class="form-check-input" id="exampleCheck1">

@@ -34,21 +34,21 @@
 				                                      <div class="form-row">
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMax">Ponto máximo da pressão</label>
-				                                          <input type="number" name="max" class="form-control" id="inputMax">
+				                                          <input type="number" name="max" class="form-control" id="inputMax" data-toggle="tooltip" data-placement="top" title="Indicador maior da pressão">
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMin">Ponto mínimo da pressão</label>
-				                                          <input type="number" name="min" class="form-control" id="inputMin">
+				                                          <input type="number" name="min" class="form-control" id="inputMin" data-toggle="tooltip" data-placement="top" title="Indicador menor pressão">
 				                                        </div>
 				                                      </div>
 				                                       <div class="form-row">
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMaxPad">Ponto máximo do Padrão</label>
-				                                          <input type="number" name="padraomax" class="form-control" id="inputMaxPad">
+				                                          <input type="number" name="padraomax" class="form-control" id="inputMaxPad" data-toggle="tooltip" data-placement="top" title="Padrão maior da pressão">
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMinPad">Ponto mínimo do Padrão</label>
-				                                          <input type="number" name="padraomin" class="form-control" id="inputMinPad">
+				                                          <input type="number" name="padraomin" class="form-control" id="inputMinPad" data-toggle="tooltip" data-placement="top" title="Padrão menor da pressão">
 				                                        </div>
 				                                      </div>
 				                                    

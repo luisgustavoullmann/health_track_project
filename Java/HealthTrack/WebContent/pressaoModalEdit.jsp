@@ -28,28 +28,28 @@
 				                                       <div class="form-row">
 				                                        <div class="form-group col-md-12">
 				                                          <label for="inputData">Data</label>
-				                                          <input type="date" name="datapressao" value='<fmt:formatDate value="${pressao.dataexercicio.time }" pattern="dd/MM/yyyy"/>' class="form-control" id="inputData" placeholder="">
+				                                          <input type="date" name="datapressao" value='<fmt:formatDate value="${pressao.datapressao.time }" pattern="dd/MM/yyyy"/>' class="form-control" id="inputData" placeholder="">
 				                                        </div>
 				                                        
 				                                      </div>
 				                                      <div class="form-row">
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMax">Ponto máximo da pressão</label>
-				                                          <input type="number" name="max" value="${pressao.max }" class="form-control" id="inputMax">
+				                                          <input type="number" name="max" value="${pressao.max }" class="form-control" id="inputMax" data-toggle="tooltip" data-placement="top" title="Ponto máximo da pressão">
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMin">Ponto mínimo da pressão</label>
-				                                          <input type="number" name="min" value="${pressao.min }" class="form-control" id="inputMin">
+				                                          <input type="number" name="min" value="${pressao.min }" class="form-control" id="inputMin" data-toggle="tooltip" data-placement="top" title="Ponto mínimo da pressão">
 				                                        </div>
 				                                      </div>
 				                                       <div class="form-row">
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMaxPad">Ponto máximo do Padrão</label>
-				                                          <input type="number" name="padraomax" value="${pressao.padraomax }" class="form-control" id="inputMaxPad">
+				                                          <input type="number" name="padraomax" value="${pressao.padraomax }" class="form-control" id="inputMaxPad" data-toggle="tooltip" data-placement="top" title="Padrão máximo">
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputMinPad">Ponto mínimo do Padrão</label>
-				                                          <input type="number" name="padraomin" value="${pressao.padraomin }" class="form-control" id="inputMinPad">
+				                                          <input type="number" name="padraomin" value="${pressao.padraomin }" class="form-control" id="inputMinPad" data-toggle="tooltip" data-placement="top" title="Padrão mínimo">
 				                                        </div>
 				                                      </div>
 				                                    

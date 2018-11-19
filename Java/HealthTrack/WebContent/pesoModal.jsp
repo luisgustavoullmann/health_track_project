@@ -31,17 +31,17 @@
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputAltura">Altura</label>
-				                                          <input type="text" name="altura" class="form-control" id="inputAltura" placeholder="">
+				                                          <input type="text" name="altura" class="form-control" id="inputAltura" placeholder="" data-toggle="tooltip" data-placement="top" title="Insira a sua altura">
 				                                        </div>
 				                                      </div>
 				                                      <div class="form-row">
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputPeso">Peso</label>
-				                                          <input type="text" name="pesagem" class="form-control" id="inputPeso">
+				                                          <input type="text" name="pesagem" class="form-control" id="inputPeso" data-toggle="tooltip" data-placement="top" title="Insira o seu peso">
 				                                        </div>
 				                                        <div class="form-group col-md-6">
 				                                          <label for="inputPadraoPeso">Padrão de Peso</label>
-				                                          <input type="text" name="padraopeso" class="form-control" id="inputPadraoPeso" placeholder="">
+				                                          <input type="text" name="padraopeso" class="form-control" id="inputPadraoPeso" placeholder="" data-toggle="tooltip" data-placement="top" title="Padrão de peso do usuário">
 				                                        </div>
 				                                      </div>
 				                                      

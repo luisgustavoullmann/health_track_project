@@ -29,15 +29,15 @@
                                           <div class="form-row">
                                             <div class="form-group col-12">
                                               <label for="inputNome">Nome</label>
-                                              <input type="text" class="form-control" id="inputNome">
+                                              <input type="text" class="form-control" id="inputNome" data-toggle="tooltip" data-placement="top" title="Insira o seu nome">
                                             </div>
                                             <div class="form-group col-12">
                                               <label for="inputEmail">Email</label>
-                                              <input type="email" class="form-control" id="inputEmail">
+                                              <input type="email" class="form-control" id="inputEmail" data-toggle="tooltip" data-placement="top" title="Insira o seu email">
                                               </div>
                                             <div class="form-group col-12">
                                               <label for="inputTextArea">Mensagem</label>
-                                              <textarea id="inputKm" class="form-group col-12 rounded" rows="3"></textarea>
+                                              <textarea id="inputKm" class="form-group col-12 rounded" rows="3" data-toggle="tooltip" data-placement="top" title="Escreva a mensagem que queira enviar"></textarea>
                                             </div>
                                             
                                           </div>
