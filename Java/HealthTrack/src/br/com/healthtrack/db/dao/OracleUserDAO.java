@@ -260,8 +260,7 @@ public class OracleUserDAO implements UserDAO {
 		try {			
 			conexao = CompanyDBManager.getInstance().obterConexao();
 			
-			stmt = conexao.prepareStatement("SELECT * FROM T_USER"
-					+ " WHERE NM_EMAIL = ? AND NR_PASSWORD = ?");
+			stmt = conexao.prepareStatement("SELECT * FROM T_USER WHERE NM_EMAIL = ? AND NR_PASSWORD = ?");
 			stmt.setString(1, usuario.getEmail());
 			stmt.setString(2, usuario.getPassword());
 			rs = stmt.executeQuery();

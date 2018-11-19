@@ -1,6 +1,6 @@
 <!-- Modal -->
 <form class="mt-3" action="cadastro" method="post">
-		<input type="hidden" value="cadastrar" name="acao">
+	<input type="hidden" value="cadastrar" name="acao">
 	<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
@@ -30,12 +30,12 @@
 							</div>
 							<div class="form-group col-md-6 m-auto pt-2 pl-2" name="sexo" id="sexo">
 								<div class="form-check">
-									<input class="form-check-input" type="radio" name="masculino" id="masculino" value="masculino">
-									<label class="form-check-label" for="masculino">Masculino</label>
+									<input class="form-check-input" type="radio" name="masculino" id="inputMasculino" value="option1">
+									<label class="form-check-label" for="inputMasculino">Masculino</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="radio" name="feminino" id="feminino" value="feminino">
-									<label class="form-check-label" for="feminino">Feminino</label>
+									<input class="form-check-input" type="radio" name="feminino" id="inputFeminino" value="option2">
+									<label class="form-check-label" for="inputFeminino">Feminino</label>
 								</div>
 							</div>
 						</div>
@@ -105,7 +105,7 @@
 			<nav>
 				<div class="modal-footer nav-item">
 					<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
-					<a class="" href="index.jsp">
+					<a href="index.jsp">
 						<button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
 					</a>
 				</div>
