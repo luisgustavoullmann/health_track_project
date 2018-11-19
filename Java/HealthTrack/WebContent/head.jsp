@@ -12,9 +12,9 @@
         <link rel="shortcut icon" href="favicon.ico">
         
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <link rel="stylesheet" href="resources/css/bootstrap.min.css">
         <link rel="stylesheet" href="resources/css/jquery-ui.theme.min.css">
         <link rel="stylesheet" href="resources/css/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css">
         <link rel="stylesheet" href="resources/css/style.css"> 
        
                     
