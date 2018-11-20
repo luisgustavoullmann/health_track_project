@@ -20,12 +20,8 @@
 				
 				<nav>
 					<div class="modal-footer nav-item">
-						<a href="dieta?acao=listar">
-							<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
-						</a>
-						<a class="" href="principal.jsp">
-							<button type="submit" class="btn btn-outline-primary">Enviar</button>
-						</a>
+						<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
+						<button type="submit" class="btn btn-outline-primary">Enviar</button>
 					</div>
 				</nav>
 			

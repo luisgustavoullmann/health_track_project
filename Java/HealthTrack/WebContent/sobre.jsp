@@ -12,8 +12,6 @@ pageEncoding="ISO-8859-1"%>
 			<%@ include file="../header.jsp" %>
 		</header>
 		
-		<!-- Modal Cadastro -->
-		<%@ include file="../cadastroModal.jsp" %>
 		
 		<div class="container d-flex justify-content-center mt-5">
 			<div class="row">

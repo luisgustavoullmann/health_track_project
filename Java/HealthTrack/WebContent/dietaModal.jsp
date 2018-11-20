@@ -66,9 +66,7 @@
 				<nav>
 					<div class="modal-footer nav-item">
 						<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
-					<a class="" href="principal.jsp">
 						<button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
-					</a>
 					</div>
 				</nav>
 			

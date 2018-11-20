@@ -49,12 +49,8 @@
       </div>
       <nav>
        <div class="modal-footer nav-item">
-         <a href="peso?acao=listar">
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
-         </a>
-          <a class="" href="principal.jsp">
           	<button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
-          </a>
        </div>
       </nav>
     </div>

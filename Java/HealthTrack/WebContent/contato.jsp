@@ -9,8 +9,6 @@ pageEncoding="ISO-8859-1"%>
     <body>
         <%@ include file="../header.jsp" %>
 
-        <!-- Modal Cadastro -->
-        <%@ include file="../cadastroModal.jsp" %>
 
         <div class="container mt-5">
 	        <div class="row">

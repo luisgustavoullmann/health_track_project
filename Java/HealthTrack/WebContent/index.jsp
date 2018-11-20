@@ -12,10 +12,7 @@ pageEncoding="ISO-8859-1"%>
 		<header>
 			<%@ include file="../header.jsp" %>
 		</header>
-		
-		<!-- Modal Cadastro -->
-		<%@ include file="../cadastroModal.jsp" %>
-		
+				
 		<!--Carousel com imgs-->
 		<section class="container-fluid mt-5 bg-color">
 			<div class="row">

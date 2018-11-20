@@ -71,12 +71,8 @@
 			
 			<nav>
 				<div class="modal-footer nav-item">
-					<a href="exercicio?acao=listar">
-						<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
-					</a>
-					<a class="" href="principal.jsp">
-						<button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
-					</a>
+					<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Sair</button>
+					<button type="submit" class="btn btn-outline-primary" onclick="mandatory">Enviar</button>
 				</div>
 			</nav>
 			</div>
