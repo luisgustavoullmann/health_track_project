@@ -8,7 +8,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -40,9 +39,6 @@ public class LoginFilter implements Filter {
 		HttpSession session = req.getSession();
 		String url = req.getRequestURI();
 		
-		/*@param usuario cookie*/
-		String usuario = getUsuario(req);
-		
 		if(session.getAttribute("user") == null 
 				&& !url.endsWith("login")
 				&& !url.contains("resources")
@@ -57,18 +53,6 @@ public class LoginFilter implements Filter {
 		}
 	}
 
-	private String getUsuario(HttpServletRequest req) {
-		Cookie[] cookies = req.getCookies();
-		if(cookies == null);
-		String usuario = "deslogado";
-		for (Cookie cookie : cookies) {
-			if(cookie.getName().equals("user.login")) {
-				usuario = cookie.getValue();
-			}
-		}
-		
-		return usuario;
-	}
 
 	/**
 	 * @see Filter#init(FilterConfig)
